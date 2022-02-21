@@ -1,4 +1,44 @@
-#borda{
-    color: aqua !important;
-    padding: 5%;    
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding-left: 10px;    
+    padding-right: 10px;    
+}
+
+.fa-brands{
+    font-size: 35pt;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998;
+}
+
+.fa-github-square:hover{
+    color:black
+}
+
+.fa-linkedin:hover{
+    color: #0072b1
+}
+
+h1{
+    font-size: 90pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 59pt;
+        font-family: 'Times New Roman', Times, serif;
+    }
 }
