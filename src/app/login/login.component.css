@@ -1,0 +1,107 @@
+.deepBlack {
+  color: #050203;
+}
+
+.bg-test {
+  background-color: #f0f0f07e !important;
+}
+
+.hovercyan {
+  color: #258383;
+}
+
+.hovercyan:hover {
+  color: #00d9ff;
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #050203;
+  background-color: #258383;
+  letter-spacing: 6px;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  color: #00d9ff;
+}
+
+.btn span {
+  display: block;
+  position: absolute;
+  background: #00d9ff;
+}
+
+.btn span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.btn:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.btn span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.btn:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.btn span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  animation-delay: 0.5s;
+}
+
+.btn:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  animation-delay: 0.5s;
+}
+
+.btn span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  animation-delay: 0.5s;
+}
+
+.btn:hover span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+  animation-delay: 0.5s;
+}
