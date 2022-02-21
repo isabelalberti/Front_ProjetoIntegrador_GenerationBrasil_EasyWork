@@ -22,10 +22,6 @@
     "jquery": "^3.6.0",
     "ngx-bootstrap": "^8.0.0",
     "ngx-order-pipe": "^2.2.0",
-<<<<<<< HEAD
-=======
-    "popper.js": "^1.16.1",
->>>>>>> 21f5577f2f9bbfadd60f0ddcb1652481cdedbe40
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
