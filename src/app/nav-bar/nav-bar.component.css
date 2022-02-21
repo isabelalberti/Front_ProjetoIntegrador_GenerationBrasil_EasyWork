@@ -1,7 +1,7 @@
 .navbar-brand{
-    text-shadow: 3px 3px 10px rgb(55, 157, 253);
+    text-shadow: 3px 3px 10px rgba(25, 25, 26, 0.329);
 }
 
 .navbar-nav{
-    text-shadow: 3px 3px 10px rgb(55, 157, 253);
+    text-shadow: 3px 3px 8px rgba(25, 25, 26, 0.329);
 }
