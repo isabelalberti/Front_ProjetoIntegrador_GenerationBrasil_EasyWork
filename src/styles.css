@@ -1,11 +1,19 @@
+
+body{
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2276716-fundo-geometrico-abstrato-em-plano-design-gr%C3%A1tis-vetor.jpg); 
+}/* You can add global styles to this file, and also import other style files */
+
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
 
 * {
   font-family: "Comfortaa", cursive, Arial, Helvetica, sans-serif;
 }
 
+<<<<<<< HEAD
 body {
   background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2276716-fundo-geometrico-abstrato-em-plano-design-gr%C3%A1tis-vetor.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 } /* You can add global styles to this file, and also import other style files */
+=======
+>>>>>>> 21f5577f2f9bbfadd60f0ddcb1652481cdedbe40
