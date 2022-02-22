@@ -1,3 +1,7 @@
+.navbar{
+    background-color: rgba(15, 114, 114, 0.781);
+}
+
 li{
     list-style: none;
 }
@@ -8,3 +12,15 @@ li{
 .navbar-nav{
     text-shadow: 3px 3px 8px rgba(25, 25, 26, 0.329);
 }
+
+.button{
+    position: relative;
+    left: 33vh;
+ }
+ .btn {
+     background-color: rgba(25, 25, 26, 0.055);
+     color: rgba(25, 25, 26, 0.87);
+     text-shadow: 3px 3px 8px rgba(25, 25, 26, 0.329);
+     border: solid rgba(25, 25, 26, 0.472);
+    
+ }

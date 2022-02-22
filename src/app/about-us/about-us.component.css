@@ -1,44 +1,41 @@
-ul.social-network{
-    list-style: none;
-    padding: 0;
+ul.social-network {
+  list-style: none;
+  padding: 0;
 }
 
-ul.social-network li{
-    display: inline;
-    margin: 0;
-    padding-left: 10px;    
-    padding-right: 10px;    
+ul.social-network li {
+  display: inline;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.fa-brands{
-    font-size: 35pt;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    
+.fa-brands {
+  font-size: 35pt;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.fa-facebook-square:hover{
-    color: #3b5998;
+.fa-github-square:hover {
+  color: black;
 }
 
-.fa-github-square:hover{
-    color:black
+.fa-linkedin:hover {
+  color: #0072b1;
 }
 
-.fa-linkedin:hover{
-    color: #0072b1
+h1 {
+  font-size: 36pt;
+  background:-webkit-linear-gradient(277.91deg, #042969 12%, #0dd5f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
-h1{
-    font-size: 90pt;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-@media (max-width: 768px){
-    h1{
-        font-size: 59pt;
-        font-family: 'Times New Roman', Times, serif;
-    }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 59pt;
+    font-family: "Times New Roman", Times, serif;
+  }
 }
