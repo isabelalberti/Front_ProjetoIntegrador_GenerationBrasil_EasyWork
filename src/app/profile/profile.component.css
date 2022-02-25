@@ -184,6 +184,13 @@ body{
       color: #ffffff;
   }
 
+<<<<<<< HEAD
+   .btn-outline-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+   }
+=======
   .header-menu{
     list-style: none
   }
+>>>>>>> 035b6e6550b2f049bc2a30302eabf038d4236084
