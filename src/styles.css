@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
+<<<<<<< HEAD
 body{
     background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2276716-fundo-geometrico-abstrato-em-plano-design-gr%C3%A1tis-vetor.jpg);
     background-size: cover;
@@ -9,3 +10,13 @@ body{
   font-family: "Comfortaa", cursive, Arial, Helvetica, sans-serif;
 }
 
+=======
+body {
+  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2276716-fundo-geometrico-abstrato-em-plano-design-gr%C3%A1tis-vetor.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Comfortaa", cursive, Arial, Helvetica, sans-serif;
+}
+>>>>>>> a5d4ab3dfa95ae32e6596845e8fb591957f14319
