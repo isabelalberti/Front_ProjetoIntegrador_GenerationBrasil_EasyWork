@@ -10,7 +10,8 @@ import { AuthService } from '../service/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-    user: Usuario
+     user: Usuario = new Usuario
+
     confPassword: string
 
     constructor(
