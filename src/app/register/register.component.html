@@ -1,76 +1,113 @@
 <div class="container-fluid vh-100">
-
-
     <div class="row">
-
         <div class="col-md-4 mt-5"></div>
 
         <div class="col-md-5 mt-5 mb-5">
-
             <div class="row d-flex justify-content-center"></div>
             <div class="col-md-10">
-
-                
                 <h1 class="text-center">Cadastre-se</h1>
-                
-               
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input class="form-control" type="text" name="nome" id="nome" placeholder=" Digite seu nome completo">
+                    <input
+                        [(ngModel)]="user.fullName"
+                        class="form-control"
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        placeholder=" Digite seu nome completo"
+                    />
                 </div>
 
                 <div class="form-group">
-                    <label for="usuario">Usuario</label>
-                    <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
+                    <label for="email">Usuario</label>
+                    <input
+                        [(ngModel)]="user.email"
+                        class="form-control"
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Digite seu Email"
+                    />
                 </div>
 
-
                 <div class="form-group">
-                    <label for="numTelefone">Número de telefone</label>
-                    <input class="form-control" type="text" name="numero de telefone" id="numero"
-                        placeholder=" Digite seu número de telefone">
+                    <label for="telefone">Número de telefone</label>
+                    <input
+                        [(ngModel)]="user.phoneNumber"
+                        class="form-control"
+                        type="text"
+                        name="telefone"
+                        id="telefone"
+                        placeholder=" Digite seu número de telefone"
+                    />
                 </div>
 
                 <div class="form-group">
                     <label for="numTelefone">Cidade</label>
-                    <input class="form-control" type="text" name="cidade" id="cidade" placeholder="Digite a sua cidade">
-
+                    <input
+                        [(ngModel)]="user.city"
+                        class="form-control"
+                        type="text"
+                        name="cidade"
+                        id="cidade"
+                        placeholder="Digite a sua cidade"
+                    />
                 </div>
 
                 <div class="form-group">
-                    <label for="numTelefone">Idade</label>
-                    <input class="form-control" type="text" name="idade" id="idade" placeholder="Digite a sua idade">
+                    <label for="idade">Idade</label>
+                    <input
+                        [(ngModel)]="user.age"
+                        class="form-control"
+                        type="text"
+                        name="idade"
+                        id="idade"
+                        placeholder="Digite a sua idade"
+                    />
                 </div>
-
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                    <input
+                        (input)="confirmPassword($event)"
+                        class="form-control"
+                        type="password"
+                        name="senha"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    />
                 </div>
-
 
                 <div class="form-group">
                     <label for="confirmSenha">Confirmar Senha</label>
-                    <input class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                        placeholder="Confirme sua senha">
+                    <input
+                        [(ngModel)]="user.password"
+                        class="form-control"
+                        type="password"
+                        name="confirmSenha"
+                        id="confirmSenha"
+                        placeholder="Confirme sua senha"
+                        required
+                    />
                 </div>
-
 
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
-                    <button type="submit" class="btn btn-success">Cadastre-se</button>
+                    <button
+                        type="submit"
+                        class="btn btn-danger mr-4"
+                        routerLink="/login"
+                    >
+                        Cancelar
+                    </button>
+                    <button
+                        (click)="register($event)"
+                        type="submit" class="btn btn-success">
+                        Cadastre-se
+                    </button>
                 </div>
-
-
-
-
-
-
             </div>
-
         </div>
-
     </div>
-
 </div>
