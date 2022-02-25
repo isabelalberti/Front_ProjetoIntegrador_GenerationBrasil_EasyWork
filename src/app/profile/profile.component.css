@@ -183,3 +183,8 @@ body{
   .single_advisor_profile:focus .single_advisor_details_info p {
       color: #ffffff;
   }
+
+   .btn-outline-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+   }
