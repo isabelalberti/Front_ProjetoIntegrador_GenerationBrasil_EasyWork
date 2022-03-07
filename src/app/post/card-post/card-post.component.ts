@@ -16,13 +16,9 @@ export class CardPostComponent implements OnInit {
     idUser = environment.id;
 
     card: Card = new Card();
-    tip: string
+    tip: string;
 
-
-    constructor(
-        private router: Router,
-        private cardService: CardService,
-    ) {}
+    constructor(private router: Router, private cardService: CardService) {}
 
     ngOnInit() {
         window.scroll(0, 0);
@@ -46,7 +42,7 @@ export class CardPostComponent implements OnInit {
         });
     }
 
-    changeTip (event: any) {
-        this.tip = event.target.value
+    changeTip(event: any) {
+        this.tip = event.target.value;
     }
 }

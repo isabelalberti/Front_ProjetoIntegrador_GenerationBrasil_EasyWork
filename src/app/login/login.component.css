@@ -3,11 +3,11 @@
 }
 
 .bg-test {
-    background-color: #f0f0f07e !important;
+    background-color: #ad9c9427 !important;
 }
 
 .hovercyan {
-    color: #258383;
+    color: #68c0d8;
 }
 
 .hovercyan:hover {
@@ -22,20 +22,20 @@
     text-decoration: none;
     text-transform: uppercase;
     color: #050203;
-    background-color: #258383;
+    background-color: #418696;
     letter-spacing: 6px;
     font-size: 16px;
     transition: 0.5s;
 }
 
 .btn:hover {
-    color: #00d9ff;
+    color: #68c0d8;
 }
 
 .btn span {
     display: block;
     position: absolute;
-    background: #00d9ff;
+    background: #68c0d8;
 }
 
 .btn span:nth-child(1) {
@@ -108,4 +108,8 @@
 
 .img-fluid {
     width: 150px;
+}
+
+.ponteiro {
+    cursor: pointer;
 }

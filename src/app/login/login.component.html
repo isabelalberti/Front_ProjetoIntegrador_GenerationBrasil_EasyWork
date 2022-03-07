@@ -1,8 +1,8 @@
-<div class="container-fluid vh-100 d-flex align-items-center ml-0 ">
+<div class="container-fluid vh-100 d-flex align-items-center ml-0">
     <div class="col-md-5 d-flex justify-content-center">
         <img
-            class="img-fluid"
-            src="/assets/img/pngwing.com.png"
+            class="img-fluid w-75"
+            src="../../assets/img/loginimg.png"
             alt="colocar logo aqui"
         />
     </div>
@@ -20,6 +20,10 @@
                         id="user"
                         placeholder="Digite seu usuario"
                     />
+                    <small id="emailHelp" class="form-text text-muted"
+                        >Nunca iremos compartilhar seu endereço de
+                        e-mail.</small
+                    >
                 </div>
                 <div class="form-group">
                     <label for="usuario">Password</label>
@@ -33,7 +37,11 @@
                     />
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn" (click)="login()">
+                    <button
+                        type="submit"
+                        class="btn mt-4"
+                        (click)="login()"
+                    >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -41,19 +49,21 @@
                         Entrar
                     </button>
                 </div>
+                <hr class="my-4" />
+                <div class="text-center font-weight-bold">
+                    <a class="text-muted ponteiro">Esqueceu sua senha?</a>
+                </div>
 
                 <div>
-                    <hr class="mt-5 mb-5" />
+                    <hr class="mt-5 mb-4" />
                     <p class="text-center">
                         Nao tem um conta?
                         <a class="hovercyan" routerLink="/register">
-                            Cadatre-se</a
+                            Cadastre-se</a
                         >
                     </p>
                 </div>
             </div>
-
-            
         </div>
     </div>
 </div>
