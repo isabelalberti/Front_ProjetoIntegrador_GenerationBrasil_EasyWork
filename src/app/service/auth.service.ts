@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { User } from '../model/User';
 import { UserSecurityLogin } from '../model/UserSecurityLogin';
-import { Usuario } from '../model/Usuario';
 
 
 
@@ -19,11 +19,11 @@ export class AuthService {
 
 
   login(userSecurityLogin: UserSecurityLogin): Observable<UserSecurityLogin>{ 
-    return this.http.post<UserSecurityLogin>("https://projeto-integrador-grupo2.herokuapp.com/usuario/logar", userSecurityLogin)
+    return this.http.post<UserSecurityLogin>("https://projeto-integrador-grupo2.herokuapp.com/user/login", userSecurityLogin)
   }
   
-    register(user: Usuario): Observable<Usuario>{ 
-      return this.http.post<Usuario>("https://projeto-integrador-grupo2.herokuapp.com/usuario/cadastrar", user)
+    register(user: User): Observable<User>{ 
+      return this.http.post<User>("https://projeto-integrador-grupo2.herokuapp.com/user/register", user)
 
 }
 

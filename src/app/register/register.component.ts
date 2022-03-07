@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from '../model/Usuario';
+import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-    user: Usuario
+    user: User = new User
     confPassword: string
 
     constructor(
@@ -26,11 +26,11 @@ export class RegisterComponent implements OnInit {
         this.confPassword = event.target.value
     }
 
-    register(event: any){
+    register(){
         if (this.confPassword != this.user.password){
             alert("As senhas não conferem!\nDigite novamente")
         } else {
-            this.auth.register(this.user).subscribe((resp: Usuario) => {
+            this.auth.register(this.user).subscribe((resp: User) => {
                 this.user = resp
                 this.router.navigate(['/login'])
                 alert("Usuário cadastrado com sucesso!")
