@@ -29,20 +29,20 @@ export class LoginComponent implements OnInit {
                 environment.id = this.userSLogin.id;
                 environment.picture = this.userSLogin.picture;
                 environment.type = this.userSLogin.type;
+                console.log(environment)
 
-                alert('logado')
+                this.router.navigate(['/card'])
             },
 
-            error: erro => {
-                if(erro.status == 500) {
-                    alert('Usuário inexistente!')
-                } else if (erro.status == 400){
-                    alert("Senha Inválida!")
+            error: (erro) => {
+                if (erro.status == 500) {
+                    alert('Usuário inexistente!');
+                } else if (erro.status == 400) {
+                    alert('Senha Inválida!');
                 } else {
-                    alert("Erro Genérico!")
+                    alert('Erro Genérico!');
                 }
-            }
-
+            },
         });
     }
 }

@@ -14,6 +14,12 @@ export class CardService {
         headers: new HttpHeaders().set('Authorization', environment.token),
     };
 
+    refreshToken() {
+        this.token = {
+            headers: new HttpHeaders().set('Authorization', environment.token),
+        };
+    }
+
     postCard(card: Card): Observable<Card> {
         return this.http.post<Card>(
             'https://projeto-integrador-grupo2.herokuapp.com/card/insert',
