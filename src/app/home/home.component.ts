@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CardService } from '../service/card.service';
 
 @Component({
     selector: 'app-home',
@@ -9,12 +10,12 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
     constructor(
         private router: Router,
-    ) {}
+        private cardService: CardService
+    ) { }
 
     ngOnInit() {
-        window.scroll(0,0)
+        window.scroll(0, 0)
 
-        getAllCard()
     }
 
     getAllCard() {

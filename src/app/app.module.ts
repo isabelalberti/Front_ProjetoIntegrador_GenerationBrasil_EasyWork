@@ -19,6 +19,9 @@ import { CardEditComponent } from './edit/card-edit/card-edit.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
 import { MuralComponent } from './mural/mural.component';
 import { HomeComponent } from './home/home.component';
+import { SkillPostComponent } from './post/skill-post/skill-post.component';
+import { SkillDeleteComponent } from './delete/skill-delete/skill-delete.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
     declarations: [
@@ -36,6 +39,9 @@ import { HomeComponent } from './home/home.component';
         CardDeleteComponent,
         MuralComponent,
         HomeComponent,
+        SkillPostComponent,
+        SkillDeleteComponent,
+        AlertComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [
