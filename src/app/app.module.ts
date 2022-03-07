@@ -17,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CardPostComponent } from './post/card-post/card-post.component';
 import { CardEditComponent } from './edit/card-edit/card-edit.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
+import { MuralComponent } from './mural/mural.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { CardDeleteComponent } from './delete/card-delete/card-delete.component'
         CardPostComponent,
         CardEditComponent,
         CardDeleteComponent,
+        MuralComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [
