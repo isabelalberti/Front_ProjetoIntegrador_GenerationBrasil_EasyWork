@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
 import { CardEditComponent } from './edit/card-edit/card-edit.component';
+import { HomeComponent } from './home/home.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: 'card', component: CardPostComponent },
     { path: 'edit-card/:id', component: CardEditComponent },
     { path: 'delete-card/:id', component: CardDeleteComponent },
+    { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({
