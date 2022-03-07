@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { Card } from '../model/Card';
+import { CardService } from '../service/card.service';
 
 @Component({
     selector: 'app-home',
@@ -7,17 +10,26 @@ import { Router } from '@angular/router';
     styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+
+    cardList: Card[]
+
     constructor(
         private router: Router,
-    ) {}
+        private cardService: CardService
+    ) { }
 
     ngOnInit() {
-        window.scroll(0,0)
-
-        getAllCard()
+        window.scroll(0, 0)
+        if (environment.token == "") {
+            alert("Tchau")
+            this.router.navigate(["/login"])
+        }
+        this.getAllCard()
     }
-
     getAllCard() {
-
+        this.cardService.getAllCard().subscribe((resp: Card[]) => {
+            this.cardList = resp
+        })
     }
 }
+
