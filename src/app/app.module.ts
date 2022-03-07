@@ -14,6 +14,9 @@ import { RegisterComponent } from './register/register.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CardPostComponent } from './post/card-post/card-post.component';
+import { CardEditComponent } from './edit/card-edit/card-edit.component';
+import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +29,9 @@ import { ProfileComponent } from './profile/profile.component';
         AboutUsComponent,
         ContactComponent,
         ProfileComponent,
+        CardPostComponent,
+        CardEditComponent,
+        CardDeleteComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [
