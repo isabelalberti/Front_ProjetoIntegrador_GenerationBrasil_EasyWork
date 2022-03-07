@@ -16,11 +16,12 @@ export class CardPostComponent implements OnInit {
     idUser = environment.id;
 
     card: Card = new Card();
+    tip: string
+
 
     constructor(
         private router: Router,
         private cardService: CardService,
-        private auth: AuthService
     ) {}
 
     ngOnInit() {
@@ -35,7 +36,7 @@ export class CardPostComponent implements OnInit {
         this.user.id = this.idUser;
         this.card.user = this.user;
 
-        console.log(this.card)
+        console.log(this.card);
         this.cardService.postCard(this.card).subscribe((resp: Card) => {
             this.card = resp;
 
@@ -43,5 +44,9 @@ export class CardPostComponent implements OnInit {
 
             this.card = new Card();
         });
+    }
+
+    changeTip (event: any) {
+        this.tip = event.target.value
     }
 }

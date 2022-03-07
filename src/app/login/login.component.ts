@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
                 environment.type = this.userSLogin.type;
                 console.log(environment)
 
-                this.router.navigate(['/home'])
-                this.router.navigate(['/profile'])
+                this.router.navigate(['/card'])
+
             },
 
             error: (erro) => {
