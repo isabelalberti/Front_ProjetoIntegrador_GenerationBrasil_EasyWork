@@ -28,13 +28,14 @@ export class CardPostComponent implements OnInit {
         if (environment.token == '') {
             this.router.navigate(['/login']);
         }
-        this.auth.refreshToken();
+        this.cardService.refreshToken();
     }
 
     publish() {
         this.user.id = this.idUser;
         this.card.user = this.user;
 
+        console.log(this.card)
         this.cardService.postCard(this.card).subscribe((resp: Card) => {
             this.card = resp;
 
