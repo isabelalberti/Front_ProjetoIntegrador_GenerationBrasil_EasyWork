@@ -27,13 +27,19 @@ export class LoginComponent implements OnInit {
                 environment.email = this.userSLogin.email;
                 environment.token = this.userSLogin.token;
                 environment.id = this.userSLogin.id;
+                environment.picture = this.userSLogin.picture;
+                environment.type = this.userSLogin.type;
 
                 alert('logado')
             },
 
             error: erro => {
-                if(erro.status == 400) {
-                    alert('usuario nao cadastrad')
+                if(erro.status == 500) {
+                    alert('Usuário inexistente!')
+                } else if (erro.status == 400){
+                    alert("Senha Inválida!")
+                } else {
+                    alert("Erro Genérico!")
                 }
             }
 

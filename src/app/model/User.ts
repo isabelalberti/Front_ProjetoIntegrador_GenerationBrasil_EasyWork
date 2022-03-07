@@ -1,6 +1,6 @@
 import { Card } from './Card';
 
-export class Usuario {
+export class User {
     public id: number;
     public fullName: string;
     public password: string;
@@ -12,5 +12,7 @@ export class Usuario {
     public linkedin: string;
     public gitHub: string;
     public city: string;
+    public state: string;
+    public type: string;
     public card: Card[];
 }
