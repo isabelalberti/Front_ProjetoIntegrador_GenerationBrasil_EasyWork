@@ -26,7 +26,7 @@ export class CardPostComponent implements OnInit {
     ngOnInit() {
         window.scroll(0, 0);
         if (environment.token == '') {
-            this.router.navigate(['/login']);
+            this.router.navigate(['/home']);
         }
         this.cardService.refreshToken();
     }
