@@ -30,9 +30,7 @@ ul.social-network li {
 }
 
 h1 {
-  font-size: pt;
-  background:-webkit-linear-gradient(277.91deg, #042969 12%, #0dd5f0 100%);
-  -webkit-text-fill-color: transparent;
+  color: rgb(37, 37, 37);
 }
 
 @media (max-width: 768px) {
