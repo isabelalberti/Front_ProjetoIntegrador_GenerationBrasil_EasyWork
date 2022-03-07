@@ -12,7 +12,7 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
     userSLogin: UserSecurityLogin = new UserSecurityLogin();
 
-    constructor(private auth: AuthService, private router: Router) {}
+    constructor(private auth: AuthService, private router: Router) { }
 
     ngOnInit() {
         window.scroll(0, 0);
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
                 console.log(environment)
 
                 this.router.navigate(['/home'])
+                this.router.navigate(['/profile'])
             },
 
             error: (erro) => {

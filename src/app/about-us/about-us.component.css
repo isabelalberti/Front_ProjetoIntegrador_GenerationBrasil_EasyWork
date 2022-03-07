@@ -1,3 +1,7 @@
+.card{
+  box-shadow:  5px 5px 12px rgba(0, 0, 0, 0.6);
+}
+
 ul.social-network {
   list-style: none;
   padding: 0;
