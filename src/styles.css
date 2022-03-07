@@ -3,7 +3,7 @@
 body {
     background-image: url("../../Front_EasyWork/src/assets/img/fundo.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 } /* You can add global styles to this file, and also import other style files */
 
 * {
