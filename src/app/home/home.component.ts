@@ -18,18 +18,5 @@ export class HomeComponent implements OnInit {
         private cardService: CardService
     ) { }
 
-    ngOnInit() {
-        window.scroll(0, 0)
-        if (environment.token == "") {
-            alert("Tchau")
-            this.router.navigate(["/login"])
-        }
-        this.getAllCard()
-    }
-    getAllCard() {
-        this.cardService.getAllCard().subscribe((resp: Card[]) => {
-            this.cardList = resp
-        })
-    }
-}
+   
 
