@@ -8,6 +8,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CardPostComponent } from './post/card-post/card-post.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -21,10 +22,11 @@ const routes: Routes = [
     { path: 'card', component: CardPostComponent },
     { path: 'edit-card/:id', component: CardEditComponent },
     { path: 'delete-card/:id', component: CardDeleteComponent },
+    { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
