@@ -41,3 +41,8 @@ h1 {
     font-family: "Times New Roman", Times, serif;
   }
 }
+
+row:hover {
+  box-shadow: 1px 3px 6px #000;
+  width: min(100vw - 20px, 85px);
+}
