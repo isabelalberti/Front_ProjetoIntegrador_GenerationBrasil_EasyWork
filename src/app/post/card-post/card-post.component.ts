@@ -26,7 +26,7 @@ export class CardPostComponent implements OnInit {
 
     tipNivel: string;
 
-    idCard: number
+    idCard: number;
 
     constructor(
         private router: Router,
@@ -40,7 +40,7 @@ export class CardPostComponent implements OnInit {
             this.router.navigate(['/login']);
         }
         this.cardService.refreshToken();
-        this.skillService.refreshToken()
+        this.skillService.refreshToken();
     }
 
     changeTip(event: any) {
@@ -53,7 +53,7 @@ export class CardPostComponent implements OnInit {
 
     changeNivel(event: any) {
         this.tipNivel = event.target.value;
-        console.log(this.tipNivel)
+        console.log(this.tipNivel);
     }
 
     publish() {
@@ -62,37 +62,20 @@ export class CardPostComponent implements OnInit {
 
         this.cardService.postCard(this.card).subscribe((resp: Card) => {
             this.card = resp;
-            this.idCard = this.card.id
+            this.idCard = this.card.id;
+            console.log(this.card);
+
+            this.skill.card = this.card;
+            this.skill.nivel = this.tipNivel;
+
+            this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
+                this.skill = resp;
+            });
+
             this.card = new Card();
+            this.skill = new Skill();
+            alert('Card Postado com Sucesso');
         });
-
-        this.card.id = this.idCard
-        this.skill.card = this.card;
-        this.skill.nivel = this.tipNivel;
-
-        console.log(this.skill);
-
-        this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
-            this.skill = resp;
-        });
-
-        this.skill = new Skill();
-        alert('Card Postado com Sucesso');
     }
 
-    publish2() {
-        this.card.id = this.idCard
-        this.skill.card = this.card;
-        this.skill.nivel = this.tipNivel;
-
-        console.log(this.skill);
-
-        this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
-            this.skill = resp;
-        });
-
-        this.card = new Card();
-        this.skill = new Skill();
-        alert('Card Postado com Sucesso');
-    }
 }
