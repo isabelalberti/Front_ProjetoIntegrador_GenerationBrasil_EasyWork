@@ -36,7 +36,6 @@ export class SkillPostComponent implements OnInit {
 
     publish() {
         this.user.id = this.idUser;
-        
 
         this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
             this.skill = resp;
