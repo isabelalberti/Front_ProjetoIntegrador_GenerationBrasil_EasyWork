@@ -3,6 +3,7 @@ import { User } from './User';
 
 export class Card {
     public id: number;
+    public tip: boolean;
     public occupation: string;
     public companyName: string;
     public institution: string;
