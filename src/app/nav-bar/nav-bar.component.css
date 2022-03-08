@@ -12,14 +12,9 @@ li {
 .navbar-nav {
     text-shadow: 3px 3px 8px rgba(25, 25, 26, 0.329);
 }
-
-.button {
-    position: relative;
-    left: 33vh;
-}
 .btn {
-    background-color: rgba(25, 25, 26, 0.055);
-    color: rgba(25, 25, 26, 0.87);
+    background-color: #EBDED5;
+    color: rgb(31, 31, 31);
     text-shadow: 3px 3px 8px rgba(25, 25, 26, 0.329);
-    border: solid rgba(25, 25, 26, 0.472);
+    border: solid rgba(31, 31, 31, 0.445);
 }
