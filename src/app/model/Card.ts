@@ -1,17 +1,16 @@
-import { Skill } from "./Skill"
-import { Usuario } from "./Usuario"
+import { Skill } from './Skill';
+import { User } from './User';
 
 export class Card {
-
-    public id_card: number
-    public occupation: string
-    public nome_empresa: string
-    public formacoes: string
-    public dataInicio: string
-    public dataFinal: string
-    public imagem: string
-    public usuario: Usuario
-    public skill: Skill[]
-
-
+    public id: number;
+    public tip: boolean;
+    public occupation: string;
+    public companyName: string;
+    public institution: string;
+    public formation: string;
+    public startDate: string;
+    public endDate: string;
+    public image: string;
+    public user: User;
+    public skill: Skill[];
 }

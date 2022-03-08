@@ -5,4 +5,11 @@ export const environment = {
     id: 0,
     picture: '',
     email: '',
+    type: '',
+    city: '',
+    phone: '',
+    pictureFormation: '',
+    temaFormation: '',
+    descriptionFormation: '',
+    skill:'',
 };

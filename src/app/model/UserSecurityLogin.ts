@@ -4,4 +4,8 @@ export class UserSecurityLogin {
     public password: string;
     public token: string;
     public id: number;
+    public picture: string;
+    public type: string;
+    public city: string;
+
 }
