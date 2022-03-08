@@ -9,103 +9,67 @@
 
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input
-                        [(ngModel)]="user.fullName"
-                        class="form-control"
-                        type="text"
-                        name="nome"
-                        id="nome"
-                        placeholder=" Digite seu nome completo"
-                    />
+                    <input [(ngModel)]="user.fullName" class="form-control" type="text" name="nome" id="nome"
+                        placeholder=" Digite seu nome completo" />
                 </div>
 
                 <div class="form-group">
                     <label for="email">Usuario</label>
-                    <input
-                        [(ngModel)]="user.email"
-                        class="form-control"
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Digite seu Email"
-                    />
+                    <input [(ngModel)]="user.email" class="form-control" type="email" name="email" id="email"
+                        placeholder="Digite seu Email" />
                 </div>
 
                 <div class="form-group">
                     <label for="telefone">Número de telefone</label>
-                    <input
-                        [(ngModel)]="user.phoneNumber"
-                        class="form-control"
-                        type="text"
-                        name="telefone"
-                        id="telefone"
-                        placeholder=" Digite seu número de telefone"
-                    />
+                    <input [(ngModel)]="user.phoneNumber" class="form-control" type="text" name="telefone" id="telefone"
+                        placeholder=" Digite seu número de telefone" />
                 </div>
 
                 <div class="form-group">
                     <label for="numTelefone">Cidade</label>
-                    <input
-                        [(ngModel)]="user.city"
-                        class="form-control"
-                        type="text"
-                        name="cidade"
-                        id="cidade"
-                        placeholder="Digite a sua cidade"
-                    />
+                    <input [(ngModel)]="user.city" class="form-control" type="text" name="cidade" id="cidade"
+                        placeholder="Digite a sua cidade" />
                 </div>
 
                 <div class="form-group">
                     <label for="idade">Idade</label>
-                    <input
-                        [(ngModel)]="user.age"
-                        class="form-control"
-                        type="text"
-                        name="idade"
-                        id="idade"
-                        placeholder="Digite a sua idade"
-                    />
+                    <input [(ngModel)]="user.age" class="form-control" type="text" name="idade" id="idade"
+                        placeholder="Digite a sua idade" />
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input
-                        (input)="confirmPassword($event)"
-                        class="form-control"
-                        type="password"
-                        name="senha"
-                        id="senha"
-                        placeholder="Digite sua senha"
-                        required
-                    />
+                    <input (input)="confirmPassword($event)" class="form-control" type="password" name="senha"
+                        id="senha" placeholder="Digite sua senha" required />
                 </div>
 
                 <div class="form-group">
                     <label for="confirmSenha">Confirmar Senha</label>
-                    <input
-                        [(ngModel)]="user.password"
-                        class="form-control"
-                        type="password"
-                        name="confirmSenha"
-                        id="confirmSenha"
-                        placeholder="Confirme sua senha"
-                        required
-                    />
+                    <input [(ngModel)]="user.password" class="form-control" type="password" name="confirmSenha"
+                        id="confirmSenha" placeholder="Confirme sua senha" required />
+                </div>
+
+                <div class="form-group col texto-color">
+                    <label class="label-cinza" for="tipo">Tipo de Usuário</label>
+                    <select class="form-control mb-3" name="tipo" id="tipo" (change)='typeUser($event)'>
+                        <option>Selecione um tipo de usuário:</option>
+                        <option value="adm">Administrador</option>
+                        <option value="padrao">Padrão</option>
+                    </select>
+                </div>
+
+                <div class="mt-4">
+                    <p class="botao-roxo text-justify font-weight-bolder bg-transparent">
+                        *Ao se cadastrar, você aceita nossos Termos de Uso e se compromete a agir de forma respeitosa
+                        com os demais usuários da rede.
+                    </p>
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <button
-                        type="submit"
-                        class="btn btn-danger mr-4"
-                        routerLink="/login"
-                    >
+                    <button type="submit" class="btn btn-danger mr-4" routerLink="/login">
                         Cancelar
                     </button>
-                    <button
-                        (click)="register()"
-                        type="submit"
-                        class="btn btn-success"
-                    >
+                    <button (click)="register()" type="submit" class="btn btn-success">
                         Cadastre-se
                     </button>
                 </div>

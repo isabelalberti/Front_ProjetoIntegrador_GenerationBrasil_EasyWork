@@ -1,0 +1,11 @@
+.botao-roxo {
+  padding: 12px 30px;
+  color: #00d9ff;
+  border: 2px #00d9ff solid;
+}
+
+.botao-roxo:hover {
+  background-color: transparent;
+  color: #fff;
+  background-color: #00d9ff;
+}
