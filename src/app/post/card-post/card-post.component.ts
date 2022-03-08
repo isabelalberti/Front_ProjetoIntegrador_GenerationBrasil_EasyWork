@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Card } from 'src/app/model/Card';
+import { Skill } from 'src/app/model/Skill';
 import { User } from 'src/app/model/User';
-import { AuthService } from 'src/app/service/auth.service';
 import { CardService } from 'src/app/service/card.service';
 import { environment } from 'src/environments/environment.prod';
+import { SkillService } from 'src/app/service/skill.service'
 
 @Component({
     selector: 'app-card-post',
@@ -15,10 +16,13 @@ export class CardPostComponent implements OnInit {
     user: User = new User();
     idUser = environment.id;
 
-    card: Card = new Card();
-    tip: string;
+    skill: Skill = new Skill();
 
-    constructor(private router: Router, private cardService: CardService) {}
+    card: Card = new Card();
+    tipCard: string;
+    tipSkill: string;
+
+    constructor(private router: Router, private cardService: CardService, private skillService: SkillService, ) {}
 
     ngOnInit() {
         window.scroll(0, 0);
@@ -32,6 +36,8 @@ export class CardPostComponent implements OnInit {
         this.user.id = this.idUser;
         this.card.user = this.user;
 
+        this.skill.card = this.card;
+
         console.log(this.card);
         this.cardService.postCard(this.card).subscribe((resp: Card) => {
             this.card = resp;
@@ -40,9 +46,17 @@ export class CardPostComponent implements OnInit {
 
             this.card = new Card();
         });
+
+        this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
+            this.skill = resp;
+        });
     }
 
     changeTip(event: any) {
-        this.tip = event.target.value;
+        this.tipCard = event.target.value;
+    }
+
+    changeSkill(event: any) {
+        this.tipSkill = event.target.value;
     }
 }

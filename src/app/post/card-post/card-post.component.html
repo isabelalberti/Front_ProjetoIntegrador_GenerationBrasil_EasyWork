@@ -32,17 +32,17 @@
                                 class="nivel pr-3 align-items-center"
                                 for="card.tip"
                             >
-                                Tipo
+                                Tipo:
                             </label>
 
                             <select (change)="changeTip($event)">
                                 <option></option>
-                                <option value="estudo">Estudo</option>
                                 <option value="trabalho">Trabalho</option>
+                                <option value="estudo">Estudo</option>
                             </select>
                         </div>
 
-                        <div *ngIf="tip == 'estudo'">
+                        <div *ngIf="tipCard == 'trabalho'">
                             <div class="form-group">
                                 <label for="companyName">Empresa</label>
                                 <input
@@ -66,9 +66,87 @@
                                     placeholder="Nome da Ocupacao"
                                 />
                             </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="nivel pr-3 align-items-center"
+                                    for="card.tip"
+                                >
+                                    Tipo:
+                                </label>
+
+                                <select (change)="changeSkill($event)">
+                                    <label for="tecnicalSkill"
+                                        >Nome da Habilidade Pessoal</label
+                                    >
+                                    <option></option>
+                                    <option value="skill">
+                                        Habilidade pessoal
+                                    </option>
+                                    <option value="tecnicalSkill">
+                                        Habilidade interperssoal
+                                    </option>
+                                </select>
+
+                                <div *ngIf="tipSkill == 'tecnicalSkill'">
+
+                                    <div class="form-group">
+                                        <label for="tecnicalSkill"
+                                            >
+                                            Nome da Habilidade Interpessoal
+                                            </label>
+
+                                        <input
+                                            [(ngModel)]="skill.skill"
+                                            type="text"
+                                            class="form-control fm"
+                                            id="tecnicalSkill"
+                                            name="tecnicalSkill"
+                                            placeholder="Nome da Habilidade Interpessoal"
+                                        />
+
+                                        <div class="form-group fm">
+
+                                            <label class="nivel pr-3 align-items-center" for="skillNivel">
+                                                Nivel de sua Habilidade:
+                                            </label>
+
+                                            <select [(ngModel)]="skill.nivel">
+
+                                                <option value="AVANCADO">Avancado</option>
+                                                <option value="INTERMEDIARIO">Intermediario</option>
+                                                <option value="BASICO">Basico</option>
+                                                <option value="SENIOR">Senior</option>
+                                                <option value="PLENO">Pleno</option>
+                                                <option value="JUNIOR ">Junior</option>
+                                            </select>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div *ngIf="tipSkill == 'skill'">
+                                    <div class="form-group">
+                                        <label for="skill"
+                                            >Nome da Habilidade Pessoal
+                                        </label>
+
+                                        <input
+                                            [(ngModel)]="skill.technicalSkill"
+                                            type="text"
+                                            class="form-control fm"
+                                            id="skill"
+                                            name="skill"
+                                            placeholder="Nome da Habilidade Pessoal"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div *ngIf="tip == 'trabalho'">
+                        <div *ngIf="tipCard == 'estudo'">
                             <div class="form-group">
                                 <label for="institution">Instituicao</label>
                                 <input
