@@ -89,12 +89,10 @@
                                 </select>
 
                                 <div *ngIf="tipSkill == 'tecnicalSkill'">
-
                                     <div class="form-group">
-                                        <label for="tecnicalSkill"
-                                            >
+                                        <label for="tecnicalSkill">
                                             Nome da Habilidade Interpessoal
-                                            </label>
+                                        </label>
 
                                         <input
                                             [(ngModel)]="skill.skill"
@@ -106,24 +104,34 @@
                                         />
 
                                         <div class="form-group fm">
-
-                                            <label class="nivel pr-3 align-items-center" for="skillNivel">
+                                            <label
+                                                class="nivel pr-3 align-items-center"
+                                                for="skillNivel"
+                                            >
                                                 Nivel de sua Habilidade:
                                             </label>
 
                                             <select [(ngModel)]="skill.nivel">
-
-                                                <option value="AVANCADO">Avancado</option>
-                                                <option value="INTERMEDIARIO">Intermediario</option>
-                                                <option value="BASICO">Basico</option>
-                                                <option value="SENIOR">Senior</option>
-                                                <option value="PLENO">Pleno</option>
-                                                <option value="JUNIOR ">Junior</option>
+                                                <option value="AVANCADO">
+                                                    Avancado
+                                                </option>
+                                                <option value="INTERMEDIARIO">
+                                                    Intermediario
+                                                </option>
+                                                <option value="BASICO">
+                                                    Basico
+                                                </option>
+                                                <option value="SENIOR">
+                                                    Senior
+                                                </option>
+                                                <option value="PLENO">
+                                                    Pleno
+                                                </option>
+                                                <option value="JUNIOR ">
+                                                    Junior
+                                                </option>
                                             </select>
-
-
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -181,6 +189,92 @@
                                     name="image"
                                     placeholder="Certificado de Conclusao"
                                 />
+                            </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="nivel pr-3 align-items-center"
+                                    for="card.tip"
+                                >
+                                    Tipo:
+                                </label>
+
+                                <select (change)="changeSkill($event)">
+                                    <label for="tecnicalSkill"
+                                        >Nome da Habilidade Pessoal</label
+                                    >
+                                    <option></option>
+                                    <option value="skill">
+                                        Habilidade pessoal
+                                    </option>
+                                    <option value="tecnicalSkill">
+                                        Habilidade interperssoal
+                                    </option>
+                                </select>
+
+                                <div *ngIf="tipSkill == 'tecnicalSkill'">
+                                    <div class="form-group">
+                                        <label for="tecnicalSkill">
+                                            Nome da Habilidade Interpessoal
+                                        </label>
+
+                                        <input
+                                            [(ngModel)]="skill.skill"
+                                            type="text"
+                                            class="form-control fm"
+                                            id="tecnicalSkill"
+                                            name="tecnicalSkill"
+                                            placeholder="Nome da Habilidade Interpessoal"
+                                        />
+
+                                        <div class="form-group fm">
+                                            <label
+                                                class="nivel pr-3 align-items-center"
+                                                for="skillNivel"
+                                            >
+                                                Nivel de sua Habilidade:
+                                            </label>
+
+                                            <select [(ngModel)]="skill.nivel">
+                                                <option value="AVANCADO">
+                                                    Avancado
+                                                </option>
+                                                <option value="INTERMEDIARIO">
+                                                    Intermediario
+                                                </option>
+                                                <option value="BASICO">
+                                                    Basico
+                                                </option>
+                                                <option value="SENIOR">
+                                                    Senior
+                                                </option>
+                                                <option value="PLENO">
+                                                    Pleno
+                                                </option>
+                                                <option value="JUNIOR ">
+                                                    Junior
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div *ngIf="tipSkill == 'skill'">
+                                    <div class="form-group">
+                                        <label for="skill"
+                                            >Nome da Habilidade Pessoal
+                                        </label>
+
+                                        <input
+                                            [(ngModel)]="skill.technicalSkill"
+                                            type="text"
+                                            class="form-control fm"
+                                            id="skill"
+                                            name="skill"
+                                            placeholder="Nome da Habilidade Pessoal"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
