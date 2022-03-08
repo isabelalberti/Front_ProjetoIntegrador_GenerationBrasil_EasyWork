@@ -29,7 +29,8 @@ export class LoginComponent implements OnInit {
                 environment.id = this.userSLogin.id;
                 environment.picture = this.userSLogin.picture;
                 environment.type = this.userSLogin.type;
-                console.log(environment);
+                environment.city = this.userSLogin.city;
+                
 
                 this.router.navigate(['/card']);
             },
