@@ -34,4 +34,5 @@ export class CardService {
             this.token
         );
     }
+
 }
