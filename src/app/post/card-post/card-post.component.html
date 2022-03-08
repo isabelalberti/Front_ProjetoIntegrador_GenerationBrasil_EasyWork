@@ -35,7 +35,10 @@
                                 Tipo:
                             </label>
 
-                            <select (change)="changeTip($event)">
+                            <select
+                                class="form-control fm"
+                                (change)="changeTip($event)"
+                            >
                                 <option></option>
                                 <option value="trabalho">Trabalho</option>
                                 <option value="estudo">Estudo</option>
@@ -75,7 +78,10 @@
                                     Tipo:
                                 </label>
 
-                                <select (change)="changeSkill($event)">
+                                <select
+                                    class="form-control fm"
+                                    (change)="changeSkill($event)"
+                                >
                                     <label for="tecnicalSkill"
                                         >Nome da Habilidade Pessoal</label
                                     >
@@ -91,7 +97,7 @@
                                 <div *ngIf="tipSkill == 'tecnicalSkill'">
                                     <div class="form-group">
                                         <label for="tecnicalSkill">
-                                            Nome da Habilidade Interpessoal
+                                            Nome da Habilidade Tecnica
                                         </label>
 
                                         <input
@@ -111,7 +117,12 @@
                                                 Nivel de sua Habilidade:
                                             </label>
 
-                                            <select [(ngModel)]="skill.nivel">
+                                            <select
+                                                class="form-control fm"
+                                                (change)="changeNivel($event)"
+                                                id="skillNivel"
+                                                name="skillNivel"
+                                            >
                                                 <option value="AVANCADO">
                                                     Avancado
                                                 </option>
@@ -199,7 +210,10 @@
                                     Tipo:
                                 </label>
 
-                                <select (change)="changeSkill($event)">
+                                <select
+                                    class="form-control fm"
+                                    (change)="changeSkill($event)"
+                                >
                                     <label for="tecnicalSkill"
                                         >Nome da Habilidade Pessoal</label
                                     >
@@ -215,7 +229,7 @@
                                 <div *ngIf="tipSkill == 'tecnicalSkill'">
                                     <div class="form-group">
                                         <label for="tecnicalSkill">
-                                            Nome da Habilidade Interpessoal
+                                            Nome da Habilidade Tecnica
                                         </label>
 
                                         <input
@@ -235,7 +249,11 @@
                                                 Nivel de sua Habilidade:
                                             </label>
 
-                                            <select [(ngModel)]="skill.nivel">
+                                            <select
+                                                (change)="changeNivel($event)"
+                                                class="form-control fm"
+                                            >
+                                                <option></option>
                                                 <option value="AVANCADO">
                                                     Avancado
                                                 </option>
@@ -251,7 +269,7 @@
                                                 <option value="PLENO">
                                                     Pleno
                                                 </option>
-                                                <option value="JUNIOR ">
+                                                <option value="JUNIOR">
                                                     Junior
                                                 </option>
                                             </select>

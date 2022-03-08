@@ -5,7 +5,7 @@ import { Skill } from 'src/app/model/Skill';
 import { User } from 'src/app/model/User';
 import { CardService } from 'src/app/service/card.service';
 import { environment } from 'src/environments/environment.prod';
-import { SkillService } from 'src/app/service/skill.service'
+import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
     selector: 'app-card-post',
@@ -19,37 +19,28 @@ export class CardPostComponent implements OnInit {
     skill: Skill = new Skill();
 
     card: Card = new Card();
+
     tipCard: string;
+
     tipSkill: string;
 
-    constructor(private router: Router, private cardService: CardService, private skillService: SkillService, ) {}
+    tipNivel: string;
+
+    idCard: number
+
+    constructor(
+        private router: Router,
+        private cardService: CardService,
+        private skillService: SkillService
+    ) {}
 
     ngOnInit() {
         window.scroll(0, 0);
         if (environment.token == '') {
-            this.router.navigate(['/home']);
+            this.router.navigate(['/login']);
         }
         this.cardService.refreshToken();
-    }
-
-    publish() {
-        this.user.id = this.idUser;
-        this.card.user = this.user;
-
-        this.skill.card = this.card;
-
-        console.log(this.card);
-        this.cardService.postCard(this.card).subscribe((resp: Card) => {
-            this.card = resp;
-
-            alert('Card Postado com Sucesso');
-
-            this.card = new Card();
-        });
-
-        this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
-            this.skill = resp;
-        });
+        this.skillService.refreshToken()
     }
 
     changeTip(event: any) {
@@ -58,5 +49,50 @@ export class CardPostComponent implements OnInit {
 
     changeSkill(event: any) {
         this.tipSkill = event.target.value;
+    }
+
+    changeNivel(event: any) {
+        this.tipNivel = event.target.value;
+        console.log(this.tipNivel)
+    }
+
+    publish() {
+        this.user.id = this.idUser;
+        this.card.user = this.user;
+
+        this.cardService.postCard(this.card).subscribe((resp: Card) => {
+            this.card = resp;
+            this.idCard = this.card.id
+            this.card = new Card();
+        });
+
+        this.card.id = this.idCard
+        this.skill.card = this.card;
+        this.skill.nivel = this.tipNivel;
+
+        console.log(this.skill);
+
+        this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
+            this.skill = resp;
+        });
+
+        this.skill = new Skill();
+        alert('Card Postado com Sucesso');
+    }
+
+    publish2() {
+        this.card.id = this.idCard
+        this.skill.card = this.card;
+        this.skill.nivel = this.tipNivel;
+
+        console.log(this.skill);
+
+        this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
+            this.skill = resp;
+        });
+
+        this.card = new Card();
+        this.skill = new Skill();
+        alert('Card Postado com Sucesso');
     }
 }
