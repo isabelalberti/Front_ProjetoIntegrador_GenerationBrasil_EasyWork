@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
     idUser = environment.id
 
 
+
     constructor(
         private router: Router,
         private cardService: CardService,
@@ -50,6 +51,7 @@ export class HomeComponent implements OnInit {
 
 
     }
+
 
     choiceSkill(event: any){
         this.skillType = event.target.value;

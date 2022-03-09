@@ -9,10 +9,7 @@ import { AuthService } from './service/auth.service';
 export class AppComponent {
     title(title: any) {
 
-      throw new Error('Method not implemented.');
-
         throw new Error('Method not implemented.');
-
     }
-    constructor(public auth: AuthService) {}
+    constructor(public auth: AuthService) { }
 }
