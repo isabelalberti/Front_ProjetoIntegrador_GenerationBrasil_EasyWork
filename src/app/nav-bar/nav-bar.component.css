@@ -1,10 +1,19 @@
+.navbar {
+    z-index: 999;
+}
+
 li {
     list-style: none;
 }
 
 .btn {
-    color: #3f0126;
-    border: solid rgba(31, 31, 31, 0.801);
+    border: solid rgb(255, 255, 255);
+    transition: 200ms;
+}
+
+.btn:hover {
+    color: rgb(122, 156, 189);
+    border: solid rgb(122, 156, 189);
 }
 
 .img-fluid {
