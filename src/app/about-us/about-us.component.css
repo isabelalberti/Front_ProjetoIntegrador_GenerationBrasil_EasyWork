@@ -30,7 +30,7 @@ ul.social-network li {
 }
 
 h1 {
-  color: rgb(37, 37, 37);
+    color: rgb(37, 37, 37);
 }
 
 @media (max-width: 768px) {
@@ -41,6 +41,6 @@ h1 {
 }
 
 row:hover {
-  box-shadow: 1px 3px 6px #000;
-  width: min(100vw - 20px, 85px);
+    box-shadow: 1px 3px 6px #000;
+    width: min(100vw - 20px, 85px);
 }
