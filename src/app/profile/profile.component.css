@@ -1,56 +1,80 @@
-.main-body {
-    padding: 8px;
+.flip-card-container {
+color: white;
+width: 230px;
+height: 350px;
 }
 
-.single_advisor_profile .advisor_thumb {
-    border-radius: 15px 15px 0 0;
-    padding: 30px 30px 0 30px;
-    background-color: #3f43fd;
+.tam{
+width: 73vw;
 }
 
-.single_advisor_profile .single_advisor_details_info {
-    padding: 30px;
-    text-align: right;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    border-radius: 0 0 15px 15px;
-    background-color: #ffffff;
+.flip-card {
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+  transition: .6s .1s;
 }
 
-.single_advisor_profile .single_advisor_details_info::after {
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    width: 50px;
-    height: 4px;
+/* hover and focus-within states */
+.flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card {
+  transform: rotateY(180deg);
 }
 
-.single_advisor_profile .single_advisor_details_info h6 {
-    margin-bottom: 0.25rem;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
+/* .card-... */
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: rgba(137, 43, 226, 0.294);
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.single_advisor_profile .single_advisor_details_info p {
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    margin-bottom: 1;
-    font-size: 14px;
+/* .card-front */
+.card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
 }
 
-.single_advisor_profile:hover .advisor_thumb::after,
-.single_advisor_profile:focus .advisor_thumb::after,
-.single_advisor_profile:hover .single_advisor_details_info,
-.single_advisor_profile:focus .single_advisor_details_info {
-    background-color: #070a57;
+/* .card-back */
+.card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
 }
 
-.single_advisor_profile:hover .single_advisor_details_info h6,
-.single_advisor_profile:focus .single_advisor_details_info h6,
-.single_advisor_profile:hover .single_advisor_details_info p,
-.single_advisor_profile:focus .single_advisor_details_info p {
+.dois {
+  list-style: none;
+}
+
+li {
+  padding-bottom: 12px;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 3rem;
+ }
+
+.cardCriar{
+  
+    border: 0;
     color: #ffffff;
+    box-shadow: 0 0 20px -5px rgba(56, 55, 55, 0.836);
+    transition: 0.5s;
+    cursor: pointer;
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+   
 }
-
-.header-menu {
-    list-style: none;
+.fa {
+  font-size: 30px;
 }

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { AlertService } from '../service/alert.service';
+import { Card } from '../model/Card';
+import { User} from '../model/User';
 import { AuthService } from '../service/auth.service';
+import { CardService } from '../service/card.service';
 
 @Component({
   selector: 'app-profile',
@@ -14,20 +16,30 @@ export class ProfileComponent implements OnInit {
   picture = environment.picture
   fullName = environment.fullName
   city = environment.city
-  temaFormation = environment.temaFormation
-  description = environment.descriptionFormation
+  descricao = environment.description
   github = environment.github
   linkedin = environment.linkedin
 
+  cardList: Card[]
+
+  user: User = new User()
 
   constructor(
     private router: Router,
     public authService: AuthService,
+    private cardService: CardService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
     this.authService.refreshToken()
+
+    this.getByIdUser()
   }
 
+  getByIdUser() {
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
+    this.user = resp
+    })
+  }
 }

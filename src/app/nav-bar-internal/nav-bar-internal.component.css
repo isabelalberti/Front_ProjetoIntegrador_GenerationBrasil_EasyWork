@@ -4,5 +4,8 @@
 
 a{
  cursor: pointer;
+}
 
+.navbar{
+  background-color: #ecc3dc10;
 }

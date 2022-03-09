@@ -9,10 +9,11 @@ export const environment = {
     city: '',
     phone: '',
     pictureFormation: '',
-    temaFormation: '',
-    descriptionFormation: '',
+    description: '',
     skill:'',
     github:'',
     linkedin:'',
     instagram:'',
+    empresa:'',
+    occupation:'',
 };

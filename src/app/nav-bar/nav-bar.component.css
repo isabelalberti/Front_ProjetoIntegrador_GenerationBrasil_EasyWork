@@ -4,9 +4,13 @@ li {
 
 .btn {
     color: #3f0126;
-    border: solid rgba(31, 31, 31, 0.801);
+    border: solid #ffff;
 }
 
 .img-fluid {
     color: white;
+}
+
+.navbar{
+    background-color: #ecc3dc10;
 }
