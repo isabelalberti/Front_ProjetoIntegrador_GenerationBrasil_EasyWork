@@ -11,6 +11,8 @@ export class Card {
     public startDate: string;
     public endDate: string;
     public image: string;
+    public option: string;
+    public FunctionDescription: string;
     public user: User;
     public skill: Skill[];
 }

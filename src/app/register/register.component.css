@@ -1,16 +1,14 @@
 .botao-roxo {
-  padding: 12px 30px;
-  color:rgb(255, 255, 255);
-  border: 2px rgb(255, 255, 255) solid;
+    padding: 12px 30px;
+    color: rgb(255, 255, 255);
+    border: 2px rgb(255, 255, 255) solid;
 }
 
-.col{
-  background-color:#35024246;
-  border-radius: 2rem;
-  
+.col {
+    background-color: #35024246;
+    border-radius: 2rem;
 }
 
-.form-group{
-  color: rgb(255, 255, 255);
-  
+.form-group {
+    color: rgb(255, 255, 255);
 }

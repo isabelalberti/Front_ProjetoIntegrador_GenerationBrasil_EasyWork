@@ -11,5 +11,8 @@ export const environment = {
     pictureFormation: '',
     temaFormation: '',
     descriptionFormation: '',
-    skill:'',
+    skill: '',
+    github: '',
+    linkedin: '',
+    instagram: '',
 };

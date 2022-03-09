@@ -9,8 +9,7 @@ import { UserSecurityLogin } from '../model/UserSecurityLogin';
     providedIn: 'root',
 })
 export class AuthService {
-
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {}
 
     token = {
         headers: new HttpHeaders().set('Authorization', environment.token),
@@ -22,6 +21,13 @@ export class AuthService {
         };
     }
 
+    getByIdUser(id: number): Observable<User> {
+        return this.http.get<User>(
+            `https://projeto-integrador-grupo2.herokuapp.com/user/id/${id}`,
+            this.token
+        );
+    }
+
     login(userSecurityLogin: UserSecurityLogin): Observable<UserSecurityLogin> {
         return this.http.post<UserSecurityLogin>(
             'https://projeto-integrador-grupo2.herokuapp.com/user/login',
@@ -30,7 +36,10 @@ export class AuthService {
     }
 
     putUser(user: User): Observable<User> {
-        return this.http.put<User>('https://projeto-integrador-grupo2.herokuapp.com/user/alterar', user);
+        return this.http.put<User>(
+            'https://projeto-integrador-grupo2.herokuapp.com/user/alterar',
+            user
+        );
     }
 
     register(user: User): Observable<User> {
@@ -49,15 +58,7 @@ export class AuthService {
         return ok;
     }
 
-    getByIdUser(id: number): Observable<User> {
-        return this.http.get<User>(
-            `hhttps://projeto-integrador-grupo2.herokuapp.com/user/${id}`,
-            this.token
-        );
-    }
-
     adm() {
-
         let ok: boolean;
 
         if (environment.type == 'adm') {

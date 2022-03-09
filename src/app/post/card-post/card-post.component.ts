@@ -60,10 +60,21 @@ export class CardPostComponent implements OnInit {
         this.user.id = this.idUser;
         this.card.user = this.user;
 
+        this.card.option = this.tipCard;
+
+        if (this.tipCard == 'Profissional') {
+            this.card.institution = '';
+            this.card.formation = '';
+            this.card.image = '';
+        } else {
+            this.card.companyName = '';
+            this.card.occupation = '';
+        }
+
         this.cardService.postCard(this.card).subscribe((resp: Card) => {
             this.card = resp;
-            this.idCard = this.card.id
-            console.log(this.card)
+            this.idCard = this.card.id;
+            console.log(this.card);
 
             this.skill.card = this.card;
             this.skill.nivel = this.tipNivel;
@@ -72,9 +83,9 @@ export class CardPostComponent implements OnInit {
                 this.skill = resp;
             });
 
-        this.card = new Card();
-        this.skill = new Skill();
-        alert('Card Postado com Sucesso');
+            this.card = new Card();
+            this.skill = new Skill();
+            alert('Card Postado com Sucesso');
         });
     }
 }

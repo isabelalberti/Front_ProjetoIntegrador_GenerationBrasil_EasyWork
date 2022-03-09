@@ -8,6 +8,7 @@ import { CardEditComponent } from './edit/card-edit/card-edit.component';
 import { HomeComponent } from './home/home.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { LoginComponent } from './login/login.component';
+import { NavBarInternalComponent } from './nav-bar-internal/nav-bar-internal.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CardPostComponent } from './post/card-post/card-post.component';
 import { SkillPostComponent } from './post/skill-post/skill-post.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
     { path: 'delete-card/:id', component: CardDeleteComponent },
     { path: 'home', component: HomeComponent },
     { path: 'profile', component: ProfileComponent },
+    { path: 'nav-bar-internal', component: NavBarInternalComponent },
     { path: 'skill-post', component: SkillPostComponent },
     { path: 'skill-delete', component: SkillDeleteComponent },
 ];

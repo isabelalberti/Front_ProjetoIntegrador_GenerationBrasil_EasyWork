@@ -25,9 +25,8 @@ export class UserComponent implements OnInit {
     constructor(
         private router: Router,
         private route: ActivatedRoute,
-        private authService: AuthService
-    ) //private alert: AlertService
-    {}
+        private authService: AuthService //private alert: AlertService
+    ) {}
 
     ngOnInit() {
         window.scroll(0, 0);
