@@ -7,7 +7,7 @@
 }
 .bg-test {
     border-radius: 32px;
-    background-color: #770db935 !important;
+    background-color: #be00d72a !important;
 }
 
 .hovercyan {
@@ -26,7 +26,6 @@
     text-decoration: none;
     text-transform: uppercase;
     color: #0197de;
-    background-color: #770db986;
     letter-spacing: 10px;
     font-size: 18px;
     transition: 0.5s;
