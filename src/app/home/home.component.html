@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid " style="background-color: #161f38;">
 
   <div class="row">
     <div class="col-md-12 d-flex justify-content-center py-3">
@@ -74,62 +74,42 @@
           </div>
         </div>
       </div>
-
-      <div>
-        <button class="btn btn-primary mb-5" type="submit" routerLink="/">Edit Card</button>
-      </div>
-
     </div>
 
 
-    <div class="d-flex justify-content-center">
-      <nav>
-        <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-          <a (click)="findByIdUser()" class="nav-link text-secondary font-weight-bold" id="nav-profile-tab"
-            data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens"
-            aria-selected="false">Minhas
-            Postagens</a>
-
-        </div>
-      </nav>
-
-      <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-
-        <div class="card-columns">
-          <div class="card text-center" *ngFor="let item of user.card">
-            <div class="card-body">
-              <p *ngIf="education()" class="card-title m-0">{{item.image}}</p>
-              <p *ngIf="education()" class="text-muted">{{formacao + item.formation}}</p>
-              <p *ngIf="education()" class="card-text mt-3">{{instituicao + item.institution}}</p>
-              <p *ngIf="professional()" class="card-text mt-3">{{item.occupation}}</p>
-              <p *ngIf="professional()" class="card-text mt-3">{{nomeEmpresa + item.companyName}}</p>
-              <p class="card-text"> <small class="text-muted">{{item.startDate | date: "dd/MM/yyyy"}} fim {{item.endDate
-                  | date: "dd/MM/yyyy"}} </small></p>
-
-              <a [routerLink]="['/edit-card', item.id]" class="text-info mr-3" href="">Editar</a>
-              <a [routerLink]="['/delete-card', item.id]" class="text-danger" href="">Apagar</a>
-
+    
+      <div class="d-flex justify-content-center flex-column">
+        <nav>
+          <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
+            <a (click)="findByIdUser()" class="nav-link text-secondary font-weight-bold" id="nav-profile-tab"
+              data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens"
+              aria-selected="false">Minhas
+              Postagens</a>
+  
+          </div>
+        </nav>
+  
+        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+  
+          <div class="card-columns">
+            <div class="card text-center" *ngFor="let item of user.card">
+              <div class="card-body">
+                <p *ngIf="education()" class="card-title m-0">{{item.image}}</p>
+                <p *ngIf="education()" class="text-muted">{{formacao + item.formation}}</p>
+                <p *ngIf="education()" class="card-text mt-3">{{instituicao + item.institution}}</p>
+                <p *ngIf="professional()" class="card-text mt-3">{{item.occupation}}</p>
+                <p *ngIf="professional()" class="card-text mt-3">{{nomeEmpresa + item.companyName}}</p>
+                <p class="card-text"> <small class="text-muted">{{item.startDate | date: "dd/MM/yyyy"}} fim {{item.endDate
+                    | date: "dd/MM/yyyy"}} </small></p>
+  
+                <a [routerLink]="['/edit-card', item.id]" class="text-info mr-3" href="">Editar</a>
+                <a [routerLink]="['/delete-card', item.id]" class="text-danger" href="">Apagar</a>
+  
+              </div>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
-      </div>
-=======
-
-<div class="container-fluid" style="background-color: #161f38;">
-
-  <div class="row">
-    <div class="col-md-12 d-flex justify-content-center py-3">
-
-      <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
-        <div class="card-body">
-          <h5 class="card-title">{{item.institution}}</h5>
-          <p class="card-text">{{item.formation}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-
-        </div>
-
->>>>>>> 02db9d7b715fff9a839c44e8ec0b2b93b656703b
+      
     </div>
   </div>
 </div>

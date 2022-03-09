@@ -33,7 +33,6 @@ const routes: Routes = [
 
     { path: 'skill-post', component: SkillPostComponent },
     { path: 'skill-delete', component: SkillDeleteComponent },
-
 ];
 
 @NgModule({
