@@ -1,14 +1,110 @@
-.botao-roxo {
-    padding: 12px 30px;
-    color: rgb(255, 255, 255);
-    border: 2px rgb(255, 255, 255) solid;
-}
-
 .col {
-    background-color: #35024246;
+    background-color: #ebded5;
     border-radius: 2rem;
+    color: #1f273f;
 }
 
-.form-group {
-    color: rgb(255, 255, 255);
+h1 {
+    color: #1f273f;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 8px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1f273f;
+    letter-spacing: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: rgb(122, 156, 189);
+}
+
+.btn span {
+    display: block;
+    position: absolute;
+    background: rgb(122, 156, 189);
+}
+
+.btn span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 1%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.btn:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.btn span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.btn:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.btn span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 1%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.hovercyan {
+    color: rgb(122, 156, 189);
+}
+
+.hovercyan:hover {
+    color: #c94672;
+    text-decoration: none;
 }
