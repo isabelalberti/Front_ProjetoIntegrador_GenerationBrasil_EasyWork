@@ -8,6 +8,7 @@ import { Skill } from '../model/Skill';
     providedIn: 'root',
 })
 export class SkillService {
+    [x: string]: any;
     constructor(private http: HttpClient) {}
 
     token = {
@@ -22,21 +23,21 @@ export class SkillService {
 
     getAllSkill(): Observable<Skill[]> {
         return this.http.get<Skill[]>(
-            'https://easyworkgen.herokuapp.com/skill',
+            'https://projeto-integrador-grupo2.herokuapp.com/skill',
             this.token
         );
     }
 
     getByIdSkill(id: number): Observable<Skill> {
         return this.http.get<Skill>(
-            'https://easyworkgen.herokuapp.com/skill/${id}',
+            'https://projeto-integrador-grupo2.herokuapp.com/skill/${id}',
             this.token
         );
     }
 
     postSkill(skill: Skill): Observable<Skill> {
         return this.http.post<Skill>(
-            'https://easyworkgen.herokuapp.com/skill/insert',
+            'https://projeto-integrador-grupo2.herokuapp.com/skill/insert',
             skill,
             this.token
         );
@@ -44,7 +45,7 @@ export class SkillService {
 
     putSkill(skill: Skill): Observable<Skill> {
         return this.http.put<Skill>(
-            'https://easyworkgen.herokuapp.com/skill/',
+            'https://projeto-integrador-grupo2.herokuapp.com/skill/',
             skill,
             this.token
         );
@@ -52,7 +53,7 @@ export class SkillService {
 
     deleteSkill(id: number) {
         return this.http.delete(
-            `https://easyworkgen.herokuapp.com/skill/${id}`,
+            `https://projeto-integrador-grupo2.herokuapp.com/skill/${id}`,
             this.token
         );
     }
