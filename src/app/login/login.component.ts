@@ -12,7 +12,7 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
     userSLogin: UserSecurityLogin = new UserSecurityLogin();
 
-    constructor(private auth: AuthService, private router: Router) { }
+    constructor(private auth: AuthService, private router: Router) {}
 
     ngOnInit() {
         window.scroll(0, 0);
@@ -29,10 +29,14 @@ export class LoginComponent implements OnInit {
                 environment.id = this.userSLogin.id;
                 environment.picture = this.userSLogin.picture;
                 environment.type = this.userSLogin.type;
-                console.log(environment)
+                environment.city = this.userSLogin.city;
+
 
                 this.router.navigate(['/nav-bar-internal'])
                 //this.router.navigate(['/profile'])//
+
+                this.router.navigate(['/card']);
+
             },
 
             error: (erro) => {

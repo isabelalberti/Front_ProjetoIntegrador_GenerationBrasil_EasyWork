@@ -22,7 +22,7 @@ export class CardService {
 
     postCard(card: Card): Observable<Card> {
         return this.http.post<Card>(
-            'https://easyworkgen.herokuapp.com/card/insert',
+            'https://projeto-integrador-grupo2.herokuapp.com/card/insert',
             card,
             this.token
         );
@@ -30,8 +30,9 @@ export class CardService {
 
     getAllCard(): Observable<Card[]> {
         return this.http.get<Card[]>(
-            'https://easyworkgen.herokuapp.com/card',
+            'https://projeto-integrador-grupo2.herokuapp.com/card',
             this.token
         );
     }
+
 }

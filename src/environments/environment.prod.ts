@@ -6,4 +6,10 @@ export const environment = {
     picture: '',
     email: '',
     type: '',
+    city: '',
+    phone: '',
+    pictureFormation: '',
+    temaFormation: '',
+    descriptionFormation: '',
+    skill:'',
 };

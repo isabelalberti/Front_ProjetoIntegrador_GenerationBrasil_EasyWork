@@ -1,43 +1,46 @@
-.card{
-  box-shadow:  5px 5px 12px rgba(0, 0, 0, 0.6);
+.card {
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.6);
 }
 
 ul.social-network {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 ul.social-network li {
-  display: inline;
-  margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+    display: inline;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .fa-brands {
-  font-size: 35pt;
-  color: white;
-  padding-left: 1rem;
-  padding-right: 1rem;
+    font-size: 35pt;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .fa-github-square:hover {
-  color: black;
+    color: black;
 }
 
 .fa-linkedin:hover {
-  color: #0072b1;
+    color: #0072b1;
 }
 
 h1 {
-  font-size: pt;
-  background:-webkit-linear-gradient(277.91deg, #042969 12%, #0dd5f0 100%);
-  -webkit-text-fill-color: transparent;
+    color: rgb(37, 37, 37);
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 24pt;
-    font-family: "Times New Roman", Times, serif;
-  }
+    h1 {
+        font-size: 24pt;
+        font-family: "Times New Roman", Times, serif;
+    }
+}
+
+row:hover {
+    box-shadow: 1px 3px 6px #000;
+    width: min(100vw - 20px, 85px);
 }
