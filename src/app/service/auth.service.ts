@@ -21,16 +21,20 @@ export class AuthService {
         };
     }
 
+    getByIdUser(id: number): Observable<User>{
+        return this.http.get<User>(`https://projeto-integrador-grupo2.herokuapp.com/user/id/${id}`, this.token)
+    }
+
     login(userSecurityLogin: UserSecurityLogin): Observable<UserSecurityLogin> {
         return this.http.post<UserSecurityLogin>(
-            'https://easyworkgen.herokuapp.com/user/login',
+            'https://projeto-integrador-grupo2.herokuapp.com/user/login',
             userSecurityLogin
         );
     }
 
     register(user: User): Observable<User> {
         return this.http.post<User>(
-            'https://easyworkgen.herokuapp.com/user/register',
+            'https://projeto-integrador-grupo2.herokuapp.com/user/register',
             user
         );
     }
