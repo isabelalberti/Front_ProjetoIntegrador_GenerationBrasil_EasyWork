@@ -12,4 +12,7 @@ export const environment = {
     temaFormation: '',
     descriptionFormation: '',
     skill:'',
+    github:'',
+    linkedin:'',
+    instagram:'',
 };

@@ -16,6 +16,8 @@ export class ProfileComponent implements OnInit {
   city = environment.city
   temaFormation = environment.temaFormation
   description = environment.descriptionFormation
+  github = environment.github
+  linkedin = environment.linkedin
 
 
   constructor(
