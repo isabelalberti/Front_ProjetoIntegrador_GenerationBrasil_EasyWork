@@ -29,14 +29,20 @@ export class LoginComponent implements OnInit {
                 environment.id = this.userSLogin.id;
                 environment.picture = this.userSLogin.picture;
                 environment.type = this.userSLogin.type;
-                environment.city = this.userSLogin.city;
+                environment.city = this.userSLogin.city;         
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 this.router.navigate(['/nav-bar-internal'])
                 //this.router.navigate(['/profile'])//
 =======
                 this.router.navigate(['/card']);
 >>>>>>> 5783d80698eb20f14e93ef7a33b69829d8fb94ed
+=======
+                console.log(environment)
+
+                this.router.navigate(['/home']);
+>>>>>>> 1a70974a41f2dc9bd499c6f03d77eed250b6f79f
             },
 
             error: (erro) => {

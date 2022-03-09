@@ -28,12 +28,9 @@ const routes: Routes = [
     { path: 'delete-card/:id', component: CardDeleteComponent },
     { path: 'home', component: HomeComponent },
     { path: 'profile', component: ProfileComponent },
-<<<<<<< HEAD
-    { path:  'nav-bar-internal', component: NavBarInternalComponent}
-=======
+    { path: 'nav-bar-internal', component: NavBarInternalComponent},
     { path: 'skill-post', component: SkillPostComponent },
     { path: 'skill-delete', component: SkillDeleteComponent },
->>>>>>> 5783d80698eb20f14e93ef7a33b69829d8fb94ed
 ];
 
 @NgModule({
