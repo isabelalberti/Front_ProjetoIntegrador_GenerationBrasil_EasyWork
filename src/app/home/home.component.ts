@@ -15,8 +15,8 @@ import { SkillService } from '../service/skill.service';
     styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+    cardList: Card[];
 
-    cardList: Card[]
     card: Card = new Card()
 
     skill : Skill = new Skill()
@@ -122,3 +122,5 @@ export class HomeComponent implements OnInit {
         return ok;
     }
 }   
+
+

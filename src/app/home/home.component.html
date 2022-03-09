@@ -94,23 +94,25 @@
       </nav>
 
       <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-            
+
         <div class="card-columns">
-            <div class="card text-center" *ngFor="let item of user.card">
-                <div class="card-body">
-                    <p *ngIf="education()" class="card-title m-0">{{item.image}}</p>
-                    <p *ngIf="education()" class="text-muted">{{formacao + item.formation}}</p>
-                    <p *ngIf="education()" class="card-text mt-3">{{instituicao + item.institution}}</p>
-                    <p *ngIf="professional()" class="card-text mt-3">{{item.occupation}}</p>
-                    <p *ngIf="professional()" class="card-text mt-3">{{nomeEmpresa + item.companyName}}</p>
-                    <p class="card-text"> <small class="text-muted">{{item.startDate | date: "dd/MM/yyyy"}} fim {{item.endDate | date: "dd/MM/yyyy"}} </small></p>
+          <div class="card text-center" *ngFor="let item of user.card">
+            <div class="card-body">
+              <p *ngIf="education()" class="card-title m-0">{{item.image}}</p>
+              <p *ngIf="education()" class="text-muted">{{formacao + item.formation}}</p>
+              <p *ngIf="education()" class="card-text mt-3">{{instituicao + item.institution}}</p>
+              <p *ngIf="professional()" class="card-text mt-3">{{item.occupation}}</p>
+              <p *ngIf="professional()" class="card-text mt-3">{{nomeEmpresa + item.companyName}}</p>
+              <p class="card-text"> <small class="text-muted">{{item.startDate | date: "dd/MM/yyyy"}} fim {{item.endDate
+                  | date: "dd/MM/yyyy"}} </small></p>
 
-                    <a [routerLink]="['/edit-card', item.id]" class="text-info mr-3" href="">Editar</a>
-                    <a [routerLink]="['/delete-card', item.id]" class="text-danger" href="">Apagar</a>
+              <a [routerLink]="['/edit-card', item.id]" class="text-info mr-3" href="">Editar</a>
+              <a [routerLink]="['/delete-card', item.id]" class="text-danger" href="">Apagar</a>
 
-                </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { Skill } from '../model/Skill';
     providedIn: 'root',
 })
 export class SkillService {
+    [x: string]: any;
     constructor(private http: HttpClient) {}
 
     token = {
