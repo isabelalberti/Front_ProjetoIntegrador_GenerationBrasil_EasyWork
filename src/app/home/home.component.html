@@ -1,4 +1,17 @@
 <div class="container-fluid">
+
+
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center py-3">
+        <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
+          <div class="card-body">
+            <h5 class="card-title">{{item.institution}}</h5>
+            <p class="card-text">{{item.formation}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+
+      </div>
+
     <div class="row">
         <div class="col-md-12 d-flex justify-content-center py-3">
             <div
@@ -12,6 +25,19 @@
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
+
+<div class="container-fluid" style="background-color: #161f38;">
+
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center py-3">
+
+      <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
+        <div class="card-body">
+          <h5 class="card-title">{{item.institution}}</h5>
+          <p class="card-text">{{item.formation}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+
         </div>
+
     </div>
 </div>

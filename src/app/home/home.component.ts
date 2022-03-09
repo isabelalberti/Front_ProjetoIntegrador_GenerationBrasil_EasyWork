@@ -12,11 +12,29 @@ import { CardService } from '../service/card.service';
 export class HomeComponent implements OnInit {
     cardList: Card[];
 
+
+    cardList: Card[]
+
+    constructor(
+        private router: Router,
+        private cardService: CardService
+    ) { }
+    ngOnInit() {
+        window.scroll(0,0)
+
+        }   
+        
+    getAllCard() {
+
+    }
+}
+
     constructor(private router: Router, private cardService: CardService) {}
 
     ngOnInit() {
         window.scroll(0, 0);
     }
+
 
     getAllCard() {}
 }
