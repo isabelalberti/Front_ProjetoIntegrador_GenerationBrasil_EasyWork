@@ -24,18 +24,18 @@ export class AuthService {
 
     login(userSecurityLogin: UserSecurityLogin): Observable<UserSecurityLogin> {
         return this.http.post<UserSecurityLogin>(
-            'https://easyworkgen.herokuapp.com/user/login',
+            'https://projeto-integrador-grupo2.herokuapp.com/user/login',
             userSecurityLogin
         );
     }
 
     putUser(user: User): Observable<User> {
-        return this.http.put<User>('https://easyworkgen.herokuapp.com/user/alterar', user);
+        return this.http.put<User>('https://projeto-integrador-grupo2.herokuapp.com/user/alterar', user);
     }
 
     register(user: User): Observable<User> {
         return this.http.post<User>(
-            'https://easyworkgen.herokuapp.com/user/register',
+            'https://projeto-integrador-grupo2.herokuapp.com/user/register',
             user
         );
     }
@@ -51,7 +51,7 @@ export class AuthService {
 
     getByIdUser(id: number): Observable<User> {
         return this.http.get<User>(
-            `https://easyworkgen.herokuapp.com/user/${id}`,
+            `hhttps://projeto-integrador-grupo2.herokuapp.com/user/${id}`,
             this.token
         );
     }
