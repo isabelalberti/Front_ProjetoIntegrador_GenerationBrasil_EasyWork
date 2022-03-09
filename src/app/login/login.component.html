@@ -1,25 +1,47 @@
-<div class="container-fluid vh-100 d-flex align-items-center ml-0" style="background-color: #161f38;">
+<div class="container-fluid vh-100 d-flex align-items-center ml-0">
     <div class="col-md-5 d-flex justify-content-center">
-        <img class="img-fluid w-75" src="../../assets/img/loginimg.png" alt="colocar logo aqui" />
+        <img
+            class="img-fluid w-75"
+            src="../../assets/img/loginimg.png"
+            alt="colocar logo aqui"
+        />
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-9 bg-test deepBlack">
-                <h1 class="fm cw mt-3">Login</h1>
-                <div class="fm cw form-group">
+            <div class="col-md-9 bg-test py-3 deepBlack">
+                <h1 class="fm cw mt-3">Entrar</h1>
+                <div class="fm cw my-2 form-group">
                     <label for="usuario">Usuário</label>
-                    <input [(ngModel)]="userSLogin.email" class="form-control" type="text" name="user" id="user"
-                        placeholder="Digite seu usuario" />
-                    <small id="emailHelp" class="cw form-text text-muted">Nunca iremos compartilhar seu endereço de
-                        e-mail.</small>
+                    <input
+                        [(ngModel)]="userSLogin.email"
+                        class="form-control"
+                        type="text"
+                        name="user"
+                        id="user"
+                        placeholder="Digite seu usuario"
+                    />
+                    <small id="emailHelp" class="cw form-text text-muted"
+                        >Nunca iremos compartilhar seu endereço de
+                        e-mail.</small
+                    >
                 </div>
-                <div class="fm cw form-group">
+                <div class="fm cw my-2 form-group">
                     <label for="usuario">Senha</label>
-                    <input [(ngModel)]="userSLogin.password" class="form-control" type="password" name="password"
-                        id="password" placeholder="Digite sua senha" />
+                    <input
+                        [(ngModel)]="userSLogin.password"
+                        class="form-control"
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Digite sua senha"
+                    />
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn mr-3 mt-4" (click)="login()">
+                    <button
+                        type="submit"
+                        class="btn mr-3 mt-4"
+                        (click)="login()"
+                    >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -27,7 +49,11 @@
                         Entrar
                     </button>
 
-                    <button type="submit" class="btn ml-3 mt-4" routerLink="/nav-bar">
+                    <button
+                        type="submit"
+                        class="btn ml-3 mt-4"
+                        routerLink="/nav-bar"
+                    >
                         <span></span>
                         <span></span>
                         <span></span>
@@ -35,17 +61,18 @@
                         Voltar
                     </button>
                 </div>
-                <hr class="fm cw my-4" />
+                <hr class="fm cw my-2" />
                 <div class="text-center font-weight-bold">
                     <a class="cw hovercyan ponteiro">Esqueceu sua senha?</a>
                 </div>
 
                 <div>
-                    <hr class="mt-5 mb-4" />
+                    <hr class="mt-2 mb-2" />
                     <p class="fm cw text-center">
                         Nao tem um conta?
                         <a class="hovercyan" routerLink="/register">
-                            Cadastre-se</a>
+                            Cadastre-se</a
+                        >
                     </p>
                 </div>
             </div>
