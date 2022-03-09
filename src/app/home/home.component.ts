@@ -17,7 +17,6 @@ import { SkillService } from '../service/skill.service';
 export class HomeComponent implements OnInit {
     cardList: Card[];
 
-<<<<<<< HEAD
     card: Card = new Card()
 
     skill : Skill = new Skill()
@@ -37,26 +36,6 @@ export class HomeComponent implements OnInit {
         private authService: AuthService
     ) { }
 
-=======
-
-    cardList: Card[]
-
-    constructor(
-        private router: Router,
-        private cardService: CardService
-    ) { }
-    ngOnInit() {
-        window.scroll(0,0)
-
-        }   
-        
-    getAllCard() {
-
-    }
-}
-
-    constructor(private router: Router, private cardService: CardService) {}
->>>>>>> 02db9d7b715fff9a839c44e8ec0b2b93b656703b
 
     ngOnInit() {
         window.scroll(0, 0)
@@ -90,7 +69,6 @@ export class HomeComponent implements OnInit {
         return this.skillType = "escolha";
     }
 
-<<<<<<< HEAD
     publish(){       
 
         this.skill.nivel = this.nivel
@@ -150,8 +128,3 @@ export class HomeComponent implements OnInit {
 }   
 
 
-=======
-
-    getAllCard() {}
-}
->>>>>>> 02db9d7b715fff9a839c44e8ec0b2b93b656703b
