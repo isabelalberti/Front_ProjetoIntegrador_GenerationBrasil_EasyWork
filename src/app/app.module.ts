@@ -25,9 +25,6 @@ import { SkillDeleteComponent } from './delete/skill-delete/skill-delete.compone
 import { AlertComponent } from './alert/alert.component';
 import { UserComponent } from './edit/user/user.component';
 
-
-
-
 @NgModule({
     declarations: [
         AppComponent,
@@ -59,4 +56,4 @@ import { UserComponent } from './edit/user/user.component';
     ],
     bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

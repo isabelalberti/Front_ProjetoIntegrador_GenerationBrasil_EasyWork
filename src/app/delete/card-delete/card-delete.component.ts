@@ -10,9 +10,8 @@ import { environment } from 'src/environments/environment.prod';
     styleUrls: ['./card-delete.component.css'],
 })
 export class CardDeleteComponent implements OnInit {
-
-    card: Card = new Card()
-    idCard: number
+    card: Card = new Card();
+    idCard: number;
 
     constructor(
         private router: Router,
@@ -21,26 +20,26 @@ export class CardDeleteComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        window.scroll(0, 0)
+        window.scroll(0, 0);
 
-        if(environment.token == ""){
-            this.router.navigate(["/login"])
+        if (environment.token == '') {
+            this.router.navigate(['/login']);
         }
 
-        this.idCard = this.route.snapshot.params["id"]
-        this.findByIdCard(this.idCard)
+        this.idCard = this.route.snapshot.params['id'];
+        this.findByIdCard(this.idCard);
     }
 
-    findByIdCard(id: number){
+    findByIdCard(id: number) {
         this.cardService.getByIdCard(id).subscribe((resp: Card) => {
-            this.card = resp
-        })
+            this.card = resp;
+        });
     }
 
-    delete(){
+    delete() {
         this.cardService.deleteCard(this.idCard).subscribe(() => {
-            alert("Card deletado com sucesso!")
-            this.router.navigate(["/home"])
-        })
+            alert('Card deletado com sucesso!');
+            this.router.navigate(['/home']);
+        });
     }
 }

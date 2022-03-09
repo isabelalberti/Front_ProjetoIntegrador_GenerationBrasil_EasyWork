@@ -12,11 +12,9 @@ import { environment } from 'src/environments/environment.prod';
     styleUrls: ['./card-edit.component.css'],
 })
 export class CardEditComponent implements OnInit {
-
-    card: Card = new Card()
+    card: Card = new Card();
 
     tip: string;
-
 
     constructor(
         private router: Router,
@@ -26,40 +24,40 @@ export class CardEditComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        if(environment.token == ""){
-            this.router.navigate(["/login"])
+        if (environment.token == '') {
+            this.router.navigate(['/login']);
         }
 
-        let id = this.route.snapshot.params["id"]
-        this.findByIdCard(id)
+        let id = this.route.snapshot.params['id'];
+        this.findByIdCard(id);
     }
 
     changeTip(event: any) {
         this.tip = event.target.value;
     }
 
-    findByIdCard(id: number){
+    findByIdCard(id: number) {
         this.cardService.getByIdCard(id).subscribe((resp: Card) => {
-            this.card = resp
-        })
+            this.card = resp;
+        });
     }
 
-    update(){
-        this.card.option = this.tip
+    update() {
+        this.card.option = this.tip;
 
-        if(this.tip == "Profissional"){
-            this.card.institution = ""
-            this.card.formation = ""
-            this.card.image = ""
+        if (this.tip == 'Profissional') {
+            this.card.institution = '';
+            this.card.formation = '';
+            this.card.image = '';
         } else {
-            this.card.companyName = ""
-            this.card.occupation = ""
+            this.card.companyName = '';
+            this.card.occupation = '';
         }
 
         this.cardService.putCard(this.card).subscribe((resp: Card) => {
-            this.card = resp
-            alert("Alterado com sucesso!")
-            this.router.navigate(["/home"])
-        })
+            this.card = resp;
+            alert('Alterado com sucesso!');
+            this.router.navigate(['/home']);
+        });
     }
 }

@@ -1,115 +1,236 @@
-<div class="container-fluid " style="background-color: #161f38;">
-
-  <div class="row">
-    <div class="col-md-12 d-flex justify-content-center py-3">
-
-      <!-- <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
+<div class="container-fluid" style="background-color: #161f38">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center py-3">
+            <!-- <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
         <div class="card-body">
           <h5 class="card-title">{{item.institution}}</h5>
           <p class="card-text">{{item.formation}}</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div> -->
-      <div class="d-flex flex-column">
+            <div class="d-flex flex-column">
+                <div>
+                    <button
+                        class="btn btn-primary mb-5"
+                        type="submit"
+                        routerLink="/card"
+                    >
+                        Card
+                    </button>
+                </div>
 
-        <div>
-          <button class="btn btn-primary mb-5" type="submit" routerLink="/card">Card</button>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                    data-whatever="@mdo"
+                >
+                    Open modal for @mdo
+                </button>
+            </div>
+
+            <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Nova habilidade
+                            </h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                                (click)="clear()"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group d-flex flex-column">
+                                    <label
+                                        class="nivel pr-3 align-items-center"
+                                    >
+                                        Escolha
+                                    </label>
+                                    <select
+                                        (change)="choiceSkill($event)"
+                                        class="form-control"
+                                    >
+                                        <option selected>Escolha</option>
+                                        <option value="skill">
+                                            Habilidade Pessoal
+                                        </option>
+                                        <option value="technicalSkill">
+                                            Habilidade Técnica
+                                        </option>
+                                    </select>
+                                </div>
+                                <div
+                                    class="form-group"
+                                    *ngIf="skillType == 'skill'"
+                                >
+                                    <label for="skill" class="col-form-label"
+                                        >Habilidade Pessoal</label
+                                    >
+                                    <input
+                                        [(ngModel)]="skill.skill"
+                                        type="text"
+                                        class="form-control"
+                                        id="skill"
+                                        name="skill"
+                                    />
+                                </div>
+
+                                <div *ngIf="skillType == 'technicalSkill'">
+                                    <div class="form-group">
+                                        <label
+                                            for="technicalSkill"
+                                            class="col-form-label"
+                                            >Habilidade Técnica</label
+                                        >
+                                        <input
+                                            [(ngModel)]="skill.technicalSkill"
+                                            type="text"
+                                            class="form-control"
+                                            id="technicalSkill"
+                                            name="technicalSkill"
+                                        />
+                                    </div>
+                                    <div class="form-group d-flex flex-column">
+                                        <label
+                                            class="nivel pr-3 align-items-center"
+                                        >
+                                            Nível
+                                        </label>
+                                        <select
+                                            (change)="choiceNivel($event)"
+                                            class="form-control"
+                                        >
+                                            <option>Escolha um nível</option>
+                                            <option value="BASICO">
+                                                Básico
+                                            </option>
+                                            <option value="INTERMEDIARIO">
+                                                Intermediário
+                                            </option>
+                                            <option value="AVANCADO">
+                                                Avançado
+                                            </option>
+                                            <option value="JUNIOR">
+                                                Júnior
+                                            </option>
+                                            <option value="PLENO">Pleno</option>
+                                            <option value="SENIOR">
+                                                Sênior
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-dismiss="modal"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                (click)="publish()"
+                            >
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-          data-whatever="@mdo">Open modal for @mdo</button>
-          
-      </div>
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Nova habilidade</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="clear()">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group d-flex flex-column">
-                  <label class="nivel pr-3 align-items-center"> Escolha </label>
-                  <select (change)="choiceSkill($event)" class="form-control">
-                    <option selected>Escolha</option>
-                    <option value="skill">Habilidade Pessoal</option>
-                    <option value="technicalSkill">Habilidade Técnica</option>
-                  </select>
+        <div class="d-flex justify-content-center flex-column">
+            <nav>
+                <div
+                    class="nav nav-tabs d-flex justify-content-center my-5"
+                    id="nav-tab"
+                    role="tablist"
+                >
+                    <a
+                        (click)="findByIdUser()"
+                        class="nav-link text-secondary font-weight-bold"
+                        id="nav-profile-tab"
+                        data-toggle="tab"
+                        href="#minhasPostagens"
+                        role="tab"
+                        aria-controls="nav-minhasPostagens"
+                        aria-selected="false"
+                        >Minhas Postagens</a
+                    >
                 </div>
-                <div class="form-group" *ngIf="skillType == 'skill'">
-                  <label for="skill" class="col-form-label">Habilidade Pessoal</label>
-                  <input [(ngModel)]="skill.skill" type="text" class="form-control" id="skill" name="skill">
-                </div>
+            </nav>
 
-                <div *ngIf="skillType == 'technicalSkill'">
-                  <div class="form-group">
-                    <label for="technicalSkill" class="col-form-label">Habilidade Técnica</label>
-                    <input [(ngModel)]="skill.technicalSkill" type="text" class="form-control" id="technicalSkill"
-                      name="technicalSkill">
-                  </div>
-                  <div class="form-group d-flex flex-column">
-                    <label class="nivel pr-3 align-items-center"> Nível </label>
-                    <select (change)="choiceNivel($event)" class="form-control">
-                      <option> Escolha um nível </option>
-                      <option value="BASICO">Básico</option>
-                      <option value="INTERMEDIARIO">Intermediário</option>
-                      <option value="AVANCADO">Avançado</option>
-                      <option value="JUNIOR">Júnior</option>
-                      <option value="PLENO">Pleno</option>
-                      <option value="SENIOR">Sênior</option>
-                    </select>
-                  </div>
-                </div>
+            <div
+                class="tab-pane fade"
+                id="minhasPostagens"
+                role="tabpanel"
+                aria-labelledby="nav-minhasPostagens-tab"
+            >
+                <div class="card-columns">
+                    <div
+                        class="card text-center"
+                        *ngFor="let item of user.card"
+                    >
+                        <div class="card-body">
+                            <p *ngIf="education()" class="card-title m-0">
+                                {{ item.image }}
+                            </p>
+                            <p *ngIf="education()" class="text-muted">
+                                {{ formacao + item.formation }}
+                            </p>
+                            <p *ngIf="education()" class="card-text mt-3">
+                                {{ instituicao + item.institution }}
+                            </p>
+                            <p *ngIf="professional()" class="card-text mt-3">
+                                {{ item.occupation }}
+                            </p>
+                            <p *ngIf="professional()" class="card-text mt-3">
+                                {{ nomeEmpresa + item.companyName }}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted"
+                                    >{{
+                                        item.startDate | date: "dd/MM/yyyy"
+                                    }}
+                                    fim {{ item.endDate | date: "dd/MM/yyyy" }}
+                                </small>
+                            </p>
 
-              </form>
+                            <a
+                                [routerLink]="['/edit-card', item.id]"
+                                class="text-info mr-3"
+                                href=""
+                                >Editar</a
+                            >
+                            <a
+                                [routerLink]="['/delete-card', item.id]"
+                                class="text-danger"
+                                href=""
+                                >Apagar</a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary" (click)="publish()">Adicionar</button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-
-
-    
-      <div class="d-flex justify-content-center flex-column">
-        <nav>
-          <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-            <a (click)="findByIdUser()" class="nav-link text-secondary font-weight-bold" id="nav-profile-tab"
-              data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens"
-              aria-selected="false">Minhas
-              Postagens</a>
-  
-          </div>
-        </nav>
-  
-        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-  
-          <div class="card-columns">
-            <div class="card text-center" *ngFor="let item of user.card">
-              <div class="card-body">
-                <p *ngIf="education()" class="card-title m-0">{{item.image}}</p>
-                <p *ngIf="education()" class="text-muted">{{formacao + item.formation}}</p>
-                <p *ngIf="education()" class="card-text mt-3">{{instituicao + item.institution}}</p>
-                <p *ngIf="professional()" class="card-text mt-3">{{item.occupation}}</p>
-                <p *ngIf="professional()" class="card-text mt-3">{{nomeEmpresa + item.companyName}}</p>
-                <p class="card-text"> <small class="text-muted">{{item.startDate | date: "dd/MM/yyyy"}} fim {{item.endDate
-                    | date: "dd/MM/yyyy"}} </small></p>
-  
-                <a [routerLink]="['/edit-card', item.id]" class="text-info mr-3" href="">Editar</a>
-                <a [routerLink]="['/delete-card', item.id]" class="text-danger" href="">Apagar</a>
-  
-              </div>
-            </div>
-          </div>
-        </div>
-      
-    </div>
-  </div>
 </div>

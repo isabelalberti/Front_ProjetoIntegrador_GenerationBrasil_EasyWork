@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
 
+<<<<<<< HEAD
 html, body {
 background: #281456 !important;
 /* background-size: auto;   */
  } /* You can add global styles to this file, and also import other style files */
+=======
+body {
+    background: #281456;
+    background-size: auto;
+} /* You can add global styles to this file, and also import other style files */
+>>>>>>> b8fa3037c90a81618c077a5cccd135962b00e520
 
 * {
     font-family: "Comfortaa", cursive, Arial, Helvetica, sans-serif;

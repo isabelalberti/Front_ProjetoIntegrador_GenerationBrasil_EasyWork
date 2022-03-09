@@ -1,29 +1,38 @@
 <div class="container my-5">
-
     <div class="row">
-
         <h1 class="text-center">Editar Card</h1>
-
     </div>
 
     <div class="row d-flex justify-content-center">
-
         <div class="col-md-6">
-
             <form>
                 <div class="form-group fm">
                     <label for="startDate">Data de Inicio</label>
-                    <input [(ngModel)]="card.startDate" type="date" class="form-control fm" id="startDate"
-                        name="startDate" />
+                    <input
+                        [(ngModel)]="card.startDate"
+                        type="date"
+                        class="form-control fm"
+                        id="startDate"
+                        name="startDate"
+                    />
                 </div>
                 <div class="form-group">
                     <label for="endDate">Data do Termino</label>
-                    <input [(ngModel)]="card.endDate" type="date" class="form-control fm" id="endDate" name="endDate" />
+                    <input
+                        [(ngModel)]="card.endDate"
+                        type="date"
+                        class="form-control fm"
+                        id="endDate"
+                        name="endDate"
+                    />
                 </div>
 
                 <form>
                     <div class="form-group">
-                        <label class="nivel pr-3 align-items-center" for="card.tip">
+                        <label
+                            class="nivel pr-3 align-items-center"
+                            for="card.tip"
+                        >
                             Tipo
                         </label>
 
@@ -37,51 +46,85 @@
                     <div *ngIf="tip == 'Profissional'">
                         <div class="form-group">
                             <label for="companyName">Empresa</label>
-                            <input [(ngModel)]="card.companyName" type="text" class="form-control fm" id="companyName"
-                                name="companyName" placeholder="Nome da empresa" />
+                            <input
+                                [(ngModel)]="card.companyName"
+                                type="text"
+                                class="form-control fm"
+                                id="companyName"
+                                name="companyName"
+                                placeholder="Nome da empresa"
+                            />
                         </div>
 
                         <div class="form-group">
                             <label for="occupation">Ocupacao</label>
-                            <input [(ngModel)]="card.occupation" type="text" class="form-control fm" id="occupation"
-                                name="occupation" placeholder="Nome da Ocupacao" />
+                            <input
+                                [(ngModel)]="card.occupation"
+                                type="text"
+                                class="form-control fm"
+                                id="occupation"
+                                name="occupation"
+                                placeholder="Nome da Ocupacao"
+                            />
                         </div>
                     </div>
 
                     <div *ngIf="tip == 'Educacional'">
                         <div class="form-group">
                             <label for="institution">Instituicao</label>
-                            <input [(ngModel)]="card.institution" type="text" class="form-control fm" id="institution"
-                                name="institution" placeholder="Nome da Instituicao" />
+                            <input
+                                [(ngModel)]="card.institution"
+                                type="text"
+                                class="form-control fm"
+                                id="institution"
+                                name="institution"
+                                placeholder="Nome da Instituicao"
+                            />
                         </div>
 
                         <div class="form-group">
                             <label for="formation">Formacao</label>
-                            <input [(ngModel)]="card.formation" type="text" class="form-control fm" id="formation"
-                                name="formation" placeholder="Nome da Formacao" />
+                            <input
+                                [(ngModel)]="card.formation"
+                                type="text"
+                                class="form-control fm"
+                                id="formation"
+                                name="formation"
+                                placeholder="Nome da Formacao"
+                            />
                         </div>
 
                         <div class="form-group">
                             <label for="image">Imagem</label>
-                            <input [(ngModel)]="card.image" type="text" class="form-control fm" id="image" name="image"
-                                placeholder="Certificado de Conclusao" />
+                            <input
+                                [(ngModel)]="card.image"
+                                type="text"
+                                class="form-control fm"
+                                id="image"
+                                name="image"
+                                placeholder="Certificado de Conclusao"
+                            />
                         </div>
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button class="fm btn btn-danger" type="submit" routerLink="/home">
+                        <button
+                            class="fm btn btn-danger"
+                            type="submit"
+                            routerLink="/home"
+                        >
                             cancelar
                         </button>
-                        <button class="fm btn btn-success" type="submit" (click)="update()">
+                        <button
+                            class="fm btn btn-success"
+                            type="submit"
+                            (click)="update()"
+                        >
                             Atualizar
                         </button>
                     </div>
                 </form>
             </form>
-
         </div>
-
-
     </div>
-
 </div>
