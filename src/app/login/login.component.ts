@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
                 environment.picture = this.userSLogin.picture;
                 environment.type = this.userSLogin.type;
                 environment.city = this.userSLogin.city;
-                
 
                 this.router.navigate(['/card']);
             },

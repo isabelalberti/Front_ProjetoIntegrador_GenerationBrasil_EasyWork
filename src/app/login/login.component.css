@@ -1,4 +1,4 @@
-#bkg{
+#bkg {
     background-size: 100% 100%;
 }
 .deepBlack {
@@ -60,7 +60,6 @@
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s;
-
 }
 
 .btn span:nth-child(2) {
@@ -113,10 +112,7 @@
     transform-origin: left;
     transition: transform 0.5s;
     transition-delay: 0.5s;
-
 }
-
-
 
 .img-fluid {
     width: 150px;
