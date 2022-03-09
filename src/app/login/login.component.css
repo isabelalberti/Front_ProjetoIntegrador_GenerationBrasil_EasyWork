@@ -1,9 +1,12 @@
+#bkg{
+    background-size: 100% 100%;
+}
 .deepBlack {
     color: #050203;
 }
 
 .bg-test {
-    background-color: #ad9c9427 !important;
+    background-color: rgba(255, 255, 255, 0.730) !important;
 }
 
 .hovercyan {

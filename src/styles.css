@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
 
 body {
-    background-image: url("../../Front_EasyWork/src/assets/img/fundo.jpg");
-    background-size: cover;
-    background-repeat: repeat;
-} /* You can add global styles to this file, and also import other style files */
+    background-image: url("https://images.hdqwalls.com/download/4k-blur-abstract-l7-2048x1152.jpg");
+    background-repeat: no-repeat;
+ } /* You can add global styles to this file, and also import other style files */
 
 * {
     font-family: "Comfortaa", cursive, Arial, Helvetica, sans-serif;

@@ -1,11 +1,16 @@
 .botao-roxo {
   padding: 12px 30px;
-  color: #00d9ff;
-  border: 2px #00d9ff solid;
+  color:rgb(255, 255, 255);
+  border: 2px rgb(255, 255, 255) solid;
 }
 
-.botao-roxo:hover {
-  background-color: transparent;
-  color: #fff;
-  background-color: #00d9ff;
+.col{
+  background-color:#35024246;
+  border-radius: 2rem;
+  
+}
+
+.form-group{
+  color: rgb(255, 255, 255);
+  
 }
