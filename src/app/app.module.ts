@@ -19,6 +19,7 @@ import { CardEditComponent } from './edit/card-edit/card-edit.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
 import { MuralComponent } from './mural/mural.component';
 import { HomeComponent } from './home/home.component';
+import { NavBarInternalComponent } from './nav-bar-internal/nav-bar-internal.component';
 
 @NgModule({
     declarations: [
@@ -36,6 +37,7 @@ import { HomeComponent } from './home/home.component';
         CardDeleteComponent,
         MuralComponent,
         HomeComponent,
+        NavBarInternalComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [

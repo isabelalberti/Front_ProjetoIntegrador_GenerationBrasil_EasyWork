@@ -17,6 +17,13 @@ export class HomeComponent implements OnInit {
         private router: Router,
         private cardService: CardService
     ) { }
+    ngOnInit() {
+        window.scroll(0,0)
 
-   
+        }   
+        
+    getAllCard() {
+
+    }
+}
 
