@@ -1,48 +1,59 @@
+<<<<<<< HEAD
 
+=======
+#bkg {
+    background-size: 100% 100%;
+}
+>>>>>>> 5783d80698eb20f14e93ef7a33b69829d8fb94ed
 .deepBlack {
     color: #050203;
 }
 
+.cw {
+    color: #ffffff;
+}
 .bg-test {
-    background-color: rgba(255, 255, 255, 0.730) !important;
+    border-radius: 32px;
+    background-color: #770db935 !important;
 }
 
 .hovercyan {
-    color: #68c0d8;
+    color: #0197de;
 }
 
 .hovercyan:hover {
-    color: #00d9ff;
+    color: #d70046;
     text-decoration: none;
 }
 
 .btn {
     position: relative;
     display: inline-block;
-    padding: 10px 40px;
+    padding: 8px 32px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #050203;
-    background-color: #418696;
-    letter-spacing: 6px;
-    font-size: 16px;
+    color: #0197de;
+    background-color: #770db986;
+    letter-spacing: 10px;
+    font-size: 18px;
     transition: 0.5s;
+    border-radius: 4px;
 }
 
 .btn:hover {
-    color: #00d9ff;
+    color: #d70046;
 }
 
 .btn span {
     display: block;
     position: absolute;
-    background: #68c0d8;
+    background: #0197de;
 }
 
 .btn span:nth-child(1) {
     left: 0;
     bottom: 0;
-    width: 1px;
+    width: 1%;
     height: 100%;
     transform: scaleY(0);
     transform-origin: top;
@@ -59,7 +70,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
+    height: 1%;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s;
@@ -74,37 +85,37 @@
 .btn span:nth-child(3) {
     right: 0;
     bottom: 0;
-    width: 1px;
+    width: 1%;
     height: 100%;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
-    animation-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 
 .btn:hover span:nth-child(3) {
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s;
-    animation-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 
 .btn span:nth-child(4) {
     left: 0;
     top: 0;
     width: 100%;
-    height: 1px;
+    height: 1%;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s;
-    animation-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 
 .btn:hover span:nth-child(4) {
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.5s;
-    animation-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 
 .img-fluid {
