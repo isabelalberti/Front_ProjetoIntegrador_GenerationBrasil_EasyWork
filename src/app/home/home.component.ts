@@ -65,6 +65,10 @@ export class HomeComponent implements OnInit {
         })
     }
 
+    clear(){
+        return this.skillType = "escolha";
+    }
+
     publish(){       
 
         this.skill.nivel = this.nivel
