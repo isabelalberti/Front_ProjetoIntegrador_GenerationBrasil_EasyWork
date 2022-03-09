@@ -22,6 +22,10 @@ export class AuthService {
         };
     }
 
+    getByIdUser(id: number): Observable<User>{
+        return this.http.get<User>(`https://projeto-integrador-grupo2.herokuapp.com/user/id/${id}`, this.token)
+    }
+
     login(userSecurityLogin: UserSecurityLogin): Observable<UserSecurityLogin> {
         return this.http.post<UserSecurityLogin>(
             'https://projeto-integrador-grupo2.herokuapp.com/user/login',
@@ -47,14 +51,7 @@ export class AuthService {
             ok = true;
         }
         return ok;
-    }
-
-    getByIdUser(id: number): Observable<User> {
-        return this.http.get<User>(
-            `hhttps://projeto-integrador-grupo2.herokuapp.com/user/${id}`,
-            this.token
-        );
-    }
+    }   
 
     adm() {
 

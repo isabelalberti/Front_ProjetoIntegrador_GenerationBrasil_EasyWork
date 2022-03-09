@@ -59,6 +59,17 @@ export class CardPostComponent implements OnInit {
     publish() {
         this.user.id = this.idUser;
         this.card.user = this.user;
+        
+        this.card.option = this.tipCard
+
+            if(this.tipCard == "Profissional"){
+            this.card.institution = ""
+            this.card.formation = ""
+            this.card.image = ""
+            } else {
+            this.card.companyName = ""
+            this.card.occupation = ""
+            }
 
         this.cardService.postCard(this.card).subscribe((resp: Card) => {
             this.card = resp;
@@ -66,15 +77,15 @@ export class CardPostComponent implements OnInit {
             console.log(this.card)
 
             this.skill.card = this.card;
-            this.skill.nivel = this.tipNivel;
-
+            this.skill.nivel = this.tipNivel;            
+            
             this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
                 this.skill = resp;
             });
 
-        this.card = new Card();
-        this.skill = new Skill();
-        alert('Card Postado com Sucesso');
+            this.card = new Card();
+            this.skill = new Skill();
+            alert('Card Postado com Sucesso');
         });
     }
 }
