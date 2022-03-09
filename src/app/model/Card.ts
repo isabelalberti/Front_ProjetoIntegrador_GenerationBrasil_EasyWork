@@ -15,4 +15,5 @@ export class Card {
     public FunctionDescription: string;
     public user: User;
     public skill: Skill[];
+    public description: string;
 }

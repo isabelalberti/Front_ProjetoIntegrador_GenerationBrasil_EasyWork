@@ -29,12 +29,11 @@ export class LoginComponent implements OnInit {
                 environment.id = this.userSLogin.id;
                 environment.picture = this.userSLogin.picture;
                 environment.type = this.userSLogin.type;
-                environment.city = this.userSLogin.city;         
+                environment.city = this.userSLogin.city;
 
-                console.log(environment)
+                console.log(environment);
 
                 this.router.navigate(['/nav-bar-internal']);
-
             },
 
             error: (erro) => {
