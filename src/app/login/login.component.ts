@@ -31,7 +31,12 @@ export class LoginComponent implements OnInit {
                 environment.type = this.userSLogin.type;
                 environment.city = this.userSLogin.city;
 
+
+                this.router.navigate(['/nav-bar-internal'])
+                //this.router.navigate(['/profile'])//
+
                 this.router.navigate(['/card']);
+
             },
 
             error: (erro) => {
