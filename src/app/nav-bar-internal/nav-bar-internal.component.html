@@ -1,40 +1,60 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item active ml-5">
+                <a class="navbar-brand text-dark font-weight-bold" href="#"
+                    >EasyWorker</a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#conteudoNavbarSuportado"
+                    aria-controls="conteudoNavbarSuportado"
+                    aria-expanded="false"
+                    aria-label="Alterna navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <img
+                    src="{{ foto }}"
+                    alt=" imagem do user"
+                    width="50px"
+                    height="50px"
+                    class="img-fluid rounded-circle ml-4"
+                />
+            </li>
 
-    <ul class="navbar-nav mr-auto d-flex align-items-center">
-      <li class="nav-item active ml-5">
+            <li class="nav-item pl-3">
+                <p class="m-0 text-black fs-16">Olá, {{ nome }}</p>
+            </li>
 
-        <a class="navbar-brand text-dark font-weight-bold " href="#">EasyWorker</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-          aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <li class="nav-item active m-0 ml-5">
+                <a
+                    class="nav-link text-dark font-weight-bold"
+                    routerLink="/jumbotron"
+                    >Início</a
+                >
+            </li>
 
-        <img
-          src="{{foto}}"
-          alt=" imagem do user" width="50px" height="50px" class="img-fluid rounded-circle ml-4">
-      </li>
+            <li class="nav-item active m-0 ml-5">
+                <a
+                    class="nav-link text-dark font-weight-bold"
+                    routerLink="/profile"
+                    >Perfil</a
+                >
+            </li>
+        </ul>
 
-      <li class="nav-item pl-3">
-        <p class="m-0 text-black fs-16">Olá, {{nome}}</p>
-      </li>
-
-      <li class="nav-item active m-0 ml-5">
-        <a class="nav-link text-dark font-weight-bold" routerLink="/jumbotron">Início</a>
-      </li>
-
-      <li class="nav-item active m-0 ml-5 ">
-        <a class="nav-link text-dark font-weight-bold" routerLink="/profile">Perfil</a>
-      </li>
-    </ul>
-
-    <ul class="navbar-nav ml-auto d-flex align-items-center">
-      <li class="nav-item pl-3">
-        <a class="m-0 font-weight-normal text-black fs-16" (click)="sair()">Sair <i class="fa fa-sign-out"
-            aria-hidden="true"></i></a>
-      </li>
-    </ul>
-
-  </div>
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item pl-3">
+                <a
+                    class="m-0 font-weight-normal text-black fs-16"
+                    (click)="sair()"
+                    >Sair <i class="fa fa-sign-out" aria-hidden="true"></i
+                ></a>
+            </li>
+        </ul>
+    </div>
 </nav>

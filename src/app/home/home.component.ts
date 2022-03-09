@@ -17,65 +17,58 @@ import { SkillService } from '../service/skill.service';
 export class HomeComponent implements OnInit {
     cardList: Card[];
 
-    card: Card = new Card()
+    card: Card = new Card();
 
-    skill : Skill = new Skill()
+    skill: Skill = new Skill();
 
-    skillType: string
-    nivel: string
-    cardId: number = 1
+    skillType: string;
+    nivel: string;
+    cardId: number = 1;
 
-    user: User = new User()
-    idUser = environment.id
-
-
+    user: User = new User();
+    idUser = environment.id;
 
     constructor(
         private router: Router,
         private cardService: CardService,
         private skillService: SkillService,
         private authService: AuthService
-    ) { }
-
+    ) {}
 
     ngOnInit() {
-        window.scroll(0, 0)
+        window.scroll(0, 0);
 
-        if(environment.token == ""){
-            this.router.navigate(["/login"])
+        if (environment.token == '') {
+            this.router.navigate(['/login']);
         }
 
-        this.authService.refreshToken()
-        this.skillService.refreshToken()
-        this.getAllCard()
-
-
+        this.authService.refreshToken();
+        this.skillService.refreshToken();
+        this.getAllCard();
     }
 
-
-    choiceSkill(event: any){
+    choiceSkill(event: any) {
         this.skillType = event.target.value;
     }
 
-    choiceNivel(event: any){
-        this.nivel = event.target.value
+    choiceNivel(event: any) {
+        this.nivel = event.target.value;
     }
 
     getAllCard() {
         this.cardService.getAllCard().subscribe((resp: Card[]) => {
-            this.cardList = resp
-        })
+            this.cardList = resp;
+        });
     }
 
-    clear(){
-        return this.skillType = "escolha";
+    clear() {
+        return (this.skillType = 'escolha');
     }
 
-    publish(){       
-
-        this.skill.nivel = this.nivel
-        this.card.id = this.cardId
-        this.skill.card = this.card
+    publish() {
+        this.skill.nivel = this.nivel;
+        this.card.id = this.cardId;
+        this.skill.card = this.card;
 
         this.skillService.postSkill(this.skill).subscribe((resp: Skill) => {
             this.skill = resp;
@@ -86,32 +79,36 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    findByIdUser(){
+    findByIdUser() {
         this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
-            this.user = resp
-        })
+            this.user = resp;
+        });
     }
 
-    x(){
-        if(this.card.option == "Education"){        
-        return "Imagem: "        
+    x() {
+        if (this.card.option == 'Education') {
+            return 'Imagem: ';
         } else {
-            return ""
+            return '';
         }
     }
-    imagem = "Imagem: "
-    formacao = "Formação: "
-    instituicao = "Instituição: "
-    cargo = "Cargo: "
-    nomeEmpresa = "Nome da empresa: "
+    imagem = 'Imagem: ';
+    formacao = 'Formação: ';
+    instituicao = 'Instituição: ';
+    cargo = 'Cargo: ';
+    nomeEmpresa = 'Nome da empresa: ';
 
     education() {
         let ok: boolean = false;
 
-        if (this.card.formation != '' &&  this.card.image != '' && this.card.institution != '') {
+        if (
+            this.card.formation != '' &&
+            this.card.image != '' &&
+            this.card.institution != ''
+        ) {
             ok = true;
-            this.cargo = ""
-            this.nomeEmpresa = ""
+            this.cargo = '';
+            this.nomeEmpresa = '';
         }
         return ok;
     }
@@ -119,14 +116,12 @@ export class HomeComponent implements OnInit {
     professional() {
         let ok: boolean = false;
 
-        if (this.card.companyName != '' &&  this.card.occupation != '') {
-            ok = true;            
-            this.imagem = ""
-            this.formacao = ""
-            this.instituicao = ""
+        if (this.card.companyName != '' && this.card.occupation != '') {
+            ok = true;
+            this.imagem = '';
+            this.formacao = '';
+            this.instituicao = '';
         }
         return ok;
     }
-}   
-
-
+}

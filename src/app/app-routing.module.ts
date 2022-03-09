@@ -28,7 +28,7 @@ const routes: Routes = [
     { path: 'delete-card/:id', component: CardDeleteComponent },
     { path: 'home', component: HomeComponent },
     { path: 'profile', component: ProfileComponent },
-    { path: 'nav-bar-internal', component: NavBarInternalComponent},
+    { path: 'nav-bar-internal', component: NavBarInternalComponent },
     { path: 'skill-post', component: SkillPostComponent },
     { path: 'skill-delete', component: SkillDeleteComponent },
 ];

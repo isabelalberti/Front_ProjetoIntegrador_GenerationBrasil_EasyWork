@@ -18,7 +18,7 @@ export class CardService {
         this.token = {
             headers: new HttpHeaders().set('Authorization', environment.token),
         };
-    }  
+    }
 
     getAllCard(): Observable<Card[]> {
         return this.http.get<Card[]>(
@@ -27,8 +27,11 @@ export class CardService {
         );
     }
 
-    getByIdCard(id: number): Observable<Card>{
-        return this.http.get<Card>(`https://projeto-integrador-grupo2.herokuapp.com/card/select/${id}`, this.token)
+    getByIdCard(id: number): Observable<Card> {
+        return this.http.get<Card>(
+            `https://projeto-integrador-grupo2.herokuapp.com/card/select/${id}`,
+            this.token
+        );
     }
 
     postCard(card: Card): Observable<Card> {
@@ -39,11 +42,18 @@ export class CardService {
         );
     }
 
-    putCard(card: Card): Observable<Card>{
-        return this.http.put<Card>("https://projeto-integrador-grupo2.herokuapp.com/card/update", card, this.token)
+    putCard(card: Card): Observable<Card> {
+        return this.http.put<Card>(
+            'https://projeto-integrador-grupo2.herokuapp.com/card/update',
+            card,
+            this.token
+        );
     }
 
-    deleteCard(id: number){
-        return this.http.delete(`https://projeto-integrador-grupo2.herokuapp.com/card/delete/${id}`, this.token)
+    deleteCard(id: number) {
+        return this.http.delete(
+            `https://projeto-integrador-grupo2.herokuapp.com/card/delete/${id}`,
+            this.token
+        );
     }
 }
