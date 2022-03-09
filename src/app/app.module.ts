@@ -19,7 +19,14 @@ import { CardEditComponent } from './edit/card-edit/card-edit.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
 import { MuralComponent } from './mural/mural.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { NavBarInternalComponent } from './nav-bar-internal/nav-bar-internal.component';
+=======
+import { SkillPostComponent } from './post/skill-post/skill-post.component';
+import { SkillDeleteComponent } from './delete/skill-delete/skill-delete.component';
+import { AlertComponent } from './alert/alert.component';
+import { UserComponent } from './edit/user/user.component';
+>>>>>>> 5783d80698eb20f14e93ef7a33b69829d8fb94ed
 
 @NgModule({
     declarations: [
@@ -37,7 +44,14 @@ import { NavBarInternalComponent } from './nav-bar-internal/nav-bar-internal.com
         CardDeleteComponent,
         MuralComponent,
         HomeComponent,
+<<<<<<< HEAD
         NavBarInternalComponent,
+=======
+        SkillPostComponent,
+        SkillDeleteComponent,
+        AlertComponent,
+        UserComponent,
+>>>>>>> 5783d80698eb20f14e93ef7a33b69829d8fb94ed
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [

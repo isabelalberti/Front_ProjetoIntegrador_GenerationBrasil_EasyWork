@@ -9,34 +9,49 @@ import { AuthService } from '../service/auth.service';
     styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+    user: User = new User();
 
+    confPassword: string;
+    gen: string;
+    userType: string;
 
-    user: User = new User
-
-    confPassword: string
-
-    constructor(
-        private auth: AuthService,
-        private router: Router
-    ) {}
+    constructor(private auth: AuthService, private router: Router) {}
 
     ngOnInit() {
         window.scroll(0, 0);
+        this.validatePreenchido();
     }
 
-    confirmPassword(event: any){
-        this.confPassword = event.target.value
+    validatePreenchido() {
+        let usuario = <HTMLInputElement>document.getElementById('email');
+        if (usuario?.value != '') {
+            usuario.classList.add('preenchido');
+        } else {
+            usuario.classList.remove('preenchido');
+        }
     }
 
-    register(){
-        if (this.confPassword != this.user.password){
-            alert("As senhas não conferem!\nDigite novamente")
+    confirmPassword(event: any) {
+        this.confPassword = event.target.value;
+    }
+
+    genero(event: any) {
+        this.gen = event.target.value;
+    }
+
+    typeUser(event: any) {
+        this.userType = event.target.value;
+    }
+
+    register() {
+        if (this.confPassword != this.user.password) {
+            alert('As senhas não conferem!\nDigite novamente');
         } else {
             this.auth.register(this.user).subscribe((resp: User) => {
-                this.user = resp
-                this.router.navigate(['/login'])
-                alert("Usuário cadastrado com sucesso!")
-            })
+                this.user = resp;
+                this.router.navigate(['/login']);
+                alert('Usuário cadastrado com sucesso!');
+            });
         }
     }
 }

@@ -6,4 +6,6 @@ export class UserSecurityLogin {
     public id: number;
     public picture: string;
     public type: string;
+    public city: string;
+
 }

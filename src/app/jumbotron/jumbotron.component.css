@@ -1,6 +1,15 @@
-.display-3{
-    text-shadow: 3px 3px 4px rgb(55, 157, 253);
-  }
-  .text-dark-50{
-    text-shadow: 2px 2px 6px rgb(55, 157, 253);
-  }
+#bkg {
+    background-size: 100% 100%;
+}
+.display-3 {
+    text-shadow: -3px 2px 1px rgba(122, 156, 189, 0.89);
+}
+.carousel-txt {
+    font-size: 20pt;
+}
+
+.carousel-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
