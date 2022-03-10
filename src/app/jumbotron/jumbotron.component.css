@@ -1,12 +1,15 @@
-<<<<<<< HEAD
-=======
-#bkg {
-    background-size: 100% 100%;
-}
->>>>>>> 5783d80698eb20f14e93ef7a33b69829d8fb94ed
 .display-3 {
     text-shadow: -3px 2px 1px rgba(122, 156, 189, 0.89);
 }
+
+.carousel {
+    min-height: 90vh;
+}
+
+.carousel-inner {
+    height: fit-content;
+}
+
 .carousel-txt {
     font-size: 20pt;
 }
@@ -15,4 +18,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-container {
+    height: fit-content;
+}
+
+.card {
+    width: 150px;
+    margin: 30px;
+    transition: 200ms;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+    .carousel-txt {
+        font-size: 12pt;
+    }
+
+    .display-3 {
+        font-size: 20pt;
+    }
 }

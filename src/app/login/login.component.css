@@ -3,19 +3,20 @@
 }
 
 .cw {
-    color: #ffffff;
+    color: #1f273f;
 }
 .bg-test {
     border-radius: 32px;
-    background-color: #770db935 !important;
+
+    background-color: #ebded5;
 }
 
 .hovercyan {
-    color: #0197de;
+    color: rgb(122, 156, 189);
 }
 
 .hovercyan:hover {
-    color: #d70046;
+    color: #c94672;
     text-decoration: none;
 }
 
@@ -25,8 +26,8 @@
     padding: 8px 32px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #0197de;
-    background-color: #770db986;
+    color: #fff;
+    background-color: #1f273f;
     letter-spacing: 10px;
     font-size: 18px;
     transition: 0.5s;
@@ -34,13 +35,13 @@
 }
 
 .btn:hover {
-    color: #d70046;
+    color: rgb(122, 156, 189);
 }
 
 .btn span {
     display: block;
     position: absolute;
-    background: #0197de;
+    background: rgb(122, 156, 189);
 }
 
 .btn span:nth-child(1) {

@@ -8,6 +8,7 @@ import { Card } from '../model/Card';
     providedIn: 'root',
 })
 export class CardService {
+    putDescription: any;
     constructor(private http: HttpClient) {}
 
     token = {
