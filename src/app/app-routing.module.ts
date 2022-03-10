@@ -17,7 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'nav-bar', pathMatch: 'full' },
+    { path: '', redirectTo: 'jumbotron', pathMatch: 'full' },
     { path: 'nav-bar', component: NavBarComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
