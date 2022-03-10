@@ -28,6 +28,11 @@
                                     Vídeo <input type="button" hidden />
                                 </label>
                             </div>
+<div class="container-fluid mt-2"><p align="center"> 
+    Visitor count<br>
+    <img src="https://profile-counter.glitch.me/profile/count.svg" />
+  </p></div>
+
                         </div>
                     </div>
                 </div>
@@ -45,6 +50,7 @@
                             </svg>
                             Github
                         </h6>
+                        <button>+</button>
                         <span class="text-secondary">{{github}}</span>
                     </li>
 
@@ -69,6 +75,15 @@
         </div>
         <div class="col-md-9">
             
+            <div class="mb-3 text-white text-center">
+                <h2 class='text-center text-white' > Sobre mim </h2>
+                <h3 class='align-itens-justify text-white'> {{descriptionPersonal}}</h3>
+
+
+            </div>
+
+
+
         <h3 class="mb-3 text-white text-center">Meus Cards </h3>
         <div class='tam d-flex align-items-center flex-wrap'>
         <!-- <div class="row">
@@ -84,7 +99,6 @@
                         <li>{{card.endDate}}</li>
                         <li>{{card.institution}}</li>
                         <li>{{card.formation}}</li>
-                        
                     </ul>
                 </div>
 

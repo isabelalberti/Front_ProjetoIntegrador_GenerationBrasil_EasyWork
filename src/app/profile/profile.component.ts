@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
   github = environment.github
   linkedin = environment.linkedin
   description = environment.description
+  descriptionPersonal = environment.descriptionPersonal
 
   idCard: number
   descric:string
@@ -55,6 +56,11 @@ export class ProfileComponent implements OnInit {
     })
   }
   
+  findByIdCard(id: number) {
+    this.cardService.getByIdCard(id).subscribe((resp: Card) => {
+        this.card = resp;
+    });
+}
   
   putDescription() {
     this.cardService.putDescription(this.description).subscribe((resp: Card) => {
