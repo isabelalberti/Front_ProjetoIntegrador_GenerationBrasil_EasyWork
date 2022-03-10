@@ -86,3 +86,14 @@ textarea {
   a{
     text-decoration: none;
   }
+
+.btnCard{
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #1f273f;
+  letter-spacing: 6px;
+  font-size: 18px;
+  transition: 0.5s;
+  border-radius: 4px;
+  width: 14rem;
+}

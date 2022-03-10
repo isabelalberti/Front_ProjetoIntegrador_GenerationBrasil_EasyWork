@@ -49,7 +49,7 @@
                                     d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
                                 </path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg> 
+                            </svg>
                             <a href="{{user.linkedin}}" class="Github" target="_blank">Linkedin</a>
                         </h6>
                     </li>
@@ -69,10 +69,7 @@
 
             <h3 class="mb-3 text-white text-center">Meus Cards </h3>
             <div class='tam d-flex align-items-center flex-wrap'>
-                <!-- <div class="row">
-        <div class="col-md-7 mb-3"> -->
-                <!-- flip-card-container -->
-                <div class="flip-card-container m-3" *ngFor='let card of user.card'>
+            <div class="flip-card-container m-3" *ngFor='let card of user.card'>
                     <div class="flip-card">
                         <div class="card-front">
                             <ul class="dois d-flex justify-content-center align-items-center flex-column text-dark">
@@ -85,21 +82,37 @@
                             </ul>
                         </div>
 
-                        <div class="card-back">
+                        <div class="card-back ">
                             <p>{{card.description}}</p>
-                            <p class="btn btn-outline"
+                            <p class="text-center text-white" 
                                 *ngIf='this.card.description == "" || this.card.description == null'>
                                 Adicionar descrição
-                                <textarea id="descricao" name="descricao" rows="2" cols="20" wrap="hard" (input)="descricao($event)"></textarea>
-                                <button class="btn btn-info" (click)="putDescription(card.id)"> Salvar
+                                <textarea id="descricao" name="descricao" rows="2" cols="20" wrap="hard"
+                                    (input)="descricao($event)"></textarea>
+                                <button class="btnCard btn-info mt-4 mb-1" (click)="putDescription(card.id)"> Salvar
                                 </button>
+                                 <button class="btnCard btn-danger" [routerLink]="['/delete-card', card.id]">Deletar</button>
+
                             </p>
-                            <button class="btn btn-outline" [routerLink]="['/delete-card', card.id]">Deletar</button>
                         </div>
                     </div>
-                    <!-- /flip-card-container -->
-                    <!-- Criar Novo Card -->
-                    <!-- /Criar Novo Card -->
+                </div>
+
+                <div class="mt-2">
+                    <h3 class="mb-3 text-white text-center">Minhas Habilidades</h3>
+                    <div class='tam d-flex align-items-center flex-wrap'>
+                    </div>
+
+                    <div class="flip-card-container m-3" *ngFor='let card of card.skill'>
+                        <div class="flip-card">
+                            <div class="card-front">
+                                <ul class="dois d-flex justify-content-center align-items-center flex-column text-dark">
+                                    <li>{{card.technicalSkill}}</li>
+                                    <li>{{card.skill}}</li>
+                                    <li>{{card.nivel}}</li>
+                                </ul>
+                            </div>
+                </div>
                 </div>
 
                 <div class="ml-4">
