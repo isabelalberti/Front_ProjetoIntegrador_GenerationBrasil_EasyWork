@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <app-nav-bar-internal></app-nav-bar-internal>
 
 <div class="container-fluid mt-4">
@@ -28,105 +27,10 @@
                                         src="https://i.imgur.com/2kGNjeH.png" />
                                     Vídeo <input type="button" hidden />
                                 </label>
-=======
-<div class="container" style="background-color: #161f38">
-    <div class="main-body">
-        <nav aria-label="breadcrumb" class="main-breadcrumb bg-dark">
-            <ul
-                class="header-menu p-2 text-uppercase d-flex justify-content-around"
-            >
-                <li>
-                    <a class="header-menu-tab text-white" href="#1"
-                        ><span class="icon entypo-cog scnd-font-color"></span
-                        >Configurações</a
-                    >
-                </li>
-                <li>
-                    <a class="header-menu-tab text-white" href="#2"
-                        ><span
-                            class="icon fontawesome-user scnd-font-color"
-                        ></span
-                        >Conta</a
-                    >
-                </li>
-                <li>
-                    <a class="header-menu-tab text-white" href="#3"
-                        ><span
-                            class="icon fontawesome-envelope scnd-font-color"
-                        ></span
-                        >Mensagens</a
-                    >
-                </li>
-                <li>
-                    <a class="header-menu-tab text-white" href="#5"
-                        ><span
-                            class="icon fontawesome-star-empty scnd-font-color"
-                        ></span
-                        >Meus Cards</a
-                    >
-                </li>
-            </ul>
-        </nav>
-
-        <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div
-                            class="d-flex flex-column align-items-center text-center"
-                        >
-                            <img
-                                src="{{ picture }}"
-                                alt="imagem do user"
-                                class="rounded-circle"
-                                width="150"
-                            />
-                            <div class="mt-3">
-                                <h4>{{ fullName }}</h4>
-                                <p class="text-secondary mb-1">
-                                    {{ city }}
-                                </p>
-                                <button
-                                    type="button"
-                                    class="btn btn-outline-secondary btn-md ml-2"
-                                    style="width: 100%"
-                                    data-toggle="modal"
-                                    data-target="#novaPostagem"
-                                >
-                                    Olá, o que há de novo?
-                                </button>
-                                <div class="container-fluid mt-2 ml-4">
-                                    <label
-                                        class="btn btn-default"
-                                        data-toggle="modal"
-                                        data-target="#novaPostagem"
-                                    >
-                                        <img
-                                            class="iconFoto"
-                                            src="https://i.imgur.com/3Vxv2W2.png"
-                                            style="width: 20px; height: 20px"
-                                        />
-                                        Foto <input type="button" hidden />
-                                    </label>
-                                    <label
-                                        class="btn btn-default mr-5"
-                                        data-toggle="modal"
-                                        data-target="#novaPostagem"
-                                    >
-                                        <img
-                                            class="icon"
-                                            style="width: 20px; height: 20px"
-                                            src="https://i.imgur.com/2kGNjeH.png"
-                                        />
-                                        Vídeo <input type="button" hidden />
-                                    </label>
-                                </div>
->>>>>>> b8fa3037c90a81618c077a5cccd135962b00e520
                             </div>
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
             </div>
             <div class="card mt-3">
                 <ul class="list-group list-group-flush">
@@ -173,7 +77,7 @@
         <div class="flip-card-container m-3" *ngFor='let card of user.card'>
             <div class="flip-card">
                 <div class="card-front">
-                    <ul class="dois d-flex justify-content-center align-items-center flex-column text-white">
+                    <ul class="dois d-flex justify-content-center align-items-center flex-column text-dark">
                         <li>{{card.companyName}}</li>
                         <li>{{card.occupation}}</li>
                         <li>{{card.startDate}}</li>
@@ -181,127 +85,54 @@
                         <li>{{card.institution}}</li>
                         <li>{{card.formation}}</li>
                         
-=======
-                <div class="card mt-3">
-                    <ul class="list-group list-group-flush">
-                        <li
-                            class="list-group-item d-flex justify-content-between align-items-center flex-wrap"
-                        >
-                            <h6 class="mb-0">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="48"
-                                    height="48"
-                                    viewBox="0 0 60 60"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-github mr-2 icon-inline"
-                                >
-                                    <path
-                                        d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"
-                                    ></path>
-                                </svg>
-                                Github
-                            </h6>
-                            <span class="text-secondary">{{ github }}</span>
-                        </li>
-
-                        <li
-                            class="list-group-item d-flex justify-content-between align-items-center flex-wrap"
-                        >
-                            <h6 class="mb-0">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    x="0px"
-                                    y="0px"
-                                    width="48"
-                                    height="48"
-                                    viewBox="0 0 48 48"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path
-                                        fill="#0288D1"
-                                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"
-                                    ></path>
-                                    <path
-                                        fill="#FFF"
-                                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"
-                                    ></path>
-                                    <line
-                                        x1="17.5"
-                                        y1="6.5"
-                                        x2="17.51"
-                                        y2="6.5"
-                                    ></line>
-                                </svg>
-                                Linkedin
-                            </h6>
-                            <span class="text-secondary">{{ linkedin }}</span>
-                        </li>
->>>>>>> b8fa3037c90a81618c077a5cccd135962b00e520
                     </ul>
                 </div>
 
                 <div class="card-back">
-                    <button class="btn btn-outline-info">Adicionar descrição</button>
+                    <p class="btn btn-outline">Adicionar descrição
+                        <textarea id="descricao" name="descricao" rows="2" cols="20" wrap="hard" (change)="descricao($event)"></textarea>
+                    <button class="btn btn-info" (click)="putDescription()"
+                    >Salvar
+                    </button>
+                    </p>
                 </div>
             </div>
             <!-- /flip-card-container -->
 
-<<<<<<< HEAD
             <!-- Criar Novo Card -->
             <!-- /Criar Novo Card -->
         </div>
         <div class="ml-4">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="#/edit-card">
+                    <a href="#/card">
                         <div class="cardCriar">
                             <p class="fa fa-plus"></p>
                             <h5>Criar</h5>
-=======
-            <h3 class="d-flex mb-3 justify-content-center">Meus Cards</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="d-flex mr-2">
-                        <div
-                            class="single_advisor_profile wow fadeInUp"
-                            data-wow-delay="0.2s"
-                            style="
-                                visibility: visible;
-                                animation-delay: 0.2s;
-                                animation-name: fadeInUp;
-                            "
-                        >
-                            <div class="advisor_thumb">
-                                <img
-                                    class="mb-3 w-50"
-                                    src="{{ picture }}"
-                                    alt=""
-                                    style="border-radius: 2rem"
-                                />
-                            </div>
-                            <!-- Team Details-->
-                            <div class="single_advisor_details_info">
-                                <h6>{{ temaFormation }}</h6>
-                                <p class="designation">{{ description }}</p>
-                            </div>
->>>>>>> b8fa3037c90a81618c077a5cccd135962b00e520
                         </div>
                     </a>
                 </div>
             </div>
         </div>
+
+        <div class="ml-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#/card">
+                        <div class="cardDeletar">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="48" height="48"
+viewBox="0 0 170 170"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M130.40408,56.16327h-88.80816c-0.96084,-0.08151 -1.91289,0.23584 -2.63265,0.87755c-0.70765,0.67985 -1.03576,1.66419 -0.87755,2.63265l9.12653,79.50612c1.07015,8.76566 8.54501,15.33447 17.37551,15.26939h44.22857c9.0789,0.12923 16.7265,-6.75362 17.55102,-15.79592l7.54694,-79.33061c0.04677,-0.85097 -0.2726,-1.68132 -0.87755,-2.28163c-0.71976,-0.64171 -1.67182,-0.95906 -2.63265,-0.87755zM119.34694,138.30204c-0.55157,5.34456 -5.16192,9.34019 -10.53061,9.12653h-44.22857c-5.2721,0.21399 -9.80403,-3.70343 -10.3551,-8.95102l-8.77551,-75.29388h81.08571zM143.21633,33.34694h-36.1551v-5.61633c0.09687,-2.69772 -0.92009,-5.31653 -2.81222,-7.24186c-1.89213,-1.92533 -4.49286,-2.98768 -7.19186,-2.93773h-22.11429c-2.69899,-0.04994 -5.29972,1.0124 -7.19186,2.93773c-1.89213,1.92533 -2.90909,4.54414 -2.81222,7.24186v5.61633h-36.1551c-1.93863,0 -3.5102,1.57157 -3.5102,3.5102c0,1.93863 1.57157,3.5102 3.5102,3.5102h114.43265c1.93863,0 3.5102,-1.57157 3.5102,-3.5102c0,-1.93863 -1.57157,-3.5102 -3.5102,-3.5102zM71.95918,33.34694v-5.61633c-0.10734,-0.83501 0.16562,-1.67413 0.74367,-2.28619c0.57806,-0.61206 1.40022,-0.93248 2.24,-0.87299h22.11429c0.83978,-0.05949 1.66194,0.26093 2.24,0.87299c0.57806,0.61206 0.85101,1.45118 0.74367,2.28619v5.61633z"></path></g></g></svg>
+                            <h5 class="text-white mt-1">Deletar</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         </div>
     </div>
-<<<<<<< HEAD
     
 </div>
 </div>
@@ -309,6 +140,3 @@
 </div> -->
 
 
-=======
-</div>
->>>>>>> b8fa3037c90a81618c077a5cccd135962b00e520
