@@ -43,7 +43,6 @@ export class HomeComponent implements OnInit {
         }
 
         this.authService.refreshToken();
-        this.skillService.refreshToken();
         this.getAllCard();
     }
 
@@ -85,43 +84,51 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    x() {
-        if (this.card.option == 'Education') {
-            return 'Imagem: ';
-        } else {
-            return '';
+    endDate(card: Card){
+        let ok = false
+        if(card.endDate != null){
+            ok = true
         }
-    }
-    imagem = 'Imagem: ';
-    formacao = 'Formação: ';
-    instituicao = 'Instituição: ';
-    cargo = 'Cargo: ';
-    nomeEmpresa = 'Nome da empresa: ';
-
-    education() {
-        let ok: boolean = false;
-
-        if (
-            this.card.formation != '' &&
-            this.card.image != '' &&
-            this.card.institution != ''
-        ) {
-            ok = true;
-            this.cargo = '';
-            this.nomeEmpresa = '';
-        }
-        return ok;
+        return ok
     }
 
-    professional() {
-        let ok: boolean = false;
+    // x() {
+    //     if (this.card.option == 'Education') {
+    //         return 'Imagem: ';
+    //     } else {
+    //         return '';
+    //     }
+    // }
+    // imagem = 'Imagem: ';
+    // formacao = 'Formação: ';
+    // instituicao = 'Instituição: ';
+    // cargo = 'Cargo: ';
+    // nomeEmpresa = 'Nome da empresa: ';
 
-        if (this.card.companyName != '' && this.card.occupation != '') {
-            ok = true;
-            this.imagem = '';
-            this.formacao = '';
-            this.instituicao = '';
-        }
-        return ok;
-    }
+    // education() {
+    //     let ok: boolean = true;
+
+    //     if (
+    //         this.card.formation == 'nada' &&
+    //         this.card.image == 'nada' &&
+    //         this.card.institution == 'nada' 
+    //     ) { 
+    //         this.card.formation = ''
+    //         this.card.image = ''
+    //         this.card.institution = ''            
+    //         ok = false;            
+    //     }
+    //     return ok;
+    // }
+
+    // professional() {
+    //     let ok: boolean = true;
+
+    //     if (this.card.companyName == 'nada' && this.card.occupation == 'nada') {
+    //         this.card.companyName = ''
+    //         this.card.occupation = ''
+    //         ok = false;            
+    //     }
+    //     return ok;
+    // }
 }

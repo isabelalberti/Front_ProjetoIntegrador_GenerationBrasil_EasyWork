@@ -1,5 +1,7 @@
+<app-nav-bar-internal></app-nav-bar-internal>
+
 <div class="container-fluid" style="background-color: #161f38">
-    <div class="row">
+    <div class="row d-flex flex-column">
         <div class="col-md-12 d-flex justify-content-center py-3">
             <!-- <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
         <div class="card-body">
@@ -167,7 +169,7 @@
                 >
                     <a
                         (click)="findByIdUser()"
-                        class="nav-link text-secondary font-weight-bold"
+                        class="nav-link active text-secondary font-weight-bold"
                         id="nav-profile-tab"
                         data-toggle="tab"
                         href="#minhasPostagens"
@@ -180,7 +182,7 @@
             </nav>
 
             <div
-                class="tab-pane fade"
+                class="tab-pane fade show active"
                 id="minhasPostagens"
                 role="tabpanel"
                 aria-labelledby="nav-minhasPostagens-tab"
@@ -191,27 +193,27 @@
                         *ngFor="let item of user.card"
                     >
                         <div class="card-body">
-                            <p *ngIf="education()" class="card-title m-0">
-                                {{ item.image }}
+                            <p class="card-title m-0">
+                                {{ item.institution }}
                             </p>
-                            <p *ngIf="education()" class="text-muted">
-                                {{ formacao + item.formation }}
+                            <p class="text-muted">
+                                {{item.formation }}
                             </p>
-                            <p *ngIf="education()" class="card-text mt-3">
-                                {{ instituicao + item.institution }}
+                            <p class="card-text mt-3">
+                                {{item.image }}
                             </p>
-                            <p *ngIf="professional()" class="card-text mt-3">
-                                {{ item.occupation }}
+                            <p class="card-text mt-3">
+                                {{item.companyName }}
                             </p>
-                            <p *ngIf="professional()" class="card-text mt-3">
-                                {{ nomeEmpresa + item.companyName }}
+                            <p class="card-text mt-3">
+                                {{item.occupation }}
                             </p>
                             <p class="card-text">
                                 <small class="text-muted"
                                     >{{
                                         item.startDate | date: "dd/MM/yyyy"
                                     }}
-                                    fim {{ item.endDate | date: "dd/MM/yyyy" }}
+                                    <span *ngIf="endDate(item)">fim {{ item.endDate | date: "dd/MM/yyyy" }}</span>                                  
                                 </small>
                             </p>
 
@@ -231,6 +233,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <button type="submit" class="btn btn-danger" [routerLink]="['/edit-user', idUser]"> edit user</button>
         </div>
     </div>
 </div>

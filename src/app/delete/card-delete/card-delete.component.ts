@@ -26,6 +26,7 @@ export class CardDeleteComponent implements OnInit {
             this.router.navigate(['/login']);
         }
 
+        this.cardService.refreshToken()
         this.idCard = this.route.snapshot.params['id'];
         this.findByIdCard(this.idCard);
     }
@@ -41,5 +42,13 @@ export class CardDeleteComponent implements OnInit {
             alert('Card deletado com sucesso!');
             this.router.navigate(['/home']);
         });
+    }
+
+    endDate(card: Card){
+        let ok = false
+        if(card.endDate != null){
+            ok = true
+        }
+        return ok
     }
 }
