@@ -84,6 +84,9 @@
 
                         <div class="card-back ">
                             <p>{{card.description}}</p>
+                            <button class="btnCard btn-danger " 
+                            *ngIf='card.description'
+                            [routerLink]="['/delete-card', card.id]">Deletar</button>
                             <p class="text-center text-white" 
                                 *ngIf='this.card.description == "" || this.card.description == null'>
                                 Adicionar descrição
@@ -91,9 +94,13 @@
                                     (input)="descricao($event)"></textarea>
                                 <button class="btnCard btn-info mt-4 mb-1" (click)="putDescription(card.id)"> Salvar
                                 </button>
-                                 <button class="btnCard btn-danger" [routerLink]="['/delete-card', card.id]">Deletar</button>
+                                <button class="btnCard btn-danger" [routerLink]="['/delete-card', card.id]">Deletar</button>
+
+                                
+                               
 
                             </p>
+
                         </div>
                     </div>
                 </div>
