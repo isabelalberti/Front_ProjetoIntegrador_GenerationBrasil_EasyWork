@@ -11,71 +11,67 @@ import { environment } from 'src/environments/environment.prod';
     styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-    fullName = environment.fullName;
-    city = environment.city;
-    email = environment.email;
-    phone = environment.phone;
+    
+    user: User = new User();
+    idUser: number
 
-    idUser: number;
-    confirmarPassword: string;
+    confPassword: string;
     gen: string;
-
-    userEdit: User = new User();
+    userType: string;
 
     constructor(
         private router: Router,
         private route: ActivatedRoute,
-        private authService: AuthService //private alert: AlertService
+        public authService: AuthService //private alert: AlertService
     ) {}
 
     ngOnInit() {
-        window.scroll(0, 0);
-        this.authService.refreshToken(); //
-
-        this.idUser = this.route.snapshot.params['id'];
-    }
-
-    validatePreenchido() {
-        let usuario = <HTMLInputElement>document.getElementById('email');
-        if (usuario?.value != '') {
-            usuario.classList.add('preenchido');
-        } else {
-            usuario.classList.remove('preenchido');
+        if(environment.token == ""){
+            this.router.navigate(["/login"])
         }
+
+        window.scroll(0, 0);
+        
+        this.idUser = this.route.snapshot.params["id"]
+        this.findByIdUser(this.idUser)
     }
 
     confirmPassword(event: any) {
-        this.confirmarPassword = event.target.value;
+        this.confPassword = event.target.value;
     }
 
     genero(event: any) {
         this.gen = event.target.value;
     }
 
-    atualizar() {
-        this.userEdit.genero = this.gen;
+    typeUser(event: any) {
+        this.userType = event.target.value;
+    }
 
-        if (this.userEdit.password.length < 6) {
-            // this.alert.showAlertInfo("A senha deve conter no minimo 8 caracteres.");
+    findByIdUser(id: number){
+        this.authService.getByIdUser(id).subscribe((resp: User) => {
+            this.user = resp
+        })
+    }
+
+    updateUser(){
+        this.user.type = this.userType
+
+        if (this.confPassword != this.user.password) {
+            alert('As senhas não conferem!\nDigite novamente');
         } else {
-            if (this.userEdit.password != this.confirmarPassword) {
-                // this.alert.showAlertInfo("As senhas estão diferentes.");
-            } else {
-                this.authService
-                    .putUser(this.userEdit)
-                    .subscribe((resp: User) => {
-                        this.userEdit = resp;
+            this.authService.putUser(this.user).subscribe((resp: User) => {
+                this.user = resp;
 
-                        this.router.navigate(['/inicio']);
-                        // this.alert.showAlertInfo("Usuário editado com sucesso! Faça seu login")
+                alert("Usuário atualizado com sucesso! Faça o login novamente, por favor.")                
 
-                        environment.token = '';
-                        environment.fullName = '';
-                        environment.picture = '';
-                        environment.id = 0;
-                        this.router.navigate(['/login']);
-                    });
-            }
+                environment.token = ""
+                environment.fullName = ""
+                environment.picture = ""
+                environment.id = 0
+
+                this.router.navigate(['/login']);
+            });
         }
     }
 }

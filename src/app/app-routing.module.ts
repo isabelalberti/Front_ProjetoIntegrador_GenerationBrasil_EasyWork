@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
 import { SkillDeleteComponent } from './delete/skill-delete/skill-delete.component';
 import { CardEditComponent } from './edit/card-edit/card-edit.component';
+import { UserComponent } from './edit/user/user.component';
 import { HomeComponent } from './home/home.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { LoginComponent } from './login/login.component';
@@ -32,7 +33,8 @@ const routes: Routes = [
     { path: 'nav-bar-internal', component: NavBarInternalComponent },
     { path: 'skill-post', component: SkillPostComponent },
     { path: 'skill-delete', component: SkillDeleteComponent },
-    {path:  'mural', component: MuralComponent},
+    { path: 'edit-user/:id', component: UserComponent },
+    { path: 'mural', component: MuralComponent },
 ];
 
 @NgModule({

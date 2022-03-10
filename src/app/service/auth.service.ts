@@ -37,8 +37,8 @@ export class AuthService {
 
     putUser(user: User): Observable<User> {
         return this.http.put<User>(
-            'https://projeto-integrador-grupo2.herokuapp.com/user/alterar',
-            user
+            'https://projeto-integrador-grupo2.herokuapp.com/user/update',
+            user, this.token
         );
     }
 
