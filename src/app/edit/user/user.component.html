@@ -1,144 +1,153 @@
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-md-12 p-3">
-            <h1 class="d-flex justify-content-center">Alterar Cadastro</h1>
-        </div>
-    </div>
+<div class="container-fluid vh-100">
+    <div class="row">
+        <div class="col-md-4 mt-5"></div>
 
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-5 mb-5 caixa">
-            <div class="margin-dentro mt-3">
-                <div class="form-group campo">
-                    <input
-                        [(ngModel)]="userEdit.fullName"
-                        class="form-control"
-                        type="text"
-                        name="nome"
-                        id="nome"
-                        required
-                    />
-                    <label for="nome">Nome</label>
-                </div>
+        <div class="container-fluid vh-100" style="background-color: #161f38">
+            <div class="row">
+                <div class="col-md-4 mt-5"></div>
 
-                <div class="form-group campo">
-                    <input
-                        [(ngModel)]="userEdit.picture"
-                        class="form-control"
-                        type="text"
-                        name="foto"
-                        id="foto"
-                        required
-                    />
-                    <label for="foto">Link da foto</label>
-                </div>
+                <div
+                    class="col col-md-5 mt-5 mb-5 d-flex justify-content-center"
+                    style="filter: 50px"
+                >
+                    <div class="row d-flex justify-content-center m-0"></div>
+                    <div class="col-md-10">
+                        <h1
+                            class="text-center mt-3 text-white text-uppercase"
+                            style="filter: none"
+                        >
+                            Atualizar
+                        </h1>
 
-                <div class="form-row">
-                    <div class="form-group col campo">
-                        <input
-                            (input)="confirmPassword($event)"
-                            class="form-control"
-                            type="password"
-                            name="senha"
-                            id="senha"
-                            required
-                        />
-                        <label for="senha"> Digite sua Senha</label>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input
+                                [(ngModel)]="user.fullName"
+                                class="form-control"
+                                type="text"
+                                name="nome"
+                                id="nome"
+                                placeholder=" Digite seu nome completo"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Usuario</label>
+                            <input
+                                [(ngModel)]="user.email"
+                                class="form-control"
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Digite seu Email"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Número de telefone</label>
+                            <input
+                                [(ngModel)]="user.phoneNumber"
+                                class="form-control"
+                                type="text"
+                                name="telefone"
+                                id="telefone"
+                                placeholder=" Digite seu número de telefone e o DDD"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numTelefone">Cidade</label>
+                            <input
+                                [(ngModel)]="user.city"
+                                class="form-control"
+                                type="text"
+                                name="cidade"
+                                id="cidade"
+                                placeholder="Digite a sua cidade e estado"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idade">Idade</label>
+                            <input
+                                [(ngModel)]="user.age"
+                                class="form-control"
+                                type="text"
+                                name="idade"
+                                id="idade"
+                                placeholder="Digite a sua idade"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="foto">Link da Foto</label>
+                            <input
+                                [(ngModel)]="user.picture"
+                                class="form-control"
+                                type="text"
+                                name="usuario"
+                                id="picture"
+                                placeholder="Link da sua foto"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input
+                                (input)="confirmPassword($event)"
+                                class="form-control"
+                                type="password"
+                                name="senha"
+                                id="senha"
+                                placeholder="Digite sua senha"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmSenha">Confirmar Senha</label>
+                            <input
+                                [(ngModel)]="user.password"
+                                class="form-control"
+                                type="password"
+                                name="confirmSenha"
+                                id="confirmSenha"
+                                placeholder="Confirme sua senha"
+                                required
+                            />
+                        </div>
+
+                        <div *ngIf="authService.adm()" class="form-group texto-color mb-3 pr-0 pl-0">
+                            <label for="tipoUsuario">Tipo de Usuario</label>
+                            <select
+                                class="form-control"
+                                name="tipo"
+                                id="tipo"
+                                (change)="typeUser($event)"
+                            >
+                                <option>Selecione um tipo de usuário:</option>
+                                <option value="adm">Administrador</option>
+                                <option value="padrao">Padrão</option>
+                            </select>
+                        </div>                        
+
+                        <div class="d-flex justify-content-center mb-3">
+                            <button
+                                type="submit"
+                                class="btn btn-danger mr-4"
+                                routerLink="/home"
+                            >
+                                Cancelar
+                            </button>
+                            <button
+                                (click)="updateUser()"
+                                type="submit"
+                                class="btn btn-success"
+                            >
+                                Atualizar
+                            </button>
+                        </div>
                     </div>
-
-                    <div class="form-group col campo">
-                        <input
-                            [(ngModel)]="userEdit.password"
-                            class="form-control"
-                            type="password"
-                            name="confirmSenha"
-                            id="confirmSenha"
-                            required
-                        />
-                        <label for="confirmSenha">Confirmação de Senha</label>
-                    </div>
-                </div>
-
-                <div class="form-group col texto-color">
-                    <label class="label-cinza" for="genero">Gênero</label>
-                    <!-- select - abre na caixa de texto, e permite escrever opções para escolha do usuário -->
-                    <!-- Option - opção dentro da caixa de texto para que o usuário escolha -->
-                    <select
-                        class="form-control"
-                        name="genero"
-                        id="genero"
-                        (change)="genero($event)"
-                    >
-                        <option>{{ userEdit.genero }}</option>
-                        <option value="fem">Feminino</option>
-                        <option value="mas">Masculino</option>
-                        <option value="outros">
-                            Outros(Trans, não-binário)
-                        </option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-around mb-3">
-            <button
-                type="button"
-                class="btn btn-danger mr-5 px-4"
-                routerLink="/inicio"
-            >
-                Cancelar
-            </button>
-            <button
-                type="button"
-                class="btn btn-success px-4"
-                (click)="atualizar()"
-            >
-                Atualizar
-            </button>
-        </div>
-    </div>
-</div>
-<div class="col-md-8">
-    <div class="card mb-3">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h6 class="mb-0">Full Name</h6>
-                </div>
-                <div class="col-sm-9 text-secondary">
-                    {{ fullName }}
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-sm-3">
-                    <h6 class="mb-0">Email</h6>
-                </div>
-                <div class="col-sm-9 text-secondary">
-                    {{ email }}
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-sm-3">
-                    <h6 class="mb-0">Phone</h6>
-                </div>
-                <div class="col-sm-9 text-secondary">
-                    {{ phone }}
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-sm-3">
-                    <h6 class="mb-0">Address</h6>
-                </div>
-                <div class="col-sm-9 text-secondary">
-                    {{ city }}
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-sm-12">
-                    <a class="btn btn-info" target="__blank">Edit</a>
                 </div>
             </div>
         </div>

@@ -45,6 +45,13 @@ export class CardEditComponent implements OnInit {
     update() {
         this.card.option = this.tip;
 
+        if(this.card.startDate == null){
+            this.card.startDate = ''
+        }
+        if(this.card.endDate == null){
+            this.card.endDate = ''
+        }        
+
         if (this.tip == 'Profissional') {
             this.card.institution = '';
             this.card.formation = '';
