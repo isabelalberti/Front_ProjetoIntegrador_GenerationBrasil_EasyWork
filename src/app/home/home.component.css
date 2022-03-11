@@ -4,6 +4,12 @@
     height: 350px;
 }
 
+.flip-card-container-test {
+    color: rgb(71, 60, 60);
+    width: 130px;
+    height: 150px;
+}
+
 .tam {
     width: 73vw;
 }
@@ -15,7 +21,7 @@
     transition: 0.6s 0.1s;
 }
 
-.flip-teste{
+.flip-test{
     width: inherit;
     height: inherit;
     transform-style: preserve-3d;    

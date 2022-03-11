@@ -2,81 +2,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="container bg-light">
-
-            <!-- <div class="card" style="width: 18rem;" *ngFor="let item of cardList">
-                    <div class="card-body">
-                        <h5 class="card-title">{{item.institution}}</h5>
-                        <p class="card-text">{{item.formation}}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div> -->
-
-            <!-- todo GetMySkills -->
-            <div class="d-flex justify-content-center">
-                <nav>
-                    <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-                        <a (click)="findByIdUser()" class="nav-link active text-secondary font-weight-bold" id="nav-profile-tab"
-                            data-toggle="tab" href="#allCards" role="tab" aria-controls="nav-allCards"
-                            aria-selected="false">Habilidade profissional</a>
-                    </div>
-                    <!-- <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-                        <a (click)="findByIdUser()" class="nav-link text-secondary font-weight-bold" id="nav-profile-tab"
-                            data-toggle="tab" href="#habilidadeComp" role="tab" aria-controls="nav-habilidadeComp"
-                            aria-selected="false">Habilidade Comportamental</a>
-                    </div> -->
-                </nav>
-                <div class="tab-content mt-5" id="nav-tabContent">
-
-                    <div class="tab-pane fade show active" id="allCards" role="tabpanel"
-                        aria-labelledby="nav-allCards-tab">
-                        <div class="d-flex flex-wrap">
-                            <ng-container *ngFor="let card of user.card">
-                                <div class="flip-card-container m-3" *ngFor='let skill of card.skill'>
-                                    <div class="flip-teste">
-                                        <div class="card-front">
-                                            <ul
-                                                class="dois d-flex justify-content-center align-items-center flex-column text-dark" 
-                                                >
-                                                <li >
-                                                    {{skill.technicalSkill}}</li>
-                                                <li >
-                                                    {{skill.nivel}}</li>
-                                                <li >
-                                                    {{skill.skill}}</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ng-container>
-                        </div>
-                    </div>
-
-                    <!-- <div class="tab-pane fade show " id="habilidadeComp" role="tabpanel"
-                        aria-labelledby="nav-habilidadeComp-tab">
-                        <div class="d-flex flex-wrap">
-                            <ng-container *ngFor="let card of user.card">
-                                <div class="flip-card-container m-3" *ngFor='let skill of card.skill'>
-                                    <div class="flip-teste">
-                                        <div class="card-front">
-                                            <ul
-                                                class="dois d-flex justify-content-center align-items-center flex-column text-dark">                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ng-container>
-                        </div>
-                    </div> -->
-
-                </div>
-            </div>
-            <!-- todo GetMySkills -->
-
+        <div class="container bg-transparent">
             <div class="d-flex justify-content-center flex-column">
                 <nav>
                     <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-                        <a class="nav-link active text-secondary font-weight-bold" id="nav-profile-tab"
+                        <a class="nav-link active text-info font-weight-bold" id="nav-profile-tab"
                             data-toggle="tab" href="#allCards" role="tab" aria-controls="nav-allCards"
                             aria-selected="false">Todas as publicações</a>
                     </div>
@@ -93,9 +23,9 @@
                                         <li>{{card.occupation}}</li>                                        
                                         <li>{{card.institution}}</li>
                                         <li>{{card.formation}}</li>
-                                        <li><small>{{card.startDate | date: "dd/MM/yyyy"}}</small></li>
+                                        <li class="mt-5"><small>{{card.startDate | date: "dd/MM/yyyy"}}</small></li>
                                         <li><small>{{card.endDate | date: "dd/MM/yyyy"}}</small></li>
-                                        <li class="mt-5">{{card.user.fullName}}</li>
+                                        <li>{{card.user.fullName}}</li>
                                         
 
                                     </ul>
@@ -111,7 +41,7 @@
             </div>
 
             <!-- ! Nova Skill -->
-            <div class="d-flex flex-column">
+            <!-- <div class="d-flex flex-column">
 
 
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
@@ -198,64 +128,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- ! Nova Skill -->
-        </div>
-
-        <!-- ? Minhas postagens -->
-        <div class="d-flex justify-content-center flex-column">
-            <nav>
-                <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-                    <a (click)="findByIdUser()" class="nav-link active text-secondary font-weight-bold"
-                        id="nav-profile-tab" data-toggle="tab" href="#minhasPostagens" role="tab"
-                        aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
-                </div>
-            </nav>
-
-            <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel"
-                aria-labelledby="nav-minhasPostagens-tab">
-                <div class="card-columns">
-                    <div class="card text-center" *ngFor="let item of user.card">
-                        <div class="card-body">
-                            <p class="card-title m-0">
-                                {{ item.institution }}
-                            </p>
-                            <p class="text-muted">
-                                {{item.formation }}
-                            </p>
-                            <p class="card-text mt-3">
-                                {{item.image }}
-                            </p>
-                            <p class="card-text mt-3">
-                                {{item.companyName }}
-                            </p>
-                            <p class="card-text mt-3">
-                                {{item.occupation }}
-                            </p>
-                            <p class="card-text">
-                                <small class="text-muted">{{
-                                    item.startDate | date: "dd/MM/yyyy"
-                                    }}
-                                    <span *ngIf="endDate(item)">fim {{ item.endDate | date: "dd/MM/yyyy"
-                                        }}</span>
-                                </small>
-                            </p>
-
-                            <a [routerLink]="['/edit-card', item.id]" class="text-info mr-3" href="">Editar</a>
-                            <a [routerLink]="['/delete-card', item.id]" class="text-danger" href="">Apagar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ? Minhas postagens -->
-
-            <!-- * Edit User -->
-            <div class="row d-flex justify-content-center">
-                <button type="submit" class="btn btn-danger" [routerLink]="['/edit-user', idUser]"> edit
-                    user</button>
-            </div>
-            <!-- * Edit User -->
-        </div>
+        </div>       
     </div>
 </div>
