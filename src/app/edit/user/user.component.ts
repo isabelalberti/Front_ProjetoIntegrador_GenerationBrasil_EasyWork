@@ -57,10 +57,12 @@ export class UserComponent implements OnInit {
     updateUser(){
         this.user.type = this.userType
 
+        console.log(this.user)
         if (this.confPassword != this.user.password) {
             alert('As senhas não conferem!\nDigite novamente');
         } else {
             this.authService.putUser(this.user).subscribe((resp: User) => {
+                console.log(resp)
                 this.user = resp;
 
                 alert("Usuário atualizado com sucesso! Faça o login novamente, por favor.")                

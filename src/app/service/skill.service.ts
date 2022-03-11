@@ -23,7 +23,7 @@ export class SkillService {
 
     getAllSkill(): Observable<Skill[]> {
         return this.http.get<Skill[]>(
-            'https://projeto-integrador-grupo2.herokuapp.com/skill',
+            'https://projeto-integrador-grupo2.herokuapp.com/skill/all',
             this.token
         );
     }
