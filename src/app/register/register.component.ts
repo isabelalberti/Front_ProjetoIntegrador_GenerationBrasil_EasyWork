@@ -35,15 +35,18 @@ export class RegisterComponent implements OnInit {
         this.confPassword = event.target.value;
     }
 
-    genero(event: any) {
+    gender(event: any) {
         this.gen = event.target.value;
     }
 
     typeUser(event: any) {
         this.userType = event.target.value;
-    }
+    }    
 
     register() {
+        this.user.gender = this.gen
+        this.user.type = this.userType
+
         if (this.confPassword != this.user.password) {
             alert('As senhas não conferem!\nDigite novamente');
         } else {
@@ -53,6 +56,5 @@ export class RegisterComponent implements OnInit {
                 alert('Usuário cadastrado com sucesso!');
             });
         }
-    }
-  	
+    }  	
 }

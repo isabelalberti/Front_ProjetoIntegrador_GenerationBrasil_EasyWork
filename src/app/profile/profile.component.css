@@ -4,6 +4,13 @@ width: 230px;
 height: 350px;
 }
 
+
+.flip-card-container-test {
+  color: rgb(71, 60, 60);
+  width: 230px;
+  height: 230px;
+}
+
 .tam{
 width: 73vw;
 }
@@ -13,6 +20,12 @@ width: 73vw;
   height: inherit;
   transform-style: preserve-3d;
   transition: .6s .1s;
+}
+
+.flip-teste{
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;    
 }
 
 /* hover and focus-within states */

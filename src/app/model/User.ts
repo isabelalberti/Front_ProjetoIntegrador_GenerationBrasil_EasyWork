@@ -14,6 +14,6 @@ export class User {
     public city: string;
     public state: string;
     public type: string;
-    public genero: string;
+    public gender: string;
     public card: Card[];
 }
