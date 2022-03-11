@@ -24,6 +24,8 @@ import { SkillPostComponent } from './post/skill-post/skill-post.component';
 import { SkillDeleteComponent } from './delete/skill-delete/skill-delete.component';
 import { AlertComponent } from './alert/alert.component';
 import { UserComponent } from './edit/user/user.component';
+import { TermosComponent } from './termos/termos.component';
+import { SharedComponent } from './shared/shared.component';
 
 @NgModule({
     declarations: [
@@ -46,6 +48,8 @@ import { UserComponent } from './edit/user/user.component';
         SkillDeleteComponent,
         AlertComponent,
         UserComponent,
+        TermosComponent,
+        SharedComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [

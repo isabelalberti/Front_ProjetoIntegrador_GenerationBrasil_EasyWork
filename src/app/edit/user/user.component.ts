@@ -22,16 +22,21 @@ export class UserComponent implements OnInit {
     constructor(
         private router: Router,
         private route: ActivatedRoute,
-        public authService: AuthService //private alert: AlertService
+        public authService: AuthService,
+        private alerts: AlertService//private alert: AlertService
     ) {}
 
     ngOnInit() {
         if(environment.token == ""){
+            alert(
+                'Sua seção expirou para sua segurança! Faça o login novamente!'
+              );
             this.router.navigate(["/login"])
         }
 
         window.scroll(0, 0);
-        
+
+        this.authService.refreshToken()
         this.idUser = this.route.snapshot.params["id"]
         this.findByIdUser(this.idUser)
     }
@@ -64,8 +69,7 @@ export class UserComponent implements OnInit {
             this.authService.putUser(this.user).subscribe((resp: User) => {
                 console.log(resp)
                 this.user = resp;
-
-                alert("Usuário atualizado com sucesso! Faça o login novamente, por favor.")                
+                alert("Usuário atualizado com sucesso!")               
 
                 environment.token = ""
                 environment.fullName = ""

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../model/User';
+import { AlertService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -19,16 +20,6 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         window.scroll(0, 0);
-        this.validatePreenchido();
-    }
-
-    validatePreenchido() {
-        let usuario = <HTMLInputElement>document.getElementById('email');
-        if (usuario?.value != '') {
-            usuario.classList.add('preenchido');
-        } else {
-            usuario.classList.remove('preenchido');
-        }
     }
 
     confirmPassword(event: any) {
