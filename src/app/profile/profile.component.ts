@@ -15,12 +15,7 @@ export class ProfileComponent implements OnInit {
   idUser = environment.id
   picture = environment.picture
   fullName = environment.fullName
-  city = environment.city
-  github = environment.github
-  linkedin = environment.linkedin
-  description = environment.description
-  descriptionPersonal = environment.descriptionPersonal
-
+  
   idCard: number
   descric:string
   
@@ -28,10 +23,7 @@ export class ProfileComponent implements OnInit {
 
   user: User = new User()
   card: Card = new Card()
-  
-  //descricao: Descricao = new descricao()
-  
-    
+      
   constructor(
     private router: Router,
     public authService: AuthService,
@@ -46,9 +38,9 @@ export class ProfileComponent implements OnInit {
    // this.putDescription()
   }
 
-  descricao(event: any) {
-    this.descric = event.target.value;
-}
+  descricao(event: any){
+  this.descric= event.target.value
+  }
 
   getByIdUser() {
     this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
@@ -62,11 +54,17 @@ export class ProfileComponent implements OnInit {
     });
 }
   
-  putDescription() {
-    this.cardService.putDescription(this.description).subscribe((resp: Card) => {
-            this.card = resp;
-            this.router.navigate(['/profile']);
-            alert('Descrição cadastrada com sucesso!');
-        });
-    }
-} 
+putDescription(id: number) {
+  this.cardService.getByIdCard(id).subscribe((resp: Card) => {
+      this.card = resp;
+      console.log(this.card);
+      this.card.description = this.descric;
+
+      this.cardService.putCard(this.card).subscribe((resp: Card) => {
+          this.card = resp;
+          this.router.navigate(['/profile']);
+          alert('Descrição cadastrada com sucesso!');
+      });
+  });
+}
+}

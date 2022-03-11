@@ -1,13 +1,15 @@
+<section>
+
 <div class="container my-5">
     <div class="row">
-        <h1 class="text-center">Editar Card</h1>
+        <h1 class="text-center text-white">Editar Card</h1>
     </div>
 
     <div class="row d-flex justify-content-center">
         <div class="col-md-6">
             <form>
-                <div class="form-group fm">
-                    <label for="startDate">Data de Inicio</label>
+                <div class="form-group fm ">
+                    <label for="startDate" >Data de Inicio</label>
                     <input
                         [(ngModel)]="card.startDate"
                         type="date"
@@ -17,7 +19,7 @@
                     />
                 </div>
                 <div class="form-group">
-                    <label for="endDate">Data do Termino</label>
+                    <label for="endDate"  >Data do Termino</label>
                     <input
                         [(ngModel)]="card.endDate"
                         type="date"
@@ -30,7 +32,7 @@
                 <form>
                     <div class="form-group">
                         <label
-                            class="nivel pr-3 align-items-center"
+                            class="nivel pr-3 align-items-center "
                             for="card.tip"
                         >
                             Tipo
@@ -45,7 +47,7 @@
 
                     <div *ngIf="tip == 'Profissional'">
                         <div class="form-group">
-                            <label for="companyName">Empresa</label>
+                            <label for="companyName"  >Empresa</label>
                             <input
                                 [(ngModel)]="card.companyName"
                                 type="text"
@@ -57,7 +59,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="occupation">Ocupacao</label>
+                            <label for="occupation"  >Ocupacao</label>
                             <input
                                 [(ngModel)]="card.occupation"
                                 type="text"
@@ -71,7 +73,7 @@
 
                     <div *ngIf="tip == 'Educacional'">
                         <div class="form-group">
-                            <label for="institution">Instituicao</label>
+                            <label for="institution" >Instituicao</label>
                             <input
                                 [(ngModel)]="card.institution"
                                 type="text"
@@ -83,7 +85,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="formation">Formacao</label>
+                            <label for="formation"  >Formacao</label>
                             <input
                                 [(ngModel)]="card.formation"
                                 type="text"
@@ -95,7 +97,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="image">Imagem</label>
+                            <label for="image"  >Imagem</label>
                             <input
                                 [(ngModel)]="card.image"
                                 type="text"
@@ -113,10 +115,10 @@
                             type="submit"
                             routerLink="/home"
                         >
-                            cancelar
+                            Cancelar
                         </button>
                         <button
-                            class="fm btn btn-success"
+                            class="fm btn btn-info"
                             type="submit"
                             (click)="update()"
                         >
@@ -128,3 +130,4 @@
         </div>
     </div>
 </div>
+</section>

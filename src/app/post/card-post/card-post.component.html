@@ -5,7 +5,7 @@
                 class="row d-flex justify-content-center align-items-center bg-test py-3"
             >
                 <form>
-                    <div class="form-group fm">
+                    <div class="form-group fm text-white">
                         <label for="startDate">Data de Inicio</label>
                         <input
                             [(ngModel)]="card.startDate"
@@ -15,7 +15,7 @@
                             name="startDate"
                         />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <label for="endDate">Data do Termino</label>
                         <input
                             [(ngModel)]="card.endDate"
@@ -27,16 +27,16 @@
                     </div>
 
                     <form>
-                        <div class="form-group">
+                        <div class="form-group ">
                             <label
-                                class="nivel pr-3 align-items-center"
+                                class="nivel pr-3 align-items-center text-white"
                                 for="card.tip"
                             >
                                 Tipo:
                             </label>
 
                             <select
-                                class="form-control fm"
+                                class="form-control fm "
                                 (change)="changeTip($event)"
                             >
                                 <option>Escolha</option>
@@ -48,7 +48,7 @@
                         </div>
 
                         <div *ngIf="tipCard == 'Profissional'">
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label for="companyName">Empresa</label>
                                 <input
                                     [(ngModel)]="card.companyName"
@@ -60,7 +60,7 @@
                                 />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label for="occupation">Ocupacao</label>
                                 <input
                                     [(ngModel)]="card.occupation"
@@ -74,9 +74,9 @@
 
                             
 
-                            <div class="form-group">
+                            <div class="form-group ">
                                 <label
-                                    class="nivel pr-3 align-items-center"
+                                    class="nivel pr-3 align-items-center text-white"
                                     for="card.tip"
                                 >
                                     Tipo:
@@ -113,7 +113,7 @@
                                             placeholder="Nome da Habilidade Interpessoal"
                                         />
 
-                                        <div class="form-group fm">
+                                        <div class="form-group fm text-white">
                                             <label
                                                 class="nivel pr-3 align-items-center"
                                                 for="skillNivel"
@@ -122,7 +122,7 @@
                                             </label>
 
                                             <select
-                                                class="form-control fm"
+                                                class="form-control fm text-white"
                                                 (change)="changeNivel($event)"
                                                 id="skillNivel"
                                                 name="skillNivel"
@@ -151,7 +151,7 @@
                                 </div>
 
                                 <div *ngIf="tipSkill == 'skill'">
-                                    <div class="form-group">
+                                    <div class="form-group text-white">
                                         <label for="skill"
                                             >Nome da Habilidade Pessoal
                                         </label>
@@ -168,7 +168,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label for="">Insira uma descricao</label>
                             </div>
 
@@ -185,7 +185,7 @@
                         </div>
 
                         <div *ngIf="tipCard == 'Educacional'">
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label for="institution">Instituicao</label>
                                 <input
                                     [(ngModel)]="card.institution"
@@ -197,7 +197,7 @@
                                 />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label for="formation">Formacao</label>
                                 <input
                                     [(ngModel)]="card.formation"
@@ -209,7 +209,7 @@
                                 />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label for="image">Imagem</label>
                                 <input
                                     [(ngModel)]="card.image"
@@ -221,7 +221,7 @@
                                 />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group text-white">
                                 <label
                                     class="nivel pr-3 align-items-center"
                                     for="card.tip"
@@ -246,7 +246,7 @@
                                 </select>
 
                                 <div *ngIf="tipSkill == 'tecnicalSkill'">
-                                    <div class="form-group">
+                                    <div class="form-group text-white">
                                         <label for="tecnicalSkill">
                                             Nome da Habilidade Tecnica
                                         </label>
@@ -260,9 +260,9 @@
                                             placeholder="Nome da Habilidade Interpessoal"
                                         />
 
-                                        <div class="form-group fm">
+                                        <div class="form-group fm text-white">
                                             <label
-                                                class="nivel pr-3 align-items-center"
+                                                class="nivel pr-3 align-items-center "
                                                 for="skillNivel"
                                             >
                                                 Nivel de sua Habilidade:
@@ -297,7 +297,7 @@
                                 </div>
 
                                 <div *ngIf="tipSkill == 'skill'">
-                                    <div class="form-group">
+                                    <div class="form-group text-white">
                                         <label for="skill"
                                             >Nome da Habilidade Pessoal
                                         </label>
