@@ -6,23 +6,26 @@ import { AlertComponent } from '../alert/alert.component';
     providedIn: 'root',
 })
 export class AlertService {
+
     constructor(private bsModalService: BsModalService) {}
 
-    private showAlert(message: string, tipo: string) {
-        const bsModalRef: BsModalRef = this.bsModalService.show(AlertComponent);
-        bsModalRef.content.type = tipo;
-        bsModalRef.content.message = message;
-    }
+    private showAlert(message: string, type: string){
+        const bsModalRef: BsModalRef = this.bsModalService.show
+        (AlertComponent)
+        bsModalRef.content.type = type
+        bsModalRef.content.message = message
+      }
 
-    showAlertDanger(message: string) {
-        this.showAlert(message, 'danger');
-    }
-
-    showAlertSuccess(message: string) {
-        this.showAlert(message, 'success');
-    }
-
-    showAlertInfo(message: string) {
-        this.showAlert(message, 'Info');
-    }
+      showAlertDanger(message: string){
+        this.showAlert(message, 'danger')
+      }
+      showAlertSuccess(message: string){
+        this.showAlert(message, 'success')
+      }
+      showAlertInfo(message: string){
+        this.showAlert(message, 'info')
+      }
+      showAlertWarning(message: string){
+        this.showAlert(message, 'warning')
+      }
 }

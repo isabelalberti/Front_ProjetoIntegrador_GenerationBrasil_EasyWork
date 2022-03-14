@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserSecurityLogin } from '../model/UserSecurityLogin';
+import { AlertService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
 
                 console.log(environment);
 
-                this.router.navigate(['/nav-bar-internal']);
+                this.router.navigate(['/home']);
             },
 
             error: (erro) => {

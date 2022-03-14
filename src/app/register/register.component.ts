@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../model/User';
+import { AlertService } from '../service/alert.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -19,31 +20,24 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         window.scroll(0, 0);
-        this.validatePreenchido();
-    }
-
-    validatePreenchido() {
-        let usuario = <HTMLInputElement>document.getElementById('email');
-        if (usuario?.value != '') {
-            usuario.classList.add('preenchido');
-        } else {
-            usuario.classList.remove('preenchido');
-        }
     }
 
     confirmPassword(event: any) {
         this.confPassword = event.target.value;
     }
 
-    genero(event: any) {
+    gender(event: any) {
         this.gen = event.target.value;
     }
 
     typeUser(event: any) {
         this.userType = event.target.value;
-    }
+    }    
 
     register() {
+        this.user.gender = this.gen
+        this.user.type = this.userType
+
         if (this.confPassword != this.user.password) {
             alert('As senhas não conferem!\nDigite novamente');
         } else {
@@ -53,6 +47,5 @@ export class RegisterComponent implements OnInit {
                 alert('Usuário cadastrado com sucesso!');
             });
         }
-    }
-  	
+    }  	
 }

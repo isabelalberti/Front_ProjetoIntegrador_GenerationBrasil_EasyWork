@@ -1,0 +1,27 @@
+#todo{
+  background: url(../../assets/img/bgCookies.png);
+  background-position: center;
+  color:#ffff;
+}
+
+.titulo{
+  text-align: center;
+  color: #ffff;
+}
+
+.subtitulo{
+  text-align: left;
+  color: #ffff;
+}
+
+.subsubtitulo{
+  color: #ffff;
+}
+
+.link{
+  color: #ffff;
+}
+
+.link:hover{
+  color: #ffff;
+}

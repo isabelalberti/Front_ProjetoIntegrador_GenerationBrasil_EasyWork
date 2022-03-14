@@ -16,6 +16,8 @@ import { CardPostComponent } from './post/card-post/card-post.component';
 import { SkillPostComponent } from './post/skill-post/skill-post.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { SharedComponent } from './shared/shared.component';
+import { TermosComponent } from './termos/termos.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'jumbotron', pathMatch: 'full' },
@@ -35,10 +37,12 @@ const routes: Routes = [
     { path: 'skill-delete', component: SkillDeleteComponent },
     { path: 'edit-user/:id', component: UserComponent },
     { path: 'mural', component: MuralComponent },
-];
+    { path: 'termos', component: TermosComponent },
+    { path: 'shared', component: SharedComponent },
+]
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

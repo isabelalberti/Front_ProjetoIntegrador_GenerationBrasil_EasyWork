@@ -2,14 +2,6 @@
     text-shadow: -3px 2px 1px rgba(122, 156, 189, 0.89);
 }
 
-.carousel {
-    min-height: 90vh;
-}
-
-.carousel-inner {
-    height: fit-content;
-}
-
 .carousel-txt {
     font-size: 20pt;
 }
@@ -27,7 +19,7 @@
 .card {
     width: 150px;
     margin: 30px;
-    transition: 200ms;
+    transition: 250ms;
 }
 
 .card:hover {
