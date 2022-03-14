@@ -197,23 +197,26 @@
                                 {{ item.institution }}
                             </p>
                             <p class="text-muted">
-                                {{item.formation }}
+                                {{ item.formation }}
                             </p>
                             <p class="card-text mt-3">
-                                {{item.image }}
+                                {{ item.image }}
                             </p>
                             <p class="card-text mt-3">
-                                {{item.companyName }}
+                                {{ item.companyName }}
                             </p>
                             <p class="card-text mt-3">
-                                {{item.occupation }}
+                                {{ item.occupation }}
                             </p>
                             <p class="card-text">
                                 <small class="text-muted"
-                                    >{{
-                                        item.startDate | date: "dd/MM/yyyy"
-                                    }}
-                                    <span *ngIf="endDate(item)">fim {{ item.endDate | date: "dd/MM/yyyy" }}</span>                                  
+                                    >{{ item.startDate | date: "dd/MM/yyyy" }}
+                                    <span *ngIf="endDate(item)"
+                                        >fim
+                                        {{
+                                            item.endDate | date: "dd/MM/yyyy"
+                                        }}</span
+                                    >
                                 </small>
                             </p>
 
@@ -236,7 +239,13 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-            <button type="submit" class="btn btn-danger" [routerLink]="['/edit-user', idUser]"> edit user</button>
+            <button
+                type="submit"
+                class="btn btn-danger"
+                [routerLink]="['/edit-user', idUser]"
+            >
+                edit user
+            </button>
         </div>
     </div>
 </div>

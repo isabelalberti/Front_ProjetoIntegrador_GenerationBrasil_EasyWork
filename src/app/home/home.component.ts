@@ -84,12 +84,12 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    endDate(card: Card){
-        let ok = false
-        if(card.endDate != null){
-            ok = true
+    endDate(card: Card) {
+        let ok = false;
+        if (card.endDate != null) {
+            ok = true;
         }
-        return ok
+        return ok;
     }
 
     // x() {
@@ -111,12 +111,12 @@ export class HomeComponent implements OnInit {
     //     if (
     //         this.card.formation == 'nada' &&
     //         this.card.image == 'nada' &&
-    //         this.card.institution == 'nada' 
-    //     ) { 
+    //         this.card.institution == 'nada'
+    //     ) {
     //         this.card.formation = ''
     //         this.card.image = ''
-    //         this.card.institution = ''            
-    //         ok = false;            
+    //         this.card.institution = ''
+    //         ok = false;
     //     }
     //     return ok;
     // }
@@ -127,7 +127,7 @@ export class HomeComponent implements OnInit {
     //     if (this.card.companyName == 'nada' && this.card.occupation == 'nada') {
     //         this.card.companyName = ''
     //         this.card.occupation = ''
-    //         ok = false;            
+    //         ok = false;
     //     }
     //     return ok;
     // }

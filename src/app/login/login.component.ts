@@ -33,9 +33,7 @@ export class LoginComponent implements OnInit {
 
                 console.log(environment);
 
-
                 this.router.navigate(['/nav-bar-internal']);
-
             },
 
             error: (erro) => {

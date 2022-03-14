@@ -1,9 +1,11 @@
-<div class="container-fluid ">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-4 mt-5 "></div>
-        <div class="col-md-4 mt-5 mb-3" style="filter: 50px;">
-
-            <h1 class="text-center mt-3 text-white text-uppercase mb-3" style="filter: none">
+        <div class="col-md-4 mt-5"></div>
+        <div class="col-md-4 mt-5 mb-3" style="filter: 50px">
+            <h1
+                class="text-center mt-3 text-white text-uppercase mb-3"
+                style="filter: none"
+            >
                 Atualizar
             </h1>
         </div>
@@ -14,11 +16,11 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4 mt-5 mb-4">
-
             <div class="btn-group" role="group">
-
                 <button class="btnBar mr-1">
-                    <a href="#setup">Dados da Conta <span class="text-danger">*</span></a>
+                    <a href="#setup"
+                        >Dados da Conta <span class="text-danger">*</span></a
+                    >
                 </button>
                 <button class="btnBar">
                     <a href="#social">Dados Social</a>
@@ -26,132 +28,223 @@
                 <button class="btnBar">
                     <a href="#pessoal">Dados Pessoal</a>
                 </button>
-
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid vh-100 ">
-    <div class="row ">
-        <div class="col-md-4 mt-5 "></div>
-        <div class="col col-md-4 mt-5 mb-5 d-flex justify-content-center " style="filter: 50px;">
+<div class="container-fluid vh-100">
+    <div class="row">
+        <div class="col-md-4 mt-5"></div>
+        <div
+            class="col col-md-4 mt-5 mb-5 d-flex justify-content-center"
+            style="filter: 50px"
+        >
             <div class="row d-flex justify-content-center m-0"></div>
             <div class="col-md-10">
-
                 <section id="setup">
-
                     <div class="form-group mt-4 text-white">
                         <label for="nome">Nome</label>
-                        <input [(ngModel)]="user.fullName" class="form-control" type="text" name="nome" id="nome"
-                            placeholder=" Digite seu nome completo" />
+                        <input
+                            [(ngModel)]="user.fullName"
+                            class="form-control"
+                            type="text"
+                            name="nome"
+                            id="nome"
+                            placeholder=" Digite seu nome completo"
+                        />
                     </div>
 
                     <div class="form-group text-white">
                         <label for="email">Usuario</label>
-                        <input [(ngModel)]="user.email" class="form-control" type="email" name="email" id="email"
-                            placeholder="Digite seu Email" />
+                        <input
+                            [(ngModel)]="user.email"
+                            class="form-control"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Digite seu Email"
+                        />
                     </div>
                     <div class="form-group text-white">
                         <label for="senha">Senha</label>
-                        <input (input)="confirmPassword($event)" class="form-control" type="password" name="senha"
-                            id="senha" placeholder="Digite sua senha" required />
+                        <input
+                            (input)="confirmPassword($event)"
+                            class="form-control"
+                            type="password"
+                            name="senha"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        />
                     </div>
 
                     <div class="form-group mb-4 text-white">
                         <label for="confirmSenha">Confirmar Senha</label>
-                        <input [(ngModel)]="user.password" class="form-control" type="password" name="confirmSenha"
-                            id="confirmSenha" placeholder="Confirme sua senha" required />
+                        <input
+                            [(ngModel)]="user.password"
+                            class="form-control"
+                            type="password"
+                            name="confirmSenha"
+                            id="confirmSenha"
+                            placeholder="Confirme sua senha"
+                            required
+                        />
                     </div>
-
                 </section>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid vh-100 ">
-        <div class="row ">
-            <div class="col-md-4 mt-5 "></div>
-            <div class="col col-md-4 mt-5 mb-5 d-flex justify-content-center " style="filter: 50px;">
+    <div class="container-fluid vh-100">
+        <div class="row">
+            <div class="col-md-4 mt-5"></div>
+            <div
+                class="col col-md-4 mt-5 mb-5 d-flex justify-content-center"
+                style="filter: 50px"
+            >
                 <div class="row d-flex justify-content-center m-0"></div>
                 <div class="col-md-10">
-
                     <section id="social">
-
                         <div class="form-group text-white mt-3">
                             <label for="github">GitHub</label>
-                            <input [(ngModel)]="user.gitHub" class="form-control" type="text" name="linkGithub"
-                                id="github" placeholder="Link GitHub" required />
+                            <input
+                                [(ngModel)]="user.gitHub"
+                                class="form-control"
+                                type="text"
+                                name="linkGithub"
+                                id="github"
+                                placeholder="Link GitHub"
+                                required
+                            />
                         </div>
 
                         <div class="form-group text-white mb-4">
                             <label for="linkedin">Linkedin</label>
-                            <input [(ngModel)]="user.linkedin" class="form-control" type="text" name="linkLinkedin"
-                                id="linkedin" placeholder="Link Linkedin" required />
+                            <input
+                                [(ngModel)]="user.linkedin"
+                                class="form-control"
+                                type="text"
+                                name="linkLinkedin"
+                                id="linkedin"
+                                placeholder="Link Linkedin"
+                                required
+                            />
                         </div>
-
                     </section>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid vh-100 ">
-            <div class="row ">
-                <div class="col-md-4 mt-5 "></div>
-                <div class="col col-md-4 mt-5 mb-4 d-flex justify-content-center " style="filter: 50px;">
+        <div class="container-fluid vh-100">
+            <div class="row">
+                <div class="col-md-4 mt-5"></div>
+                <div
+                    class="col col-md-4 mt-5 mb-4 d-flex justify-content-center"
+                    style="filter: 50px"
+                >
                     <div class="row d-flex justify-content-center m-0"></div>
                     <div class="col-md-10">
-
                         <section id="pessoal">
-
                             <div class="form-group text-white mt-3">
                                 <label for="telefone">Número de telefone</label>
-                                <input [(ngModel)]="user.phoneNumber" class="form-control" type="text" name="telefone"
-                                    id="telefone" placeholder=" Digite seu número de telefone e o DDD" />
+                                <input
+                                    [(ngModel)]="user.phoneNumber"
+                                    class="form-control"
+                                    type="text"
+                                    name="telefone"
+                                    id="telefone"
+                                    placeholder=" Digite seu número de telefone e o DDD"
+                                />
                             </div>
 
                             <div class="form-group text-white">
                                 <label for="numTelefone">Cidade</label>
-                                <input [(ngModel)]="user.city" class="form-control" type="text" name="cidade"
-                                    id="cidade" placeholder="Digite a sua cidade e estado" />
+                                <input
+                                    [(ngModel)]="user.city"
+                                    class="form-control"
+                                    type="text"
+                                    name="cidade"
+                                    id="cidade"
+                                    placeholder="Digite a sua cidade e estado"
+                                />
                             </div>
 
                             <div class="form-group text-white">
                                 <label for="numTelefone">State</label>
-                                <input [(ngModel)]="user.state" class="form-control" type="text" name="cidade"
-                                    id="cidade" placeholder="Digite a sua cidade e estado" />
+                                <input
+                                    [(ngModel)]="user.state"
+                                    class="form-control"
+                                    type="text"
+                                    name="cidade"
+                                    id="cidade"
+                                    placeholder="Digite a sua cidade e estado"
+                                />
                             </div>
 
                             <div class="form-group text-white">
                                 <label for="idade">Idade</label>
-                                <input [(ngModel)]="user.age" class="form-control" type="text" name="idade" id="idade"
-                                    placeholder="Digite a sua idade" />
+                                <input
+                                    [(ngModel)]="user.age"
+                                    class="form-control"
+                                    type="text"
+                                    name="idade"
+                                    id="idade"
+                                    placeholder="Digite a sua idade"
+                                />
                             </div>
 
                             <div class="form-group text-white">
                                 <label for="idade">Genero</label>
-                                <input [(ngModel)]="user.genero" class="form-control" type="text" name="idade"
-                                    id="idade" placeholder="Digite a sua idade" />
+                                <input
+                                    [(ngModel)]="user.genero"
+                                    class="form-control"
+                                    type="text"
+                                    name="idade"
+                                    id="idade"
+                                    placeholder="Digite a sua idade"
+                                />
                             </div>
 
-                            <div class="form-group ">
-                                <label for="foto" class="text-white">Link da Foto</label>
-                                <input [(ngModel)]="user.picture" class="form-control" type="text" name="usuario"
-                                    id="picture" placeholder="Link da sua foto" />
+                            <div class="form-group">
+                                <label for="foto" class="text-white"
+                                    >Link da Foto</label
+                                >
+                                <input
+                                    [(ngModel)]="user.picture"
+                                    class="form-control"
+                                    type="text"
+                                    name="usuario"
+                                    id="picture"
+                                    placeholder="Link da sua foto"
+                                />
                             </div>
 
                             <div class="form-group text-white">
                                 <label for="foto">autoBiography</label>
-                                <input [(ngModel)]="user.autoBiography" class="form-control" type="text" name="usuario"
-                                    id="picture" placeholder="Pequena descrição sobre você" />
+                                <input
+                                    [(ngModel)]="user.autoBiography"
+                                    class="form-control"
+                                    type="text"
+                                    name="usuario"
+                                    id="picture"
+                                    placeholder="Pequena descrição sobre você"
+                                />
                             </div>
 
-
                             <div class="d-flex justify-content-center mb-3">
-                                <button type="submit" class="btn btn-danger mr-4" routerLink="/home">
+                                <button
+                                    type="submit"
+                                    class="btn btn-danger mr-4"
+                                    routerLink="/home"
+                                >
                                     Cancelar
                                 </button>
-                                <button (click)="updateUser()" type="submit" class="btn btn-success">
+                                <button
+                                    (click)="updateUser()"
+                                    type="submit"
+                                    class="btn btn-success"
+                                >
                                     Atualizar
                                 </button>
                             </div>

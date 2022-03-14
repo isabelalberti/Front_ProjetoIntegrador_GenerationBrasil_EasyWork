@@ -14,8 +14,11 @@
                     <p class="card-text mt-3">{{ card.companyName }}</p>
                     <p class="card-text">
                         <small class="text-muted"
-                            >{{ card.startDate | date: "dd/MM/yyyy" }} <span *ngIf="endDate(card)"> fim
-                            {{ card.endDate | date: "dd/MM/yyyy" }}</span>
+                            >{{ card.startDate | date: "dd/MM/yyyy" }}
+                            <span *ngIf="endDate(card)">
+                                fim
+                                {{ card.endDate | date: "dd/MM/yyyy" }}</span
+                            >
                         </small>
                     </p>
                 </div>
