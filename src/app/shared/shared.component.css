@@ -1,31 +1,31 @@
-.row{
-  background-image: url(../../assets/img/bgCookies.png);
-  background-size: cover;
-  background-position: 100% 40%;
-  background-repeat: no-repeat;
+.row {
+    background-image: url(../../assets/img/bgCookies.png);
+    background-size: cover;
+    background-position: 100% 40%;
+    background-repeat: no-repeat;
 }
 
-.titulo{
-  color: #ffff;
-  margin-top: 2rem;
+.titulo {
+    color: #ffff;
+    margin-top: 2rem;
 }
 
-.subtitulo{
-  color: #ffff;
+.subtitulo {
+    color: #ffff;
 }
 
-.texto{
-  color: #ffff;
-  margin: 1rem;
+.texto {
+    color: #ffff;
+    margin: 1rem;
 }
 
-.link{
-  color: #ffff;
+.link {
+    color: #ffff;
 }
 
-.imagem{
-  height: 20vw;
-  width: 20vw;
-  max-width: 40vw;
-  max-height: 40vw;
+.imagem {
+    height: 20vw;
+    width: 20vw;
+    max-width: 40vw;
+    max-height: 40vw;
 }

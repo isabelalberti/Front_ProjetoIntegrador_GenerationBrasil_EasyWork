@@ -11,9 +11,8 @@ import { environment } from 'src/environments/environment.prod';
     styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-    
     user: User = new User();
-    idUser: number
+    idUser: number;
 
     confPassword: string;
     gen: string;
@@ -23,22 +22,22 @@ export class UserComponent implements OnInit {
         private router: Router,
         private route: ActivatedRoute,
         public authService: AuthService,
-        private alerts: AlertService//private alert: AlertService
+        private alerts: AlertService //private alert: AlertService
     ) {}
 
     ngOnInit() {
-        if(environment.token == ""){
+        if (environment.token == '') {
             alert(
                 'Sua seção expirou para sua segurança! Faça o login novamente!'
-              );
-            this.router.navigate(["/login"])
+            );
+            this.router.navigate(['/login']);
         }
 
         window.scroll(0, 0);
 
-        this.authService.refreshToken()
-        this.idUser = this.route.snapshot.params["id"]
-        this.findByIdUser(this.idUser)
+        this.authService.refreshToken();
+        this.idUser = this.route.snapshot.params['id'];
+        this.findByIdUser(this.idUser);
     }
 
     confirmPassword(event: any) {
@@ -53,28 +52,31 @@ export class UserComponent implements OnInit {
         this.userType = event.target.value;
     }
 
-    findByIdUser(id: number){
+    findByIdUser(id: number) {
         this.authService.getByIdUser(id).subscribe((resp: User) => {
-            this.user = resp
-        })
+            this.user = resp;
+        });
     }
 
-    updateUser(){
-        this.user.type = this.userType
+    updateUser() {
+        this.user.type = this.userType;
 
-        console.log(this.user)
+        console.log(this.user);
         if (this.confPassword != this.user.password) {
             alert('As senhas não conferem!\nDigite novamente');
         } else {
             this.authService.putUser(this.user).subscribe((resp: User) => {
-                console.log(resp)
+                console.log(resp);
                 this.user = resp;
-                alert("Usuário atualizado com sucesso!")               
 
-                environment.token = ""
-                environment.fullName = ""
-                environment.picture = ""
-                environment.id = 0
+                alert(
+                    'Usuário atualizado com sucesso! Faça o login novamente, por favor.'
+                );
+
+                environment.token = '';
+                environment.fullName = '';
+                environment.picture = '';
+                environment.id = 0;
 
                 this.router.navigate(['/login']);
             });
