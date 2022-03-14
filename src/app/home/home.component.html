@@ -5,34 +5,64 @@
         <div class="container bg-transparent">
             <div class="d-flex justify-content-center flex-column">
                 <nav>
-                    <div class="nav nav-tabs d-flex justify-content-center my-5" id="nav-tab" role="tablist">
-                        <a class="nav-link active text-info font-weight-bold" id="nav-profile-tab"
-                            data-toggle="tab" href="#allCards" role="tab" aria-controls="nav-allCards"
-                            aria-selected="false">Todas as publicações</a>
+                    <div
+                        class="nav nav-tabs d-flex justify-content-center my-5"
+                        id="nav-tab"
+                        role="tablist"
+                    >
+                        <a
+                            class="nav-link active text-info font-weight-bold"
+                            id="nav-profile-tab"
+                            data-toggle="tab"
+                            href="#allCards"
+                            role="tab"
+                            aria-controls="nav-allCards"
+                            aria-selected="false"
+                            >Todas as publicações</a
+                        >
                     </div>
                 </nav>
 
-                <div class="tab-pane fade show active" id="allCards" role="tabpanel" aria-labelledby="nav-allCards-tab">
+                <div
+                    class="tab-pane fade show active"
+                    id="allCards"
+                    role="tabpanel"
+                    aria-labelledby="nav-allCards-tab"
+                >
                     <div class="d-flex flex-wrap">
-                        <div class="flip-card-container m-3" *ngFor='let card of cardList'>
+                        <div
+                            class="flip-card-container m-3"
+                            *ngFor="let card of cardList"
+                        >
                             <div class="flip-card">
                                 <div class="card-front">
                                     <ul
-                                        class="dois d-flex justify-content-center align-items-center flex-column text-dark">
-                                        <li>{{card.companyName}}</li>
-                                        <li>{{card.occupation}}</li>                                        
-                                        <li>{{card.institution}}</li>
-                                        <li>{{card.formation}}</li>
-                                        <li class="mt-5"><small>{{card.startDate | date: "dd/MM/yyyy"}}</small></li>
-                                        <li><small>{{card.endDate | date: "dd/MM/yyyy"}}</small></li>
-                                        <li>{{card.user.fullName}}</li>
-                                        
-
+                                        class="dois d-flex justify-content-center align-items-center flex-column text-dark"
+                                    >
+                                        <li>{{ card.companyName }}</li>
+                                        <li>{{ card.occupation }}</li>
+                                        <li>{{ card.institution }}</li>
+                                        <li>{{ card.formation }}</li>
+                                        <li class="mt-5">
+                                            <small>{{
+                                                card.startDate
+                                                    | date: "dd/MM/yyyy"
+                                            }}</small>
+                                        </li>
+                                        <li>
+                                            <small>{{
+                                                card.endDate
+                                                    | date: "dd/MM/yyyy"
+                                            }}</small>
+                                        </li>
+                                        <li>{{ card.user.fullName }}</li>
                                     </ul>
                                 </div>
 
                                 <div class="card-back">
-                                    <p class="btn btn-outline">{{card.description}}</p>
+                                    <p class="btn btn-outline">
+                                        {{ card.description }}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -130,6 +160,6 @@
                 </div>
             </div> -->
             <!-- ! Nova Skill -->
-        </div>       
+        </div>
     </div>
 </div>

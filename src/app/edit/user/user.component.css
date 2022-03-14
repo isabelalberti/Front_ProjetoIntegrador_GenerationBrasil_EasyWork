@@ -20,39 +20,37 @@
     transition: transform 0.5s;
     transform: scaleX(1);
     transition-delay: 0.5s;
-    
 }
 
-section{
+section {
     width: 85%;
     margin: 0% auto;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-.principal{
-  background-color: #ffffff1e;
-  height: 40px;
-  max-width: 65%;
-  margin: 0% auto;
+.principal {
+    background-color: #ffffff1e;
+    height: 40px;
+    max-width: 65%;
+    margin: 0% auto;
 }
 
-.principal li{
-  display: inline-block;
-  line-height: 2.5;
-  margin: 0 89px
+.principal li {
+    display: inline-block;
+    line-height: 2.5;
+    margin: 0 89px;
 }
 
-.principal a{
-  color: #fff;
+.principal a {
+    color: #fff;
 }
 
-div a{
+div a {
     color: #ffff;
 }
-
 
 .btnBar {
     text-transform: uppercase;
@@ -62,6 +60,5 @@ div a{
     transition: 0.4s;
     border: none;
     width: 300px;
-    text-decoration:none; 
+    text-decoration: none;
 }
-

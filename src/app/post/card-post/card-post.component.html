@@ -27,7 +27,7 @@
                     </div>
 
                     <form>
-                        <div class="form-group ">
+                        <div class="form-group">
                             <label
                                 class="nivel pr-3 align-items-center text-white"
                                 for="card.tip"
@@ -36,7 +36,7 @@
                             </label>
 
                             <select
-                                class="form-control fm "
+                                class="form-control fm"
                                 (change)="changeTip($event)"
                             >
                                 <option>Escolha</option>
@@ -72,9 +72,7 @@
                                 />
                             </div>
 
-                            
-
-                            <div class="form-group ">
+                            <div class="form-group">
                                 <label
                                     class="nivel pr-3 align-items-center text-white"
                                     for="card.tip"
@@ -262,7 +260,7 @@
 
                                         <div class="form-group fm text-white">
                                             <label
-                                                class="nivel pr-3 align-items-center "
+                                                class="nivel pr-3 align-items-center"
                                                 for="skillNivel"
                                             >
                                                 Nivel de sua Habilidade:
@@ -319,13 +317,14 @@
                             <button
                                 class="fm btn btn-danger"
                                 type="submit"
-                                routerLink="/home"
+                                routerLink="/profile"
                             >
                                 cancelar
                             </button>
                             <button
                                 class="fm btn btn-success"
                                 type="submit"
+                                routerLink="/profile"
                                 (click)="publish()"
                             >
                                 publicar
