@@ -5,20 +5,95 @@
 }
 
 .btn {
+    position: relative;
+    display: inline-block;
+    padding: 8px 32px;
+    text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
-    background-color: #1f273f;
-    letter-spacing: 3px;
-    transition: 0.4s;
+    color: #281456;
+    background-color: #ebded5;
+    letter-spacing: 10px;
+    font-size: 20px;
+    transition: 0.5s;
     border-radius: 4px;
 }
 
 .btn:hover {
-    color: rgb(122, 156, 189);
+    color: #ebded5;
+    background-color: #281456;
+}
+
+.btn span {
+    display: block;
+    position: absolute;
+    background: #ebded5;
+}
+
+.btn span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.btn:hover span:nth-child(1) {
     transform: scaleY(1);
     transform-origin: bottom;
     transition: transform 0.5s;
+}
+
+.btn span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.btn:hover span:nth-child(2) {
     transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.btn span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.btn:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
     transition-delay: 0.5s;
 }
 
