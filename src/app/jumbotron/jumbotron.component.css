@@ -16,16 +16,6 @@
     height: fit-content;
 }
 
-.card {
-    width: 150px;
-    margin: 30px;
-    transition: 250ms;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
 @media (max-width: 500px) {
     .carousel-txt {
         font-size: 12pt;
@@ -37,7 +27,7 @@
 }
 
 .emp{
-    margin-left: 10%;
+margin-left: 10%;
 align-items: center;
 margin-right: 4rem;
 font-size: 24pt;
@@ -48,25 +38,21 @@ font-size: 24pt;
 }
 
 .sobre{
-    margin-top: 5rem;
+    margin-top: 10rem;
     background: #202324;
     color:white;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 50px;
 }
 
-.h3-sobre{
+.h3-sobre {
     font-size: 200px!important;
     color:  #ebded5;
-    font-family: 'Alfa Slab One', cursive;
-    letter-spacing: normal;
-    
 }
 
 .h3-project{
     font-size: 65pt !important;
     color:  #ebded5;
-    font-family: 'Alfa Slab One', cursive;
     letter-spacing: normal;
     margin-bottom: 5rem;
 }
@@ -83,7 +69,7 @@ font-size: 24pt;
 }
 
 .span-sobre{
-    color:#B22222;
+    color:#f58e8e;
 }
 
 p{
@@ -91,12 +77,12 @@ p{
 }
 
 .jumbotron span{
-    color:#B22222;
+    color:#f58e8e;
  }
 
  #missaovisao{
     background-color: #ebded5;
- }
+}
 
  .curriculo{
      margin-top: 7rem;
