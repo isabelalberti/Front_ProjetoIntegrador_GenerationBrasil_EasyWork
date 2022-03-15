@@ -16,16 +16,6 @@
     height: fit-content;
 }
 
-.card {
-    width: 150px;
-    margin: 30px;
-    transition: 250ms;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
 @media (max-width: 500px) {
     .carousel-txt {
         font-size: 12pt;
@@ -36,13 +26,64 @@
     }
 }
 
-.emp{
+.emp {
     margin-left: 10%;
-align-items: center;
-margin-right: 4rem;
-font-size: 24pt;
+    align-items: center;
+    margin-right: 4rem;
+    font-size: 24pt;
 }
 
-.videotwo{
+.videotwo {
     margin-left: 150px;
+}
+
+.sobre {
+    margin-top: 10rem;
+    background: #202324;
+    color: white;
+    padding-left: 40px;
+    padding-right: 50px;
+}
+
+.h3-sobre {
+    font-size: 200px !important;
+    color: #ebded5;
+}
+
+.h3-project {
+    font-size: 65pt !important;
+    color: #ebded5;
+    letter-spacing: normal;
+    margin-bottom: 5rem;
+}
+
+.h3-sobre:hover {
+    transform: scale(1.1);
+    color: #cb96e0;
+    transition: ease 1s;
+}
+.h3-project:hover {
+    transform: scale(1.1);
+    color: #cb96e0;
+    transition: ease 1s;
+}
+
+.span-sobre {
+    color: #f58e8e;
+}
+
+p {
+    text-align: justify;
+}
+
+.jumbotron span {
+    color: #f58e8e;
+}
+
+#missaovisao {
+    background-color: #ebded5;
+}
+
+.curriculo {
+    margin-top: 7rem;
 }

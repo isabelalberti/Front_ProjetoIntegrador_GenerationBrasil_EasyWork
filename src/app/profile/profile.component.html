@@ -107,6 +107,8 @@
                 </ul>
             </div>
         </div>
+
+
         <div class="col-md-9">
             <div class="mb-3 text-white text-center">
                 <h2 class="text-center text-white">Sobre mim</h2>
@@ -116,11 +118,13 @@
             </div>
 
             <h3 class="mb-3 text-white text-center">Meus Cards</h3>
+
             <div class="tam d-flex align-items-center flex-wrap">
+                
                 <div
                     class="flip-card-container m-3"
-                    *ngFor="let card of user.card"
-                >
+                    *ngFor="let card of user.card">
+
                     <div class="flip-card">
                         <div class="card-front">
                             <ul

@@ -17,8 +17,8 @@ import { SkillService } from '../service/skill.service';
 export class HomeComponent implements OnInit {
     cardList: Card[];
     card: Card = new Card();
-    
-    skillList: Skill[]
+
+    skillList: Skill[];
     skill: Skill = new Skill();
 
     skillType: string;
@@ -42,11 +42,11 @@ export class HomeComponent implements OnInit {
             this.router.navigate(['/login']);
         }
 
-        this.cardService.refreshToken()
+        this.cardService.refreshToken();
         this.authService.refreshToken();
         this.getAllCard();
         this.getAllSkill();
-        this.findByIdUser()
+        this.findByIdUser();
     }
 
     choiceSkill(event: any) {
@@ -63,11 +63,11 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    getAllSkill(){
+    getAllSkill() {
         this.skillService.getAllSkill().subscribe((resp: Skill[]) => {
-            this.skillList = resp
-            console.log(this.skillList)
-        })
+            this.skillList = resp;
+            console.log(this.skillList);
+        });
     }
 
     clear() {
@@ -85,7 +85,7 @@ export class HomeComponent implements OnInit {
             alert('Habilidade criado com sucesso!');
 
             this.skill = new Skill();
-            this.findByIdUser()
+            this.findByIdUser();
         });
     }
 
@@ -103,22 +103,22 @@ export class HomeComponent implements OnInit {
         return ok;
     }
 
-    technicalSkill(x: string){
-        let ok = false
+    technicalSkill(x: string) {
+        let ok = false;
 
-        if(x != "" || x != null){
-            ok = true
+        if (x != '' || x != null) {
+            ok = true;
         }
-        return ok
+        return ok;
     }
 
-    test(skill: Skill){
-        let ok = false
+    test(skill: Skill) {
+        let ok = false;
 
-        if(skill == null){
-            ok = true
+        if (skill == null) {
+            ok = true;
         }
-        return ok
+        return ok;
     }
 
     // x() {

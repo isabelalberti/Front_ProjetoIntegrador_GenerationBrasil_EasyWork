@@ -35,8 +35,8 @@ export class RegisterComponent implements OnInit {
     }
 
     register() {
-        this.user.gender = this.gen
-        this.user.type = this.userType
+        this.user.gender = this.gen;
+        this.user.type = this.userType;
 
         if (this.confPassword != this.user.password) {
             alert('As senhas não conferem!\nDigite novamente');

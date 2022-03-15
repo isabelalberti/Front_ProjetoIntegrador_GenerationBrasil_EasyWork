@@ -4,13 +4,12 @@ li {
 
 .btn {
     position: relative;
-    display: inline-block;
-    padding: 6px 20px;
+    padding: 6px;
     text-decoration: none;
     text-transform: uppercase;
     color: #281456;
     background-color: #ebded5;
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     font-size: 16px;
     transition: 0.5s;
     border-radius: 4px;
@@ -99,6 +98,11 @@ li {
     color: white;
 }
 
+.navbar-nav {
+    margin-left: 18rem;
+}
+
 .navbar {
-    z-index: 999;
+    width: 100%;
+    letter-spacing: 0.1rem;
 }

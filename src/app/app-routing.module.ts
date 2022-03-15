@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { CardDeleteComponent } from './delete/card-delete/card-delete.component';
@@ -16,7 +17,7 @@ import { CardPostComponent } from './post/card-post/card-post.component';
 import { SkillPostComponent } from './post/skill-post/skill-post.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
-import { SharedComponent } from './shared/shared.component';
+
 import { TermosComponent } from './termos/termos.component';
 
 const routes: Routes = [
@@ -38,11 +39,10 @@ const routes: Routes = [
     { path: 'edit-user/:id', component: UserComponent },
     { path: 'mural', component: MuralComponent },
     { path: 'termos', component: TermosComponent },
-    { path: 'shared', component: SharedComponent },
-]
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
