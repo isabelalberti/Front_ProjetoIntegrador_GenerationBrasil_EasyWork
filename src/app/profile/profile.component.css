@@ -1,7 +1,14 @@
 .flip-card-container {
-    color: rgb(71, 60, 60);
+    color: rgb(110, 94, 94);
     width: 230px;
     height: 350px;
+
+}
+
+.flip-card-container-test {
+    color: rgb(71, 60, 60);
+    width: 230px;
+    height: 230px;
 }
 
 .tam {
@@ -39,6 +46,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-style: double;
+    border-color: rgb(189, 105, 105);
 }
 
 /* .card-front */
