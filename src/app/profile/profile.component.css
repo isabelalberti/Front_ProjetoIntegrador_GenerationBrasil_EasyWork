@@ -103,9 +103,9 @@ a {
     width: 14rem;
 }
 
-.auto{
-box-shadow: 10px 10px 20px 10px rgba(180, 173, 173, 0.25);
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
-font-size: 14pt;
+.auto {
+    box-shadow: 10px 10px 20px 10px rgba(180, 173, 173, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 14pt;
 }

@@ -36,68 +36,67 @@
     }
 }
 
-.emp{
+.emp {
     margin-left: 10%;
-align-items: center;
-margin-right: 4rem;
-font-size: 24pt;
+    align-items: center;
+    margin-right: 4rem;
+    font-size: 24pt;
 }
 
-.videotwo{
+.videotwo {
     margin-left: 150px;
 }
 
-.sobre{
+.sobre {
     margin-top: 5rem;
     background: #202324;
-    color:white;
+    color: white;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.h3-sobre{
-    font-size: 200px!important;
-    color:  #ebded5;
-    font-family: 'Alfa Slab One', cursive;
+.h3-sobre {
+    font-size: 200px !important;
+    color: #ebded5;
+    font-family: "Alfa Slab One", cursive;
     letter-spacing: normal;
-    
 }
 
-.h3-project{
+.h3-project {
     font-size: 65pt !important;
-    color:  #ebded5;
-    font-family: 'Alfa Slab One', cursive;
+    color: #ebded5;
+    font-family: "Alfa Slab One", cursive;
     letter-spacing: normal;
     margin-bottom: 5rem;
 }
 
-.h3-sobre:hover{
+.h3-sobre:hover {
     transform: scale(1.1);
-    color:#cb96e0;
+    color: #cb96e0;
     transition: ease 1s;
 }
-.h3-project:hover{
+.h3-project:hover {
     transform: scale(1.1);
-    color:#cb96e0;
+    color: #cb96e0;
     transition: ease 1s;
 }
 
-.span-sobre{
-    color:#B22222;
+.span-sobre {
+    color: #b22222;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-.jumbotron span{
-    color:#B22222;
- }
+.jumbotron span {
+    color: #b22222;
+}
 
- #missaovisao{
+#missaovisao {
     background-color: #ebded5;
- }
+}
 
- .curriculo{
-     margin-top: 7rem;
- }
+.curriculo {
+    margin-top: 7rem;
+}

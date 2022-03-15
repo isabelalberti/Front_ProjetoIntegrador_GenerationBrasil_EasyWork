@@ -39,12 +39,10 @@ const routes: Routes = [
     { path: 'edit-user/:id', component: UserComponent },
     { path: 'mural', component: MuralComponent },
     { path: 'termos', component: TermosComponent },
-   
-
-]
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
