@@ -1,26 +1,26 @@
-#todo{
-  background-position: center;
-  color:#ffff;
+#todo {
+    background-position: center;
+    color: #ffff;
 }
 
-.titulo{
-  text-align: center;
-  color: #ffff;
+.titulo {
+    text-align: center;
+    color: #ffff;
 }
 
-.subtitulo{
-  text-align: left;
-  color: #ffff;
+.subtitulo {
+    text-align: left;
+    color: #ffff;
 }
 
-.subsubtitulo{
-  color: #ffff;
+.subsubtitulo {
+    color: #ffff;
 }
 
-.link{
-  color: #ffff;
+.link {
+    color: #ffff;
 }
 
-.link:hover{
-  color: #ffff;
+.link:hover {
+    color: #ffff;
 }

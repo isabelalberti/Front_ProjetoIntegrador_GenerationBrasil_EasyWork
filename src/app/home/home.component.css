@@ -21,10 +21,10 @@
     transition: 0.6s 0.1s;
 }
 
-.flip-test{
+.flip-test {
     width: inherit;
     height: inherit;
-    transform-style: preserve-3d;    
+    transform-style: preserve-3d;
 }
 
 /* hover and focus-within states */

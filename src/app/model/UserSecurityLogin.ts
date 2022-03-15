@@ -7,5 +7,4 @@ export class UserSecurityLogin {
     public picture: string;
     public type: string;
     public city: string;
-
 }

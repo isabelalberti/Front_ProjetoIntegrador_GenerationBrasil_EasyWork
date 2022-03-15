@@ -98,12 +98,11 @@ li {
     color: white;
 }
 
-.navbar-nav{
-   margin-left: 18rem;
-   
+.navbar-nav {
+    margin-left: 18rem;
 }
 
-.navbar{
+.navbar {
     width: 100%;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }

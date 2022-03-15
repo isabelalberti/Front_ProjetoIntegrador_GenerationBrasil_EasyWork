@@ -26,64 +26,64 @@
     }
 }
 
-.emp{
-margin-left: 10%;
-align-items: center;
-margin-right: 4rem;
-font-size: 24pt;
+.emp {
+    margin-left: 10%;
+    align-items: center;
+    margin-right: 4rem;
+    font-size: 24pt;
 }
 
-.videotwo{
+.videotwo {
     margin-left: 150px;
 }
 
-.sobre{
+.sobre {
     margin-top: 10rem;
     background: #202324;
-    color:white;
+    color: white;
     padding-left: 40px;
     padding-right: 50px;
 }
 
 .h3-sobre {
-    font-size: 200px!important;
-    color:  #ebded5;
+    font-size: 200px !important;
+    color: #ebded5;
 }
 
-.h3-project{
+.h3-project {
     font-size: 65pt !important;
-    color:  #ebded5;
+    color: #ebded5;
     letter-spacing: normal;
     margin-bottom: 5rem;
 }
 
-.h3-sobre:hover{
+.h3-sobre:hover {
     transform: scale(1.1);
-    color:#cb96e0;
+    color: #cb96e0;
     transition: ease 1s;
 }
-.h3-project:hover{
+.h3-project:hover {
     transform: scale(1.1);
-    color:#cb96e0;
+    color: #cb96e0;
     transition: ease 1s;
 }
 
-.span-sobre{
-    color:#f58e8e;
+.span-sobre {
+    color: #f58e8e;
 }
 
-p{
+p {
     text-align: justify;
 }
 
-.jumbotron span{
-    color:#f58e8e;
- }
+.jumbotron span {
+    color: #f58e8e;
+}
 
- #missaovisao{
+#missaovisao {
     background-color: #ebded5;
 }
 
- .curriculo{
-     margin-top: 7rem;
- }
+.curriculo {
+    margin-top: 7rem;
+}
