@@ -46,3 +46,58 @@ font-size: 24pt;
 .videotwo{
     margin-left: 150px;
 }
+
+.sobre{
+    margin-top: 5rem;
+    background: #202324;
+    color:white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.h3-sobre{
+    font-size: 200px!important;
+    color:  #ebded5;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: normal;
+    
+}
+
+.h3-project{
+    font-size: 65pt !important;
+    color:  #ebded5;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: normal;
+    margin-bottom: 5rem;
+}
+
+.h3-sobre:hover{
+    transform: scale(1.1);
+    color:#cb96e0;
+    transition: ease 1s;
+}
+.h3-project:hover{
+    transform: scale(1.1);
+    color:#cb96e0;
+    transition: ease 1s;
+}
+
+.span-sobre{
+    color:#B22222;
+}
+
+p{
+    text-align: justify;
+}
+
+.jumbotron span{
+    color:#B22222;
+ }
+
+ #missaovisao{
+    background-color: #ebded5;
+ }
+
+ .curriculo{
+     margin-top: 7rem;
+ }

@@ -25,7 +25,7 @@ import { SkillDeleteComponent } from './delete/skill-delete/skill-delete.compone
 import { AlertComponent } from './alert/alert.component';
 import { UserComponent } from './edit/user/user.component';
 import { TermosComponent } from './termos/termos.component';
-import { SharedComponent } from './shared/shared.component';
+
 
 @NgModule({
     declarations: [
@@ -49,7 +49,8 @@ import { SharedComponent } from './shared/shared.component';
         AlertComponent,
         UserComponent,
         TermosComponent,
-        SharedComponent,
+       
+
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
     providers: [

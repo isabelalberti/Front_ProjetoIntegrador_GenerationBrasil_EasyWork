@@ -5,12 +5,12 @@ li {
 .btn {
     position: relative;
     display: inline-block;
-    padding: 6px 20px;
+    padding: 6px;
     text-decoration: none;
     text-transform: uppercase;
     color: #281456;
     background-color: #ebded5;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     font-size: 16px;
     transition: 0.5s;
     border-radius: 4px;
@@ -99,6 +99,13 @@ li {
     color: white;
 }
 
-.navbar {
-    z-index: 999;
+.navbar-nav{
+   margin-left: 18rem;
+   
+}
+
+.navbar{
+    background-color: rgba(167, 167, 167, 0.15);
+    position: fixed;
+    letter-spacing: .1rem;
 }
