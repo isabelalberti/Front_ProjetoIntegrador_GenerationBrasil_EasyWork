@@ -131,17 +131,17 @@
                                 class="dois d-flex justify-content-center align-items-center flex-column text-dark"
                             >
                                 <li>{{ card.companyName }}</li>
-                                <li>{{ card.occupation }}</li>
-                                <li>
-                                    {{ card.startDate | date: "dd/mm/yyyy" }}
-                                </li>
-                                <li>{{ card.endDate | date: "dd/mm/yyyy" }}</li>
+                                <li>{{ card.occupation }}</li>                                
                                 <li>{{ card.institution }}</li>
                                 <li>{{ card.formation }}</li>
+                                <li class="mt-5">
+                                    <small>{{ card.startDate | date: "dd/mm/yyyy" }}</small>
+                                </li>
+                                <li><small>{{ card.endDate | date: "dd/mm/yyyy" }}</small></li>
                             </ul>
                         </div>
 
-                        <div class="card-back">
+                        <div class="card-back d-flex flex-wrap">
                             <p>{{ card.description }}</p>
                             <button
                                 class="btnCard btn-danger"
@@ -177,13 +177,7 @@
                                     [routerLink]="['/delete-card', card.id]"
                                 >
                                     Deletar
-                                </button>
-                                <button
-                                    class="btnCard btn-danger"
-                                    [routerLink]="['/delete-card', card.id]"
-                                >
-                                    Deletar
-                                </button>
+                                </button>                                
                             </p>
                         </div>
                     </div>
