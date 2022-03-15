@@ -40,7 +40,7 @@ export class CardDeleteComponent implements OnInit {
     delete() {
         this.cardService.deleteCard(this.idCard).subscribe(() => {
             alert('Card deletado com sucesso!');
-            this.router.navigate(['/home']);
+            this.router.navigate(['/profile']);
         });
     }
 
