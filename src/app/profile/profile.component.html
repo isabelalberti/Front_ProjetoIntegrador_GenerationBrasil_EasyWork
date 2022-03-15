@@ -127,17 +127,17 @@
                                 class="dois d-flex justify-content-center align-items-center flex-column text-dark"
                             >
                                 <li>{{ card.companyName }}</li>
-                                <li>{{ card.occupation }}</li>
-                                <li>
-                                    {{ card.startDate | date: "dd/mm/yyyy" }}
-                                </li>
-                                <li>{{ card.endDate | date: "dd/mm/yyyy" }}</li>
+                                <li>{{ card.occupation }}</li>                                
                                 <li>{{ card.institution }}</li>
                                 <li>{{ card.formation }}</li>
+                                <li class="mt-5">
+                                    <small>{{ card.startDate | date: "dd/mm/yyyy" }}</small>
+                                </li>
+                                <li><small>{{ card.endDate | date: "dd/mm/yyyy" }}</small></li>
                             </ul>
                         </div>
 
-                        <div class="card-back">
+                        <div class="card-back d-flex flex-wrap">
                             <p>{{ card.description }}</p>
                             <button
                                 class="btnCard btn-danger"
@@ -173,13 +173,7 @@
                                     [routerLink]="['/delete-card', card.id]"
                                 >
                                     Deletar
-                                </button>
-                                <button
-                                    class="btnCard btn-danger"
-                                    [routerLink]="['/delete-card', card.id]"
-                                >
-                                    Deletar
-                                </button>
+                                </button>                                
                             </p>
                         </div>
                     </div>
@@ -191,21 +185,25 @@
                     </h3>
                     <div class="tam d-flex align-items-center flex-wrap"></div>
 
-                    <div
-                        class="flip-card-container m-3"
-                        *ngFor="let card of card.skill"
-                    >
-                        <div class="flip-card">
-                            <div class="card-front">
-                                <ul
-                                    class="dois d-flex justify-content-center align-items-center flex-column text-dark"
-                                >
-                                    <li>{{ card.technicalSkill }}</li>
-                                    <li>{{ card.skill }}</li>
-                                    <li>{{ card.nivel }}</li>
-                                </ul>
+                    <div class="d-flex flex-wrap">
+                        <ng-container *ngFor="let card of user.card">
+                            <div class="flip-card-container-test m-3" *ngFor='let skill of card.skill'>
+                                <div class="flip-teste">
+                                    <div class="card-front">
+                                        <ul
+                                            class="dois d-flex justify-content-center align-items-center flex-column text-dark" 
+                                            >
+                                            <li >
+                                                {{skill.technicalSkill}}</li>
+                                            <li >
+                                                {{skill.skill}}</li>
+                                            <li >
+                                                {{skill.nivel}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </ng-container>
                     </div>
 
                     <div class="ml-4">

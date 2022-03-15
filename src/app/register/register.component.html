@@ -19,7 +19,7 @@
             <div class="btn-group" role="group">
                 <button class="btnBar mr-1">
                     <a href="#setup"
-                        >Dados da Conta <span class="text-danger">*</span></a
+                        >Dados da Conta <span class="text-danger" title="Campo Obrigatório">*</span></a
                     >
                 </button>
                 <button class="btnBar">
@@ -40,7 +40,7 @@
             class="col col-md-4 mt-5 mb-5 d-flex justify-content-center"
             style="filter: 50px"
         >
-            <div class="row d-flex justify-content-center m-0"></div>
+            <div id="asteristico" class="row d-flex justify-content-center m-0 text-danger btn mt-2 bg-transparent" title="Campo Obrigatório">*</div>
             <div class="col-md-10">
                 <section id="setup">
                     <div class="form-group mt-4 text-white">
@@ -50,9 +50,10 @@
                             class="form-control"
                             type="text"
                             name="nome"
-                            id="nome"
                             placeholder=" Digite seu nome completo"
+                            (keyup)="validName()"
                         />
+                        <div id="nome"></div>
                     </div>
 
                     <div class="form-group text-white">
@@ -62,9 +63,10 @@
                             class="form-control"
                             type="email"
                             name="email"
-                            id="email"
                             placeholder="Digite seu Email"
+                            (keyup)="validEmail()"
                         />
+                        <div id="email"></div>
                     </div>
                     <div class="form-group text-white">
                         <label for="senha">Senha</label>
@@ -73,10 +75,11 @@
                             class="form-control"
                             type="password"
                             name="senha"
-                            id="senha"
                             placeholder="Digite sua senha"
                             required
+                            (keyup)="validPassword()"
                         />
+                        <div id="senha"></div>
                     </div>
 
                     <div class="form-group mb-4 text-white">
@@ -86,15 +89,17 @@
                             class="form-control"
                             type="password"
                             name="confirmSenha"
-                            id="confirmSenha"
                             placeholder="Confirme sua senha"
                             required
+                            (keyup)="validConfPassword()"
                         />
+                        <div id="confirmSenha"></div>
                     </div>
                 </section>
             </div>
         </div>
     </div>
+
 
     <div class="container-fluid vh-100">
         <div class="row">

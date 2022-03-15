@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
     gen: string;
     userType: string;
 
-    constructor(private auth: AuthService, private router: Router) {}
+    constructor(private auth: AuthService, private router: Router) { }
 
     ngOnInit() {
         window.scroll(0, 0);
@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
 
     typeUser(event: any) {
         this.userType = event.target.value;
-    }    
+    }
 
     register() {
         this.user.gender = this.gen
@@ -45,7 +45,61 @@ export class RegisterComponent implements OnInit {
                 this.user = resp;
                 this.router.navigate(['/login']);
                 alert('Usuário cadastrado com sucesso!');
+
             });
         }
-    }  	
+    }
+
+    validEmail() {
+        let regex = /.+\@.+\..+/
+        if (this.user.email.indexOf("@") != -1 && this.user.email.indexOf(".") != -1) {
+            let email = (<HTMLDivElement>document.getElementById('email'))
+            // email.innerHTML = (255 - this.user.email.length).toString()
+            email.innerHTML = "Email válido"
+            email.style.color = "green"
+        } else {
+            let email = (<HTMLDivElement>document.getElementById('email'))
+            email.innerHTML = 'Email inválido'
+            email.style.color = "red"
+        }
+    }
+
+    validName() {
+        let regex = /.+\@.+\..+/
+        if (this.user.fullName.length < 3) {
+            let name = (<HTMLDivElement>document.getElementById('nome'))
+            // email.innerHTML = (255 - this.user.email.length).toString()
+            name.innerHTML = "Mínimo 3 caracteres!"
+            name.style.color = "red"
+        } else {
+            let name = (<HTMLDivElement>document.getElementById('nome'))
+            name.innerHTML = ''            
+        }
+    }
+
+    validPassword() {
+        let regex = /.+\@.+\..+/
+        if (this.confPassword.length < 6) {
+            let password = (<HTMLDivElement>document.getElementById('senha'))
+            // email.innerHTML = (255 - this.user.email.length).toString()
+            password.innerHTML = "Mínimo 6 caracteres!"
+            password.style.color = "red"
+        } else {
+            let password = (<HTMLDivElement>document.getElementById('senha'))
+            password.innerHTML = ''            
+        }
+    }
+
+    validConfPassword() {
+        let regex = /.+\@.+\..+/
+        if (this.user.password.length < 6) {
+            let confirPassword = (<HTMLDivElement>document.getElementById('confirmSenha'))
+            // email.innerHTML = (255 - this.user.email.length).toString()
+            confirPassword.innerHTML = "Mínimo 6 caracteres!"
+            confirPassword.style.color = "red"
+        } else {
+            let confirPassword = (<HTMLDivElement>document.getElementById('confirmSenha'))
+            confirPassword.innerHTML = ''            
+        }
+    }
 }
