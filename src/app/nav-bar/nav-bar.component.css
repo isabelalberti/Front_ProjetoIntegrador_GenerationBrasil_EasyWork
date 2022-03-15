@@ -105,6 +105,7 @@ li {
 }
 
 .navbar{
+    width: 100%;
     background-color: rgba(167, 167, 167, 0.15);
     position: fixed;
     letter-spacing: .1rem;
