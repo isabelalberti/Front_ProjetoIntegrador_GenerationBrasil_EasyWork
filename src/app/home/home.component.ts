@@ -16,6 +16,8 @@ import { SkillService } from '../service/skill.service';
 })
 export class HomeComponent implements OnInit {
     cardList: Card[];
+    cardListProf: Card[];
+    cardListEduc: Card[];
     card: Card = new Card();
 
     skillList: Skill[];
@@ -45,8 +47,10 @@ export class HomeComponent implements OnInit {
         this.cardService.refreshToken();
         this.authService.refreshToken();
         this.getAllCard();
-        this.getAllSkill();
+        // this.getAllSkill();
         this.findByIdUser();
+        this.getAllProfessional();
+        this.getAllEducation();
     }
 
     choiceSkill(event: any) {
@@ -63,10 +67,22 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    getAllSkill() {
-        this.skillService.getAllSkill().subscribe((resp: Skill[]) => {
-            this.skillList = resp;
-            console.log(this.skillList);
+    // getAllSkill() {
+    //     this.skillService.getAllSkill().subscribe((resp: Skill[]) => {
+    //         this.skillList = resp;
+    //         console.log(this.skillList);
+    //     });
+    // }
+
+    getAllProfessional() {
+        this.cardService.getByOption("Profissional").subscribe((resp: Card[]) => {
+            this.cardListProf = resp;
+        });
+    }
+
+    getAllEducation() {
+        this.cardService.getByOption("Educacional").subscribe((resp: Card[]) => {
+            this.cardListEduc = resp;
         });
     }
 
@@ -103,23 +119,23 @@ export class HomeComponent implements OnInit {
         return ok;
     }
 
-    technicalSkill(x: string) {
-        let ok = false;
+    // technicalSkill(x: string) {
+    //     let ok = false;
 
-        if (x != '' || x != null) {
-            ok = true;
-        }
-        return ok;
-    }
+    //     if (x != '' || x != null) {
+    //         ok = true;
+    //     }
+    //     return ok;
+    // }
 
-    test(skill: Skill) {
-        let ok = false;
+    // test(skill: Skill) {
+    //     let ok = false;
 
-        if (skill == null) {
-            ok = true;
-        }
-        return ok;
-    }
+    //     if (skill == null) {
+    //         ok = true;
+    //     }
+    //     return ok;
+    // }
 
     // x() {
     //     if (this.card.option == 'Education') {
