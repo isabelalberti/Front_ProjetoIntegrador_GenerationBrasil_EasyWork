@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Card } from '../model/Card';
 import { User } from '../model/User';
@@ -16,6 +16,7 @@ export class ProfileComponent implements OnInit {
     picture = environment.picture;
     fullName = environment.fullName;
 
+
     idCard: number;
     descric: string;
 
@@ -27,13 +28,14 @@ export class ProfileComponent implements OnInit {
     constructor(
         private router: Router,
         public authService: AuthService,
-        private cardService: CardService
-    ) {}
+        private cardService: CardService,
+        private route: ActivatedRoute,
+    ) { }
 
     ngOnInit() {
         window.scroll(0, 0);
-        this.authService.refreshToken();
 
+        this.authService.refreshToken();
         this.getByIdUser();
         // this.putDescription()
     }
@@ -67,4 +69,26 @@ export class ProfileComponent implements OnInit {
             });
         });
     }
+
+    updateBio() {
+        this.user.id = this.idUser
+        this.user.email = environment.email        
+
+        this.authService.putBio(this.user).subscribe({
+            next: (resp: User) => {
+            this.user = resp;
+            alert(
+                'Sobre mim atualizado com sucesso!'
+            );
+        },
+        error: (erro) =>{
+            if(erro.status == 400){
+                alert("Senha incorreta!")
+            } else {
+                alert("Erro Genérico!")
+            }
+        },
+    });
+    }
 }
+
