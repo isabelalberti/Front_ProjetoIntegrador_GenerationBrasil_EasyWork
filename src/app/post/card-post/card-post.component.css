@@ -6,6 +6,44 @@
     color: #ffffff;
 }
 .bg-test {
-    border-radius: 32px;
-    background-color: #770db935 !important;
+    border-radius: 24px;
+    background-color: #ebded58e !important;
+}
+
+.btnEffectBlue {
+    position: relative;
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4c00ff ;
+    background-color: #e9e7ff;
+    letter-spacing: 8px;
+    font-size: 14px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.btnEffectBlue:hover {
+    color: #e9e7ff;
+    background-color: #4c00ff ;
+}
+
+.btnEffectRed {
+    position: relative;
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ff0000;
+    background-color: #ffe0e0;
+    letter-spacing: 8px;
+    font-size: 14px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.btnEffectRed:hover {
+    color: #ffe0e0;
+    background-color: #ff0000;
 }
