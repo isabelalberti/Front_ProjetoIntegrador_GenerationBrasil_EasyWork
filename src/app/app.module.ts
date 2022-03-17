@@ -52,7 +52,12 @@ import { TermosComponent } from './termos/termos.component';
        
 
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+    imports: [
+        BrowserModule, 
+        AppRoutingModule, 
+        HttpClientModule, 
+        FormsModule],
+        
     providers: [
         {
             provide: LocationStrategy,
