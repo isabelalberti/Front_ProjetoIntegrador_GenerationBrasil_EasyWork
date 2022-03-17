@@ -9,6 +9,10 @@ import { UserSecurityLogin } from '../model/UserSecurityLogin';
     providedIn: 'root',
 })
 export class AuthService {
+
+    remote : string = "https://projeto-integrador-grupo2.herokuapp.com"
+    local : string = "http://localhost:8080"
+
     constructor(private http: HttpClient) {}
 
     token = {
@@ -23,28 +27,35 @@ export class AuthService {
 
     getByIdUser(id: number): Observable<User> {
         return this.http.get<User>(
-            `https://projeto-integrador-grupo2.herokuapp.com/user/id/${id}`,
+            `${this.remote}/user/id/${id}`,
             this.token
         );
     }
 
     login(userSecurityLogin: UserSecurityLogin): Observable<UserSecurityLogin> {
         return this.http.post<UserSecurityLogin>(
-            'https://projeto-integrador-grupo2.herokuapp.com/user/login',
+            this.remote + '/user/login',
             userSecurityLogin
         );
     }
 
     putUser(user: User): Observable<User> {
         return this.http.put<User>(
-            'https://projeto-integrador-grupo2.herokuapp.com/user/update',
+            this.remote + '/user/update',
+            user, this.token
+        );
+    }
+
+    putBio(user: User): Observable<User> {
+        return this.http.put<User>(
+            this.remote + '/user/updateBio',
             user, this.token
         );
     }
 
     register(user: User): Observable<User> {
         return this.http.post<User>(
-            'https://projeto-integrador-grupo2.herokuapp.com/user/register',
+            this.remote + '/user/register',
             user
         );
     }

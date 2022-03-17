@@ -35,6 +35,13 @@ export class CardService {
         );
     }
 
+    getByOption(option: string): Observable<Card[]> {
+        return this.http.get<Card[]>(
+            `https://projeto-integrador-grupo2.herokuapp.com/card/option/${option}`,
+            this.token
+        );
+    }
+
     postCard(card: Card): Observable<Card> {
         return this.http.post<Card>(
             'https://projeto-integrador-grupo2.herokuapp.com/card/insert',

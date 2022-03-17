@@ -47,10 +47,7 @@ export class UserComponent implements OnInit {
     genero(event: any) {
         this.gen = event.target.value;
     }
-
-    typeUser(event: any) {
-        this.userType = event.target.value;
-    }
+    
 
     findByIdUser(id: number) {
         this.authService.getByIdUser(id).subscribe((resp: User) => {
@@ -59,12 +56,16 @@ export class UserComponent implements OnInit {
     }
 
     updateUser() {
-        this.user.type = this.userType;
+        console.log("ola mundo")
+        this.user.type
+        this.user.id = this.idUser
 
         console.log(this.user);
         if (this.confPassword != this.user.password) {
             alert('As senhas não conferem!\nDigite novamente');
         } else {
+            console.log("ola mundo")
+
             this.authService.putUser(this.user).subscribe((resp: User) => {
                 console.log(resp);
                 this.user = resp;
