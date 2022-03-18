@@ -215,10 +215,14 @@
                             </ul>
                         </div>
 
-                        <div class="card-back">
+                        <div class="card-back d-flex flex-wrap">
                             <p class="btn btn-outline">
                                 {{ card.description }}
                             </p>
+                            <button class="btnCard btn-danger" *ngIf="user.type == 'adm'"
+                                [routerLink]="['/delete-card', card.id]">
+                                Deletar
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,11 @@ import { Skill } from '../model/Skill';
 })
 export class SkillService {
     [x: string]: any;
+
     constructor(private http: HttpClient) {}
+
+    remote : string = "https://projeto-integrador-grupo2.herokuapp.com"
+    local : string = "http://localhost:8080"
 
     token = {
         headers: new HttpHeaders().set('Authorization', environment.token),
@@ -23,21 +27,21 @@ export class SkillService {
 
     getAllSkill(): Observable<Skill[]> {
         return this.http.get<Skill[]>(
-            'https://projeto-integrador-grupo2.herokuapp.com/skill/all',
+            this.remote + '/skill/all',
             this.token
         );
     }
 
     getByIdSkill(id: number): Observable<Skill> {
         return this.http.get<Skill>(
-            'https://projeto-integrador-grupo2.herokuapp.com/skill/${id}',
+            this.remote + '/skill/${id}',
             this.token
         );
     }
 
     postSkill(skill: Skill): Observable<Skill> {
         return this.http.post<Skill>(
-            'https://projeto-integrador-grupo2.herokuapp.com/skill/insert',
+            this.remote + '/skill/insert',
             skill,
             this.token
         );
@@ -45,7 +49,7 @@ export class SkillService {
 
     putSkill(skill: Skill): Observable<Skill> {
         return this.http.put<Skill>(
-            'https://projeto-integrador-grupo2.herokuapp.com/skill/',
+            this.remote + '/skill/',
             skill,
             this.token
         );
@@ -53,7 +57,7 @@ export class SkillService {
 
     deleteSkill(id: number) {
         return this.http.delete(
-            `https://projeto-integrador-grupo2.herokuapp.com/skill/${id}`,
+            `${this.remote}/skill/${id}`,
             this.token
         );
     }
