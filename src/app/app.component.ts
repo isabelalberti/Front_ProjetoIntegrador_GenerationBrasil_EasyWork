@@ -16,9 +16,6 @@ export class AppComponent {
     constructor(public auth: AuthService,private router: Router) {}
 
     ngOnInit() {
-        window.scroll(0, 0);
-        if(environment.token == ''){
-            this.router.navigate(["/jumbotron"])
-        }
+        window.scroll(0, 0);        
     }
 }

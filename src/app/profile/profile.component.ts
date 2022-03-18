@@ -39,6 +39,7 @@ export class ProfileComponent implements OnInit {
         this.idUser = this.route.snapshot.params['id']
         this.getByIdUser(this.idUser);
         // this.putDescription()
+        console.log("O idUSer vale: " + this.idUser)
     }
 
     descricao(event: any) {
