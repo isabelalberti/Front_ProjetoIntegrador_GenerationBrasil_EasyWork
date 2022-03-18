@@ -44,7 +44,7 @@ export class UserComponent implements OnInit {
         this.confPassword = event.target.value;
     }
 
-    genero(event: any) {
+    gender(event: any) {
         this.gen = event.target.value;
     }
     
@@ -59,6 +59,7 @@ export class UserComponent implements OnInit {
         console.log("ola mundo")
         this.user.type
         this.user.id = this.idUser
+        this.user.gender = this.gen
 
         console.log(this.user);
         if (this.confPassword != this.user.password) {

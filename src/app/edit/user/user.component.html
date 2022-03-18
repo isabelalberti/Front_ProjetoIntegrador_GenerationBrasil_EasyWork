@@ -186,15 +186,18 @@
                             </div>
 
                             <div class="form-group text-white">
-                                <label for="idade">Genero</label>
-                                <input
-                                    [(ngModel)]="user.gender"
+                                <label for="idade">Sexo</label>
+                                <select
                                     class="form-control"
-                                    type="text"
-                                    name="genero"
-                                    id="genero"
-                                    placeholder="Digite seu sexo"
-                                />
+                                    name="tipo"
+                                    id="tipo"
+                                    (change)="gender($event)"
+                                >
+                                    <option>Selecione um sexo:</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -213,10 +216,11 @@
                             
 
                             <div class="d-flex justify-content-center mb-3">
-                                <button
+                                <form>
+                                    <button
                                     type="submit"
                                     class="btn btn-danger mr-4"
-                                    routerLink="/home"
+                                    routerLink="/profile"
                                 >
                                     Cancelar
                                 </button>
@@ -227,6 +231,7 @@
                                 >
                                     Atualizar
                                 </button>
+                                </form>
                             </div>
                         </section>
                     </div>

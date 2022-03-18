@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.prod';
 export class NavBarInternalComponent implements OnInit {
     nome = environment.fullName;
     foto = environment.picture;
+    idUser = environment.id;
 
     constructor(private router: Router) {}
 

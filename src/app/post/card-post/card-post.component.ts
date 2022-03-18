@@ -86,6 +86,7 @@ export class CardPostComponent implements OnInit {
             this.card = new Card();
             this.skill = new Skill();
             alert('Card Postado com Sucesso');
+            this.router.navigate(["/profile", this.idUser])
         });
     }
 }
