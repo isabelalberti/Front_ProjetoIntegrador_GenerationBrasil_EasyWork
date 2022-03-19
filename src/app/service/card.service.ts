@@ -9,6 +9,10 @@ import { Card } from '../model/Card';
 })
 export class CardService {
     putDescription: any;
+
+    remote : string = "https://projeto-integrador-grupo2.herokuapp.com"
+    local : string = "http://localhost:8080"
+
     constructor(private http: HttpClient) {}
 
     token = {
@@ -23,28 +27,28 @@ export class CardService {
 
     getAllCard(): Observable<Card[]> {
         return this.http.get<Card[]>(
-            'https://projeto-integrador-grupo2.herokuapp.com/card',
+            this.remote + '/card',
             this.token
         );
     }
 
     getByIdCard(id: number): Observable<Card> {
         return this.http.get<Card>(
-            `https://projeto-integrador-grupo2.herokuapp.com/card/select/${id}`,
+            `${this.remote}/card/select/${id}`,
             this.token
         );
     }
 
     getByOption(option: string): Observable<Card[]> {
         return this.http.get<Card[]>(
-            `https://projeto-integrador-grupo2.herokuapp.com/card/option/${option}`,
+            `${this.remote}/card/option/${option}`,
             this.token
         );
     }
 
     postCard(card: Card): Observable<Card> {
         return this.http.post<Card>(
-            'https://projeto-integrador-grupo2.herokuapp.com/card/insert',
+            this.remote + '/card/insert',
             card,
             this.token
         );
@@ -52,7 +56,7 @@ export class CardService {
 
     putCard(card: Card): Observable<Card> {
         return this.http.put<Card>(
-            'https://projeto-integrador-grupo2.herokuapp.com/card/update',
+            this.remote + '/card/update',
             card,
             this.token
         );
@@ -60,7 +64,7 @@ export class CardService {
 
     deleteCard(id: number) {
         return this.http.delete(
-            `https://projeto-integrador-grupo2.herokuapp.com/card/delete/${id}`,
+            `${this.remote}/card/delete/${id}`,
             this.token
         );
     }

@@ -12,10 +12,10 @@ import { CardService } from '../service/card.service';
     styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-    idUser = environment.id;
+    idUser : number;
+
     picture = environment.picture;
     fullName = environment.fullName;
-
 
     idCard: number;
     descric: string;
@@ -36,7 +36,8 @@ export class ProfileComponent implements OnInit {
         window.scroll(0, 0);
 
         this.authService.refreshToken();
-        this.getByIdUser();
+        this.idUser = this.route.snapshot.params['id']
+        this.getByIdUser(this.idUser);
         // this.putDescription()
     }
 
@@ -44,8 +45,8 @@ export class ProfileComponent implements OnInit {
         this.descric = event.target.value;
     }
 
-    getByIdUser() {
-        this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
+    getByIdUser(id: number) {
+        this.authService.getByIdUser(id).subscribe((resp: User) => {
             this.user = resp;
         });
     }
@@ -85,10 +86,13 @@ export class ProfileComponent implements OnInit {
             if(erro.status == 400){
                 alert("Senha incorreta!")
             } else {
-                alert("Erro Genérico!")
+                alert("Faça o login para alterar!")   
+                this.router.navigate(["/profile", this.idUser])             
             }
         },
     });
     }
+
+    
 }
 

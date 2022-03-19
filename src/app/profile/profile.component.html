@@ -6,14 +6,17 @@
                     <div class="d-flex flex-column align-items-center text-center">
                         <img src="{{ user.picture }}" alt="imagem do user" class="rounded-circle" width="150" />
                         <div class="mt-3">
-                            <h4>{{ fullName }}</h4>
+                            <h4>{{ user.fullName }}</h4>
                             <p class="text-secondary mb-1">
                                 {{ user.city }}
                             </p>
-                            <button type="button" class="btn btn-outline-secondary btn-md ml-2" style="width: 100%"
+                            <button type="button" class="btn btn-outline-secondary btn-md ml-2 mb-3" style="width: 100%"
                                 data-toggle="modal" data-target="#novaPostagem" [routerLink]="['/edit-user', idUser]">
                                 Editar perfil
                             </button>
+
+                            <a [href]="['https://easyworkgen.netlify.app/#/profile/'+ idUser]" target="_blank">Compartilhe sua página</a>
+
                         </div>
                     </div>
                 </div>
@@ -85,36 +88,12 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <a type="button" class="btn btn-primary" href="#confirmP" data-toggle="modal" data-whatever="@getbootstrap">Atualizar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="confirmP" tabindex="-1" aria-labelledby="confirm"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="confirm">Senha</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>                                
-                                <div class="form-group">                                    
-                                    <label for="confirm" class="col-form-label">Senha</label>
-                                    <input type="password" class="form-control" id="confirm" name="confirm" [(ngModel)]="user.password"/>
-                                </div>                                
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary" (click)="updateBio()">Atualizar</button>
-                        </div>
+                        <form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button submit" class="btn btn-primary" data-dismiss="modal" (click)="updateBio()" >Atualizar</button>                          
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -127,7 +106,7 @@
 
                     <div class="flip-card">
                         <div class="card-front">
-                            <ul class="dois d-flex justify-content-center align-items-center flex-column text-dark">
+                            <ul class="dois d-flex justify-content-center flex-column text-dark">
                                 <li>{{ card.companyName }}</li>
                                 <li>{{ card.occupation }}</li>
                                 <li>{{ card.institution }}</li>
@@ -139,7 +118,7 @@
                             </ul>
                         </div>
 
-                        <div class="card-back d-flex flex-wrap">
+                        <div class="card-back d-flex flex-wrap justify-content-center">
                             <p>{{ card.description }}</p>
                             <button class="btnCard btn-danger" *ngIf="card.description"
                                 [routerLink]="['/delete-card', card.id]">
