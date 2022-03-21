@@ -45,6 +45,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-style: double;
+    border-color: rgb(189, 105, 105);
 }
 
 /* .card-front */
